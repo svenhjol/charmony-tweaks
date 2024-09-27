@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "charmony-tweaks-nano",
+  "version": "${mod_version}",
+
+  "name": "Charmony Tweaks (nano)",
+  "description": "Small tweaks without changing core gameplay.",
+  "authors": [
+    "svenhjol"
+  ],
+
+  "license": "MIT",
+  "environment": "*",
+  "mixins": [
+  ],
+
+  "entrypoints": {
+    "client": [
+      "svenhjol.charmony.tweaks.nano.fabric.ClientInitializer"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "*",
+    "java": ">=21",
+    "charmony-nano": "${charmony_version}",
+    "charmony-api": "${api_version}"
+  },
+
+  "contact": {
+    "homepage": "https://charmony.work",
+    "sources": "https://github.com/svenhjol/${mod_id}"
+  }
+}
