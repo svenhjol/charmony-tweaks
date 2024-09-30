@@ -12,6 +12,7 @@
   "license": "MIT",
   "environment": "*",
   "mixins": [
+    "charmony-tweaks-nano.mixins.json"
   ],
 
   "entrypoints": {
@@ -24,6 +25,7 @@
     "fabricloader": ">=${loader_version}",
     "minecraft": "*",
     "java": ">=21",
+    "fabric-api": "*",
     "charmony-nano": "${charmony_version}",
     "charmony-api": "${api_version}"
   },

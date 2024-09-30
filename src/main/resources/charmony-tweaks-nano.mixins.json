@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "svenhjol.charmony.tweaks.nano.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "${refmap_file}",
+  "plugin": "svenhjol.charmony.tweaks.nano.mixins.MixinConfig",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "features.repair_cost_visible.AnvilScreenMixin"
+  ]
+}
