@@ -4,7 +4,7 @@
   "version": "${mod_version}",
 
   "name": "Charmony Tweaks (nano)",
-  "description": "Small tweaks without changing core gameplay.",
+  "description": "Small client tweaks without changing core gameplay.",
   "authors": [
     "svenhjol"
   ],
