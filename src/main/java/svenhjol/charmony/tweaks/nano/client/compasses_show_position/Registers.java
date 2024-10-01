@@ -9,7 +9,7 @@ public class Registers extends Setup<CompassesShowPosition> {
     }
 
     @Override
-    public Runnable register() {
+    public Runnable boot() {
         return () -> HudRenderEvent.INSTANCE.handle(feature().handlers::hudRender);
     }
 }
