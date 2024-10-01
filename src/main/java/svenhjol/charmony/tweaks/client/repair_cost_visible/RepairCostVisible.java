@@ -6,7 +6,7 @@ import svenhjol.charmony.scaffold.annotations.Feature;
 import svenhjol.charmony.scaffold.enums.Side;
 
 @Feature(side = Side.Client)
-public class RepairCostVisible extends ModFeature {
+public final class RepairCostVisible extends ModFeature {
     public Handlers handlers;
 
     public RepairCostVisible(Mod mod) {
