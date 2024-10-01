@@ -1,9 +1,9 @@
 {
   "required": true,
-  "package": "svenhjol.charmony.tweaks.nano.mixins",
+  "package": "svenhjol.charmony.tweaks.mixins",
   "compatibilityLevel": "JAVA_21",
   "refmap": "${refmap_file}",
-  "plugin": "svenhjol.charmony.tweaks.nano.mixins.MixinConfig",
+  "plugin": "svenhjol.charmony.tweaks.mixins.MixinConfig",
   "injectors": {
     "defaultRequire": 1
   },
