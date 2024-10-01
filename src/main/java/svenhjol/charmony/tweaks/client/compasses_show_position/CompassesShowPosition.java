@@ -8,7 +8,7 @@ import svenhjol.charmony.scaffold.enums.Side;
 
 @Feature(side = Side.Client, description = """
     Shows the direction that the player is facing, the position coordinates and current biome when holding a compass.""")
-public class CompassesShowPosition extends ModFeature {
+public final class CompassesShowPosition extends ModFeature {
     public final Registers registers;
     public final Handlers handlers;
     public final Providers providers;

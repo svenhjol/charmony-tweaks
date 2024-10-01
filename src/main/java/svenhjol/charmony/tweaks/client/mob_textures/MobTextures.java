@@ -8,7 +8,7 @@ import svenhjol.charmony.scaffold.enums.Side;
 
 @Feature(side = Side.Client, description = """
     Mobs may spawn with alternative textures.""")
-public class MobTextures extends ModFeature {
+public final class MobTextures extends ModFeature {
     public final Handlers handlers;
     public final Registers registers;
 
