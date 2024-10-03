@@ -8,6 +8,10 @@
     "defaultRequire": 1
   },
   "client": [
-    "features.repair_cost_visible.AnvilScreenMixin"
+    "features.repair_cost_visible.AnvilScreenMixin",
+    "features.telemetry.ClientTelemetryManagerMixin",
+    "features.telemetry.DisableToastMixin",
+    "features.telemetry.RealmsAvailabilityMixin",
+    "features.telemetry.WorldOpenFlowsMixin"
   ]
 }
