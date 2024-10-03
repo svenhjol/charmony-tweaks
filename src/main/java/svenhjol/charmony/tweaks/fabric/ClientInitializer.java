@@ -11,9 +11,11 @@ import svenhjol.charmony.tweaks.client.repair_cost_visible.RepairCostVisible;
 public class ClientInitializer implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        var tweaks = Tweaks.instance();
+        // Ensure charmony is launched first.
+        svenhjol.charmony.scaffold.fabric.ClientInitializer.init();
 
-        // Add features.
+        // Prepare the mod.
+        var tweaks = Tweaks.instance();
         tweaks.addFeature(CompassesShowPosition.class);
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
         tweaks.addFeature(MobTextures.class);

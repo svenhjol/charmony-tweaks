@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks;
 import svenhjol.charmony.scaffold.base.Mod;
 
 public class Tweaks extends Mod {
-    public static final String ID = "charmony-tweaks-nano";
+    public static final String ID = "charmony-tweaks";
     private static Tweaks instance;
 
     private Tweaks() {}
