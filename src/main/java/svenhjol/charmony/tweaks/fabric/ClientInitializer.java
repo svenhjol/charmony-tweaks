@@ -3,6 +3,7 @@ package svenhjol.charmony.tweaks.fabric;
 import net.fabricmc.api.ClientModInitializer;
 import svenhjol.charmony.scaffold.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_books.ChiseledBookshelvesShowBooks;
 import svenhjol.charmony.tweaks.client.compasses_show_position.CompassesShowPosition;
 import svenhjol.charmony.tweaks.client.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
 import svenhjol.charmony.tweaks.client.maps_show_hovering.MapsShowHovering;
@@ -17,9 +18,9 @@ public class ClientInitializer implements ClientModInitializer {
         // Ensure charmony is launched first.
         svenhjol.charmony.scaffold.fabric.ClientInitializer.init();
 
-        // Prepare the mod.
+        // Prepare and run the mod.
         var tweaks = Tweaks.instance();
-
+        tweaks.addFeature(ChiseledBookshelvesShowBooks.class);
         tweaks.addFeature(CompassesShowPosition.class);
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
         tweaks.addFeature(MapsShowHovering.class);
@@ -27,8 +28,6 @@ public class ClientInitializer implements ClientModInitializer {
         tweaks.addFeature(RepairCostVisible.class);
         tweaks.addFeature(ShulkerBoxesShowHovering.class);
         tweaks.addFeature(Telemetry.class);
-
-        // Run the mod.
         tweaks.run(Side.Client);
     }
 }

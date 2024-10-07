@@ -13,5 +13,8 @@
     "features.telemetry.DisableToastMixin",
     "features.telemetry.RealmsAvailabilityMixin",
     "features.telemetry.WorldOpenFlowsMixin"
+  ],
+  "mixins": [
+    "features.chiseled_bookshelves_show_books.ChiseledBookShelfBlockEntityMixin"
   ]
 }
