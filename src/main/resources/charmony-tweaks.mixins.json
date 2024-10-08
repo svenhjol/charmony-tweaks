@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "svenhjol.charmony.tweaks.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "${refmap_file}",
+  "plugin": "svenhjol.charmony.tweaks.mixins.MixinConfig",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "features.repair_cost_visible.AnvilScreenMixin",
+    "features.telemetry.ClientTelemetryManagerMixin",
+    "features.telemetry.DisableToastMixin",
+    "features.telemetry.RealmsAvailabilityMixin",
+    "features.telemetry.WorldOpenFlowsMixin"
+  ],
+  "mixins": [
+    "features.chiseled_bookshelves_show_books.ChiseledBookShelfBlockEntityMixin"
+  ]
+}
