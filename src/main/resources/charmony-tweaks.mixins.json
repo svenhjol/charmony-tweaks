@@ -9,6 +9,7 @@
   },
   "client": [
     "features.repair_cost_visible.AnvilScreenMixin",
+    "features.spyglass_scope_hiding.GuiMixin",
     "features.telemetry.ClientTelemetryManagerMixin",
     "features.telemetry.DisableToastMixin",
     "features.telemetry.RealmsAvailabilityMixin",

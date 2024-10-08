@@ -5,9 +5,8 @@ import svenhjol.charmony.scaffold.base.Mod;
 import svenhjol.charmony.scaffold.base.ModFeature;
 import svenhjol.charmony.scaffold.enums.Side;
 
-@Feature(side = Side.Client, description = """
-    Maps show their content when hovering over the map item.""")
-public class MapsShowHovering extends ModFeature {
+@Feature(side = Side.Client, description = "Maps show their content when hovering over the inventory item.")
+public final class MapsShowHovering extends ModFeature {
     public final Registers registers;
     public final Handlers handlers;
 
