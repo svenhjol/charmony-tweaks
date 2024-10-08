@@ -9,6 +9,7 @@ import svenhjol.charmony.tweaks.client.maps_show_hovering.MapsShowHovering;
 import svenhjol.charmony.tweaks.client.mob_textures.MobTextures;
 import svenhjol.charmony.tweaks.client.repair_cost_visible.RepairCostVisible;
 import svenhjol.charmony.tweaks.client.shulker_boxes_show_hovering.ShulkerBoxesShowHovering;
+import svenhjol.charmony.tweaks.client.spyglass_scope_hiding.SpyglassScopeHiding;
 import svenhjol.charmony.tweaks.client.telemetry.Telemetry;
 
 public class ClientInitializer implements ClientModInitializer {
@@ -17,18 +18,16 @@ public class ClientInitializer implements ClientModInitializer {
         // Ensure charmony is launched first.
         svenhjol.charmony.scaffold.fabric.ClientInitializer.init();
 
-        // Prepare the mod.
+        // Prepare and run the mod.
         var tweaks = Tweaks.instance();
-
         tweaks.addFeature(CompassesShowPosition.class);
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
         tweaks.addFeature(MapsShowHovering.class);
         tweaks.addFeature(MobTextures.class);
         tweaks.addFeature(RepairCostVisible.class);
         tweaks.addFeature(ShulkerBoxesShowHovering.class);
+        tweaks.addFeature(SpyglassScopeHiding.class);
         tweaks.addFeature(Telemetry.class);
-
-        // Run the mod.
         tweaks.run(Side.Client);
     }
 }
