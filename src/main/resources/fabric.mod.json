@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "charmony-tweaks-nano",
+  "id": "charmony-tweaks",
   "version": "${mod_version}",
 
-  "name": "Charmony Tweaks (nano)",
-  "description": "Small client tweaks without changing core gameplay.",
+  "name": "Charmony Tweaks",
+  "description": "Small tweaks and improvements that don't change core gameplay.",
   "authors": [
     "svenhjol"
   ],
@@ -12,9 +12,9 @@
   "license": "MIT",
   "environment": "client",
   "mixins": [
-    "charmony-tweaks-nano.mixins.json"
+    "charmony-tweaks.mixins.json"
   ],
-  "accessWidener": "charmony-tweaks-nano.accesswidener",
+  "accessWidener": "charmony-tweaks.accesswidener",
 
   "entrypoints": {
     "client": [
@@ -27,7 +27,7 @@
     "minecraft": "*",
     "java": ">=21",
     "fabric-api": "*",
-    "charmony-nano": "${charmony_version}",
+    "charmony": "${charmony_version}",
     "charmony-api": "${api_version}"
   },
 
