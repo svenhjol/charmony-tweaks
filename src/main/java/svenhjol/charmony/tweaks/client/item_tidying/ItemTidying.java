@@ -5,7 +5,7 @@ import svenhjol.charmony.scaffold.base.Mod;
 import svenhjol.charmony.scaffold.base.ModFeature;
 import svenhjol.charmony.scaffold.enums.Side;
 
-@Feature(side = Side.Client)
+@Feature(side = Side.Client, description = "Button to automatically stack and arrange items in inventory and containers.")
 public final class ItemTidying extends ModFeature {
     public final Registers registers;
     public final Handlers handlers;
