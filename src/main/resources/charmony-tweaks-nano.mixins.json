@@ -8,6 +8,7 @@
     "defaultRequire": 1
   },
   "client": [
+    "features.chiseled_bookshelves_labelling.GuiGraphicsMixin",
     "features.repair_cost_visible.AnvilScreenMixin",
     "features.spyglass_scope_hiding.GuiMixin",
     "features.telemetry.ClientTelemetryManagerMixin",

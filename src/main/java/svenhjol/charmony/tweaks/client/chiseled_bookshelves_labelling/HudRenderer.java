@@ -1,21 +1,19 @@
-package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_books;
+package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
 
 public class HudRenderer extends BaseHudRenderer {
-    private ChiseledBookShelfBlockEntity bookshelf;
-    private BlockHitResult hitResult;
-    private BlockState hitState;
+    private ItemStack hitStack; // A reference to the item stack currently being pointed at.
 
     @Override
     public void render(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
@@ -30,17 +28,13 @@ public class HudRenderer extends BaseHudRenderer {
         var scale = Math.max(0f, Math.min(1.0f, (ticksFade / (float) MAX_FADE_TICKS)));
         var top = window.getGuiScaledHeight() - 100;
 
-        if (hitResult != null) {
-            var slot = feature().handlers.getHitSlot(hitResult, hitState);
-            if (slot.isPresent()) {
-                var stack = feature().handlers.getItem(bookshelf, slot.getAsInt());
-                var lines = stack.getTooltipLines(Item.TooltipContext.EMPTY, minecraft.player, TooltipFlag.NORMAL);
-                if (!stack.isEmpty()) {
-                    renderScaledGuiItem(guiGraphics, stack, midX - 8, top, scale, scale);
-                    for (int i = 0; i < lines.size(); i++) {
-                        var component = lines.get(i);
-                        guiGraphics.drawCenteredString(font, component, midX, top + 20 + (i * 12), 0xffffff | alpha);
-                    }
+        if (hitStack != null && !hitStack.isEmpty()) {
+            var lines = hitStack.getTooltipLines(Item.TooltipContext.EMPTY, minecraft.player, TooltipFlag.NORMAL);
+            if (!hitStack.isEmpty()) {
+                renderScaledGuiItem(guiGraphics, hitStack, midX - 8, top, scale, scale);
+                for (int i = 0; i < lines.size(); i++) {
+                    var component = lines.get(i);
+                    guiGraphics.drawCenteredString(font, component, midX, top + 20 + (i * 12), 0xffffff | alpha);
                 }
             }
         }
@@ -63,16 +57,30 @@ public class HudRenderer extends BaseHudRenderer {
                     out.loadInto(blockEntity, level.registryAccess());
                 });
             }
-            this.bookshelf = blockEntity;
-            this.hitResult = lookedAt;
-            this.hitState = level.getBlockState(pos);
-            return true;
+
+            var slot = feature().handlers.getHitSlot(lookedAt, level.getBlockState(pos));
+            if (slot.isPresent()) {
+                var stack = feature().handlers.getItem(blockEntity, slot.getAsInt());
+                if (!stack.isEmpty()) {
+                    this.hitStack = stack;
+                    return true;
+                }
+            }
         }
 
         return false;
     }
 
-    private ChiseledBookshelvesShowBooks feature() {
-        return ChiseledBookshelvesShowBooks.feature();
+    /**
+     * Called by mixin to render the item with scaling.
+     * @see svenhjol.charmony.tweaks.mixins.features.chiseled_bookshelves_labelling.GuiGraphicsMixin
+     */
+    public void scaleItem(ItemStack stack, PoseStack poseStack) {
+        poseStack.scale(scaleX, scaleY, 1.0f);
+        scaleX = scaleY = 1.0f;
+    }
+
+    private ChiseledBookshelvesLabelling feature() {
+        return ChiseledBookshelvesLabelling.feature();
     }
 }

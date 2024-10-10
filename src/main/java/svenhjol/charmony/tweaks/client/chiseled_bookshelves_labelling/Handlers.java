@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_books;
+package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
 
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
@@ -19,8 +19,8 @@ import svenhjol.charmony.scaffold.base.Setup;
 import java.util.Optional;
 import java.util.OptionalInt;
 
-public class Handlers extends Setup<ChiseledBookshelvesShowBooks> {
-    public Handlers(ChiseledBookshelvesShowBooks feature) {
+public class Handlers extends Setup<ChiseledBookshelvesLabelling> {
+    public Handlers(ChiseledBookshelvesLabelling feature) {
         super(feature);
     }
 
@@ -34,6 +34,9 @@ public class Handlers extends Setup<ChiseledBookshelvesShowBooks> {
     }
 
     public ItemStack getItem(ChiseledBookShelfBlockEntity bookshelf, int slot) {
+        if (bookshelf == null) {
+            return ItemStack.EMPTY;
+        }
         return bookshelf.getItem(slot);
     }
 
@@ -86,12 +89,9 @@ public class Handlers extends Setup<ChiseledBookshelvesShowBooks> {
      * Copypasta from ChiseledBookShelfBlock so we can get the slot positions.
      */
     private int getSection(float f) {
-        float g = 0.0625f;
-        float h = 0.375f;
         if (f < 0.375f) {
             return 0;
         } else {
-            float i = 0.6875f;
             return f < 0.6875f ? 1 : 2;
         }
     }

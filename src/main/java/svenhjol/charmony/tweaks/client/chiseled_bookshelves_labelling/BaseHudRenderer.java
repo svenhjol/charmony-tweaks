@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_books;
+package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
 
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
