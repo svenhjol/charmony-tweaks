@@ -3,7 +3,6 @@ package svenhjol.charmony.tweaks.fabric;
 import net.fabricmc.api.ClientModInitializer;
 import svenhjol.charmony.scaffold.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
-import svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_books.ChiseledBookshelvesShowBooks;
 import svenhjol.charmony.tweaks.client.compasses_show_position.CompassesShowPosition;
 import svenhjol.charmony.tweaks.client.item_tidying.ItemTidying;
 import svenhjol.charmony.tweaks.client.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
@@ -22,7 +21,6 @@ public class ClientInitializer implements ClientModInitializer {
 
         // Prepare and run the mod.
         var tweaks = Tweaks.instance();
-        tweaks.addFeature(ChiseledBookshelvesShowBooks.class);
         tweaks.addFeature(CompassesShowPosition.class);
         tweaks.addFeature(ItemTidying.class);
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
