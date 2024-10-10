@@ -1,7 +1,6 @@
 package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_books;
 
 import net.minecraft.client.DeltaTracker;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -64,10 +63,6 @@ public abstract class BaseHudRenderer {
     }
 
     protected void renderScaledGuiItem(GuiGraphics guiGraphics, ItemStack stack, int x, int y, float scaleX, float scaleY) {
-        var minecraft = Minecraft.getInstance();
-        var itemRenderer = minecraft.getItemRenderer();
-        var level = minecraft.level;
-
         this.scaleX = scaleX;
         this.scaleY = scaleY;
         guiGraphics.renderFakeItem(stack, x, y);
