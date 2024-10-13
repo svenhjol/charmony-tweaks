@@ -7,7 +7,7 @@ import svenhjol.charmony.core.enums.Side;
 
 @ModDefinition(id = Tweaks.ID, sides = {Side.Client},
     name = "Tweaks (nano)",
-    description = "Small client tweaks that don't change core gameplay.")
+    description = "Small client tweaks that don't change core gameplay. Compatible with vanilla servers such as Realms.")
 public final class Tweaks extends Mod {
     public static final String ID = "charmony-tweaks";
     private static Tweaks instance;
