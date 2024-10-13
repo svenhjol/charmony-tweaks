@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.client.item_tidying;
 
 import net.minecraft.client.gui.components.WidgetSprites;
-import svenhjol.charmony.scaffold.base.Setup;
-import svenhjol.charmony.scaffold.events.RenderScreenCallback;
-import svenhjol.charmony.scaffold.events.SetupScreenCallback;
+import svenhjol.charmony.core.base.Setup;
+import svenhjol.charmony.core.events.RenderScreenCallback;
+import svenhjol.charmony.core.events.SetupScreenCallback;
 import svenhjol.charmony.tweaks.Tweaks;
 
 public class Registers extends Setup<ItemTidying> {
@@ -13,8 +13,8 @@ public class Registers extends Setup<ItemTidying> {
         super(feature);
 
         tidyButton = new WidgetSprites(
-            Tweaks.instance().id("widget/item_tidying/tidy_button"),
-            Tweaks.instance().id("widget/item_tidying/tidy_button_highlighted")
+            Tweaks.id("widget/item_tidying/tidy_button"),
+            Tweaks.id("widget/item_tidying/tidy_button_highlighted")
         );
     }
 

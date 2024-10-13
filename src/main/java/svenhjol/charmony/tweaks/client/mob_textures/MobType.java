@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.client.mob_textures;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
-import svenhjol.charmony.scaffold.base.Mod;
+import svenhjol.charmony.core.base.Mod;
 
 import java.util.Locale;
 

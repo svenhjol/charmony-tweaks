@@ -8,7 +8,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Items;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
 public class Handlers extends Setup<CompassesShowPosition> {
     public Handlers(CompassesShowPosition feature) {

@@ -18,7 +18,7 @@
 
   "entrypoints": {
     "client": [
-      "svenhjol.charmony.tweaks.fabric.ClientInitializer"
+      "svenhjol.charmony.tweaks.client.ClientInitializer"
     ]
   },
 

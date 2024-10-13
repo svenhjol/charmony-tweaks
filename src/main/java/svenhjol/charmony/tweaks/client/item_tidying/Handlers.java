@@ -12,7 +12,7 @@ import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import svenhjol.charmony.api.ItemTidyingButtonTweak;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;

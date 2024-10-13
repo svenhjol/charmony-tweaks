@@ -1,7 +1,7 @@
-package svenhjol.charmony.tweaks.fabric;
+package svenhjol.charmony.tweaks.client;
 
 import net.fabricmc.api.ClientModInitializer;
-import svenhjol.charmony.scaffold.enums.Side;
+import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
 import svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling.ChiseledBookshelvesLabelling;
 import svenhjol.charmony.tweaks.client.compasses_show_position.CompassesShowPosition;
@@ -18,7 +18,7 @@ public class ClientInitializer implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         // Ensure charmony is launched first.
-        svenhjol.charmony.scaffold.fabric.ClientInitializer.init();
+        svenhjol.charmony.core.client.ClientInitializer.init();
 
         // Prepare and run the mod.
         var tweaks = Tweaks.instance();

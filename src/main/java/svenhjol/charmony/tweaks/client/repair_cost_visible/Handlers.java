@@ -4,7 +4,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 

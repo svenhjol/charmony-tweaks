@@ -4,7 +4,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.world.item.ItemStack;
-import svenhjol.charmony.scaffold.client.ItemContainerTooltip;
+import svenhjol.charmony.core.client.ItemContainerTooltip;
 
 import java.util.List;
 

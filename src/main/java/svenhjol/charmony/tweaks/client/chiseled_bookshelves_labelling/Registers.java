@@ -2,7 +2,7 @@ package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
 public class Registers extends Setup<ChiseledBookshelvesLabelling> {
     public final HudRenderer hudRenderer;

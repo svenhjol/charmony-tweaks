@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.MapItem;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 

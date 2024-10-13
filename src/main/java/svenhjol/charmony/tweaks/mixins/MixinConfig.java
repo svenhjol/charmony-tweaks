@@ -1,6 +1,6 @@
 package svenhjol.charmony.tweaks.mixins;
 
-import svenhjol.charmony.scaffold.mixins.BaseMixinConfig;
+import svenhjol.charmony.core.mixins.BaseMixinConfig;
 import svenhjol.charmony.tweaks.Tweaks;
 
 public class MixinConfig extends BaseMixinConfig {
