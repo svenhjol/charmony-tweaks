@@ -6,7 +6,8 @@ import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
 
-@FeatureDefinition(side = Side.Client)
+@FeatureDefinition(side = Side.Client, description = """
+    Shows the name and type of book when looking at a slot of a chiseled bookshelf.""")
 public final class ChiseledBookshelvesLabelling extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
