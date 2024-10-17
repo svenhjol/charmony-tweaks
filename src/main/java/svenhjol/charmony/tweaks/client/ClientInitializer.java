@@ -5,6 +5,7 @@ import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
 import svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling.ChiseledBookshelvesLabelling;
 import svenhjol.charmony.tweaks.client.compasses_show_position.CompassesShowPosition;
+import svenhjol.charmony.tweaks.client.crafting_table_nearby.CraftingTableNearby;
 import svenhjol.charmony.tweaks.client.item_tidying.ItemTidying;
 import svenhjol.charmony.tweaks.client.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
 import svenhjol.charmony.tweaks.client.maps_show_when_hovering.MapsShowWhenHovering;
@@ -24,6 +25,7 @@ public class ClientInitializer implements ClientModInitializer {
         var tweaks = Tweaks.instance();
         tweaks.addFeature(ChiseledBookshelvesLabelling.class);
         tweaks.addFeature(CompassesShowPosition.class);
+        tweaks.addFeature(CraftingTableNearby.class);
         tweaks.addFeature(ItemTidying.class);
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
         tweaks.addFeature(MapsShowWhenHovering.class);
