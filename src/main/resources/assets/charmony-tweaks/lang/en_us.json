@@ -4,5 +4,6 @@
   "gui.charmony-tweaks.compass.coords_only_xz": "X: %s   Z: %s",
   "gui.charmony-tweaks.compass.facing": "Facing %s",
   "gui.charmony-tweaks.repair_cost": "Repair Cost: %s",
-  "key.charmony-tweaks.openCrafting": "Open crafting"
+  "key.charmony-tweaks.openCrafting": "Open crafting",
+  "key.charmony-tweaks.tidyInventory": "Tidy inventory"
 }

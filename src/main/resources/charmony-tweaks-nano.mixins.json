@@ -8,12 +8,13 @@
     "defaultRequire": 1
   },
   "client": [
-    "registry.hud_item_scaling.GuiGraphicsMixin",
+    "features.item_tidying.AbstractContainerScreenMixin",
     "features.repair_cost_visible.AnvilScreenMixin",
     "features.spyglass_scope_hiding.GuiMixin",
     "features.telemetry.ClientTelemetryManagerMixin",
     "features.telemetry.DisableToastMixin",
     "features.telemetry.RealmsAvailabilityMixin",
-    "features.telemetry.WorldOpenFlowsMixin"
+    "features.telemetry.WorldOpenFlowsMixin",
+    "registry.hud_item_scaling.GuiGraphicsMixin"
   ]
 }
