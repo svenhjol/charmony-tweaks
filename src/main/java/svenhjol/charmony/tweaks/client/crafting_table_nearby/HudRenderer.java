@@ -30,6 +30,7 @@ public class HudRenderer extends BaseHudRenderer {
 
     @Override
     protected boolean isValid(Player player) {
-        return CraftingTableNearby.feature().handlers.getCraftingTablePos().isPresent();
+        var feature = CraftingTableNearby.feature();
+        return feature.showCraftingIcon() && feature.handlers.getCraftingTablePos().isPresent();
     }
 }
