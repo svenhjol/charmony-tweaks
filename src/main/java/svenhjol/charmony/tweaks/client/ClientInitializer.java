@@ -14,6 +14,7 @@ import svenhjol.charmony.tweaks.client.repair_cost_visible.RepairCostVisible;
 import svenhjol.charmony.tweaks.client.shulker_boxes_show_when_hovering.ShulkerBoxesShowWhenHovering;
 import svenhjol.charmony.tweaks.client.spyglass_scope_hiding.SpyglassScopeHiding;
 import svenhjol.charmony.tweaks.client.telemetry.Telemetry;
+import svenhjol.charmony.tweaks.client.totem_emergency_swap.TotemEmergencySwap;
 
 public class ClientInitializer implements ClientModInitializer {
     @Override
@@ -34,6 +35,7 @@ public class ClientInitializer implements ClientModInitializer {
         tweaks.addFeature(ShulkerBoxesShowWhenHovering.class);
         tweaks.addFeature(SpyglassScopeHiding.class);
         tweaks.addFeature(Telemetry.class);
+        tweaks.addFeature(TotemEmergencySwap.class);
         tweaks.run(Side.Client);
     }
 }

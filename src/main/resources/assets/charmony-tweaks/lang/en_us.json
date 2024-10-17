@@ -5,5 +5,6 @@
   "gui.charmony-tweaks.compass.facing": "Facing %s",
   "gui.charmony-tweaks.repair_cost": "Repair Cost: %s",
   "key.charmony-tweaks.openCrafting": "Open crafting",
+  "key.charmony-tweaks.swapTotem": "Put totem in offhand",
   "key.charmony-tweaks.tidyInventory": "Tidy inventory"
 }
