@@ -54,10 +54,14 @@ public class Handlers extends Setup<CraftingTableNearby> {
         var pos = player.blockPosition();
         var level = player.level();
         var range = 4;
-        craftingTablePos = BlockPos.betweenClosedStream(pos.offset(-range, -range, -range), pos.offset(range, range, range))
-            .filter(p -> level.getBlockState(p) == Blocks.CRAFTING_TABLE.defaultBlockState())
-            .findFirst()
-            .orElse(null);
+        for (BlockPos p : BlockPos.withinManhattan(pos, range, range, range)) {
+            if (level.getBlockState(p) == Blocks.CRAFTING_TABLE.defaultBlockState()) {
+                craftingTablePos = p;
+                return;
+            }
+        }
+
+        craftingTablePos = null;
     }
 
     public Optional<BlockPos> getCraftingTablePos() {
