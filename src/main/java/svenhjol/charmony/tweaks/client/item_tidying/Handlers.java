@@ -11,7 +11,6 @@ import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
-import svenhjol.charmony.api.ItemTidyingButtonTweak;
 import svenhjol.charmony.core.base.Setup;
 
 import javax.annotation.Nullable;
@@ -55,11 +54,11 @@ public class Handlers extends Setup<ItemTidying> {
         if (player == null) return;
 
         if (!(screen instanceof AbstractContainerScreen<?> abstractContainerScreen)) return;
-        this.containerScreen = abstractContainerScreen;
 
-        var clazz = containerScreen.getClass();
+        var clazz = abstractContainerScreen.getClass();
         if (feature().providers.blacklisted.contains(clazz)) return;
-        ItemTidyingButtonTweak tweak = feature().providers.tweaks.get(clazz);
+        var tweak = feature().providers.tweaks.get(clazz);
+        this.containerScreen = abstractContainerScreen;
 
         sortingButtons.clear();
         var menu = containerScreen.getMenu();
