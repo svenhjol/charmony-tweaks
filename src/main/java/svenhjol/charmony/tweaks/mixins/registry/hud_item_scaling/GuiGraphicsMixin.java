@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.chiseled_bookshelves_labelling;
+package svenhjol.charmony.tweaks.mixins.registry.hud_item_scaling;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.GuiGraphics;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling.ChiseledBookshelvesLabelling;
+import svenhjol.charmony.tweaks.client.BaseHudRenderer;
 
 @Mixin(GuiGraphics.class)
 public class GuiGraphicsMixin {
@@ -19,7 +19,7 @@ public class GuiGraphicsMixin {
 
     /**
      * Adds programmatic scaling to rendered items.
-     * This is used by the chiseled bookshelf hover effect to make the item icon pinch zoom in and out.
+     * This is used for example by the chiseled bookshelf hover effect to make the item icon pinch zoom in and out.
      */
     @Inject(
         method = "renderItem(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;IIII)V",
@@ -30,6 +30,6 @@ public class GuiGraphicsMixin {
         )
     )
     private void hookAddPoseScale(LivingEntity livingEntity, Level level, ItemStack stack, int i, int j, int k, int l, CallbackInfo ci) {
-        ChiseledBookshelvesLabelling.feature().registers.hudRenderer.scaleItem(stack, this.pose);
+        BaseHudRenderer.scaleItemsCallback(stack, this.pose);
     }
 }

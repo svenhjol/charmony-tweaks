@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
+import svenhjol.charmony.tweaks.client.BaseHudRenderer;
 
 public class HudRenderer extends BaseHudRenderer {
     private ItemStack hitStack; // A reference to the item stack currently being pointed at.
@@ -72,9 +73,9 @@ public class HudRenderer extends BaseHudRenderer {
     }
 
     /**
-     * Called by mixin to render the item with scaling.
-     * @see svenhjol.charmony.tweaks.mixins.features.chiseled_bookshelves_labelling.GuiGraphicsMixin
+     * Called by base to render the item with scaling.
      */
+    @Override
     public void scaleItem(ItemStack stack, PoseStack poseStack) {
         poseStack.scale(scaleX, scaleY, 1.0f);
         scaleX = scaleY = 1.0f;
