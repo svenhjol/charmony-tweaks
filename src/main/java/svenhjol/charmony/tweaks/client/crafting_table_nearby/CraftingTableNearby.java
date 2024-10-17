@@ -8,7 +8,7 @@ import svenhjol.charmony.tweaks.Tweaks;
 
 @FeatureDefinition(side = Side.Client, description = """
     Open the 3x3 crafting grid using a hotkey when within 4 blocks of any crafting table.""")
-public class CraftingTableNearby extends SidedFeature {
+public final class CraftingTableNearby extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
 

@@ -14,7 +14,7 @@ import svenhjol.charmony.core.enums.Side;
 @FeatureDefinition(side = Side.Client, enabledByDefault = false, description = """
     Disables telemetry and hides some nag messages.
     Some data removal may be considered controversial so this feature is disabled by default.""")
-public class Telemetry extends SidedFeature {
+public final class Telemetry extends SidedFeature {
     @Configurable(name = "Disable telemetry", description = """
         If true, prevents the client telemetry manager from ever sending any messages back to the mothership.
         Telemetry includes your game session, game version, operating system and launcher.""")
