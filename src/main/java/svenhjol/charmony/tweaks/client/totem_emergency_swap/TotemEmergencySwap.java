@@ -8,8 +8,7 @@ import svenhjol.charmony.tweaks.Tweaks;
 
 @FeatureDefinition(side = Side.Client, description = """
     Adds a keybind to swap any totem in your inventory with your offhand.
-    Note that this requires an off-screen drag and drop.
-    Pressing the key will interrupt the mouse operation for one tick.""")
+    Note that this performs an off-screen drag and drop, so pressing the key will interrupt any continuous mouse operations.""")
 public final class TotemEmergencySwap extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
