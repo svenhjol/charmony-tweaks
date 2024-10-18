@@ -3,6 +3,7 @@ package svenhjol.charmony.tweaks.client;
 import net.fabricmc.api.ClientModInitializer;
 import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.client.burning_reduced_view_blocking.BurningReducedViewBlocking;
 import svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling.ChiseledBookshelvesLabelling;
 import svenhjol.charmony.tweaks.client.compasses_show_position.CompassesShowPosition;
 import svenhjol.charmony.tweaks.client.crafting_table_nearby.CraftingTableNearby;
@@ -25,6 +26,7 @@ public class ClientInitializer implements ClientModInitializer {
 
         // Prepare and run the mod.
         var tweaks = Tweaks.instance();
+        tweaks.addFeature(BurningReducedViewBlocking.class);
         tweaks.addFeature(ChiseledBookshelvesLabelling.class);
         tweaks.addFeature(CompassesShowPosition.class);
         tweaks.addFeature(CraftingTableNearby.class);

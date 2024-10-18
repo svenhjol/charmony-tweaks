@@ -8,6 +8,7 @@
     "defaultRequire": 1
   },
   "client": [
+    "features.burning_reduced_view_blocking.ScreenEffectRendererMixin",
     "features.item_tidying.AbstractContainerScreenMixin",
     "features.repair_cost_visible.AnvilScreenMixin",
     "features.shields_reduced_view_blocking.ItemInHandRendererMixin",
