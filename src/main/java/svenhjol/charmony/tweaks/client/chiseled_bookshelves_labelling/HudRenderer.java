@@ -27,13 +27,14 @@ public class HudRenderer extends BaseHudRenderer {
         var midX = (int)(window.getGuiScaledWidth() / 2.0f);
         var alpha = Math.max(4, Math.min(MAX_FADE_TICKS, ticksFade)) << 24 & 0xff000000;
         var scale = Math.max(0f, Math.min(1.0f, (ticksFade / (float) MAX_FADE_TICKS)));
-        var top = window.getGuiScaledHeight() - 100;
+        var top = window.getGuiScaledHeight() - 150;
 
         if (hitStack != null && !hitStack.isEmpty()) {
             var lines = hitStack.getTooltipLines(Item.TooltipContext.EMPTY, minecraft.player, TooltipFlag.NORMAL);
             if (!hitStack.isEmpty()) {
                 renderScaledGuiItem(guiGraphics, hitStack, midX - 8, top, scale, scale);
-                for (int i = 0; i < lines.size(); i++) {
+                var size = Math.min(4, lines.size()); // Don't render too far on the Y.
+                for (int i = 0; i < size; i++) {
                     var component = lines.get(i);
                     guiGraphics.drawCenteredString(font, component, midX, top + 20 + (i * 12), 0xffffff | alpha);
                 }
@@ -73,7 +74,7 @@ public class HudRenderer extends BaseHudRenderer {
     }
 
     /**
-     * Called by base to render the item with scaling.
+     * Render displayed item with scaling.
      */
     @Override
     public void scaleItem(ItemStack stack, PoseStack poseStack) {
