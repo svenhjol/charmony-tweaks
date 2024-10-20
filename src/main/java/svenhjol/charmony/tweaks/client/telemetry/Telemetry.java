@@ -1,20 +1,20 @@
 package svenhjol.charmony.tweaks.client.telemetry;
 
-import svenhjol.charmony.scaffold.annotations.Configurable;
-import svenhjol.charmony.scaffold.annotations.Feature;
-import svenhjol.charmony.scaffold.base.Environment;
-import svenhjol.charmony.scaffold.base.Mod;
-import svenhjol.charmony.scaffold.base.ModFeature;
-import svenhjol.charmony.scaffold.enums.Side;
+import svenhjol.charmony.core.annotations.Configurable;
+import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.core.base.Environment;
+import svenhjol.charmony.core.base.Mod;
+import svenhjol.charmony.core.base.SidedFeature;
+import svenhjol.charmony.core.enums.Side;
 
 /**
  * This feature exposes its configuration via static methods.
  * The reason for this is that the mixins need direct access to these values on the thread they run.
  */
-@Feature(side = Side.Client, enabledByDefault = false, description = """
+@FeatureDefinition(side = Side.Client, enabledByDefault = false, description = """
     Disables telemetry and hides some nag messages.
     Some data removal may be considered controversial so this feature is disabled by default.""")
-public class Telemetry extends ModFeature {
+public final class Telemetry extends SidedFeature {
     @Configurable(name = "Disable telemetry", description = """
         If true, prevents the client telemetry manager from ever sending any messages back to the mothership.
         Telemetry includes your game session, game version, operating system and launcher.""")

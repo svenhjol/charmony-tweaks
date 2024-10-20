@@ -1,21 +1,30 @@
 package svenhjol.charmony.tweaks.client.item_tidying;
 
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.components.WidgetSprites;
-import svenhjol.charmony.scaffold.base.Setup;
-import svenhjol.charmony.scaffold.events.RenderScreenCallback;
-import svenhjol.charmony.scaffold.events.SetupScreenCallback;
+import org.lwjgl.glfw.GLFW;
+import svenhjol.charmony.core.base.Setup;
+import svenhjol.charmony.core.events.RenderScreenCallback;
+import svenhjol.charmony.core.events.SetupScreenCallback;
 import svenhjol.charmony.tweaks.Tweaks;
 
 public class Registers extends Setup<ItemTidying> {
-    public final WidgetSprites tidyButton;
+    public final WidgetSprites tidyButtonSprite;
+    public final KeyMapping tidyInventoryKey;
 
     public Registers(ItemTidying feature) {
         super(feature);
 
-        tidyButton = new WidgetSprites(
-            Tweaks.instance().id("widget/item_tidying/tidy_button"),
-            Tweaks.instance().id("widget/item_tidying/tidy_button_highlighted")
+        this.tidyButtonSprite = new WidgetSprites(
+            Tweaks.id("widget/item_tidying/tidy_button"),
+            Tweaks.id("widget/item_tidying/tidy_button_highlighted")
         );
+
+        this.tidyInventoryKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+            "key.charmony-tweaks.tidyInventory",
+            GLFW.GLFW_KEY_APOSTROPHE,
+            "key.categories.inventory"));
     }
 
     @Override

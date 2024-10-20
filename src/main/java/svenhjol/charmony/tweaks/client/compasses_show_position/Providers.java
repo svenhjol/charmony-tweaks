@@ -2,8 +2,8 @@ package svenhjol.charmony.tweaks.client.compasses_show_position;
 
 import svenhjol.charmony.api.CompassOverlayItem;
 import svenhjol.charmony.api.CompassOverlayProvider;
-import svenhjol.charmony.scaffold.Api;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.Api;
+import svenhjol.charmony.core.base.Setup;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,12 @@
 package svenhjol.charmony.tweaks.client.spyglass_scope_hiding;
 
-import svenhjol.charmony.scaffold.annotations.Feature;
-import svenhjol.charmony.scaffold.base.Mod;
-import svenhjol.charmony.scaffold.base.ModFeature;
-import svenhjol.charmony.scaffold.enums.Side;
+import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.core.base.Mod;
+import svenhjol.charmony.core.base.SidedFeature;
+import svenhjol.charmony.core.enums.Side;
 
-@Feature(side = Side.Client, description = "Removes the border when zooming in with the spyglass.")
-public final class SpyglassScopeHiding extends ModFeature {
+@FeatureDefinition(side = Side.Client, description = "Removes the border when zooming in with the spyglass.")
+public final class SpyglassScopeHiding extends SidedFeature {
     public SpyglassScopeHiding(Mod mod) {
         super(mod);
     }

@@ -2,8 +2,8 @@ package svenhjol.charmony.tweaks.client.jukeboxes_stop_background_music;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import svenhjol.charmony.scaffold.base.Setup;
-import svenhjol.charmony.scaffold.events.PlaySoundCallback;
+import svenhjol.charmony.core.base.Setup;
+import svenhjol.charmony.core.events.PlaySoundCallback;
 
 public class Registers extends Setup<JukeboxesStopBackgroundMusic> {
     public Registers(JukeboxesStopBackgroundMusic feature) {

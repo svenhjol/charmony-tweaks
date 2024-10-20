@@ -7,8 +7,8 @@ import svenhjol.charmony.api.ItemTidyingBlacklistProvider;
 import svenhjol.charmony.api.ItemTidyingButtonTweak;
 import svenhjol.charmony.api.ItemTidyingButtonTweakProvider;
 import svenhjol.charmony.api.ItemTidyingWhitelistProvider;
-import svenhjol.charmony.scaffold.Api;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.Api;
+import svenhjol.charmony.core.base.Setup;
 
 import java.util.ArrayList;
 import java.util.HashMap;

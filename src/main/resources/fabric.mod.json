@@ -4,11 +4,11 @@
   "version": "${mod_version}",
 
   "name": "Charmony Tweaks",
-  "description": "Small tweaks and improvements that don't change core gameplay.",
+  "description": "Small tweaks that don't change core gameplay.",
   "authors": [
     "svenhjol"
   ],
-  "icon": "icon.png",
+  "icon": "assets/charmony-tweaks/textures/gui/sprites/icon.png",
   "license": "MIT",
   "environment": "client",
   "mixins": [
@@ -18,7 +18,7 @@
 
   "entrypoints": {
     "client": [
-      "svenhjol.charmony.tweaks.fabric.ClientInitializer"
+      "svenhjol.charmony.tweaks.client.ClientInitializer"
     ]
   },
 

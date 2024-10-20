@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.maps_show_hovering;
+package svenhjol.charmony.tweaks.client.maps_show_when_hovering;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -11,15 +11,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.MapItem;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public class Handlers extends Setup<MapsShowHovering> {
+public class Handlers extends Setup<MapsShowWhenHovering> {
     public static final RenderType MAP_BACKGROUND = RenderType.text(ResourceLocation.parse("textures/map/map_background.png"));
     private final MapRenderState mapRenderState = new MapRenderState();
 
-    public Handlers(MapsShowHovering feature) {
+    public Handlers(MapsShowWhenHovering feature) {
         super(feature);
     }
 

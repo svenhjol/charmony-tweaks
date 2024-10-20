@@ -11,9 +11,9 @@ import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
-import svenhjol.charmony.api.ItemTidyingButtonTweak;
-import svenhjol.charmony.scaffold.base.Setup;
+import svenhjol.charmony.core.base.Setup;
 
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -22,21 +22,43 @@ public class Handlers extends Setup<ItemTidying> {
     private static final int TOP = 12;
 
     private final List<ImageButton> sortingButtons = new ArrayList<>();
+    private List<Slot> playerSlots = new LinkedList<>();
+    private List<Slot> containerSlots = new LinkedList<>();
+    private @Nullable AbstractContainerScreen<?> containerScreen;
 
     public Handlers(ItemTidying feature) {
         super(feature);
     }
 
+    public void handleKeypress(int i, int j, int k) {
+        if (containerScreen == null || !feature().registers.tidyInventoryKey.matches(i, j)) return;
+
+        if (feature().keybindSortsMultipleInventories()) {
+            sortContainer();
+            sortPlayer();
+            return;
+        }
+
+        if (containerScreen instanceof InventoryScreen) {
+            sortPlayer();
+        } else {
+            sortContainer();
+        }
+    }
+
     public void setupScreen(Screen screen) {
+        this.containerScreen = null;
+
         var minecraft = Minecraft.getInstance();
         var player = minecraft.player;
-
         if (player == null) return;
-        if (!(screen instanceof AbstractContainerScreen<?> containerScreen)) return;
 
-        var clazz = containerScreen.getClass();
+        if (!(screen instanceof AbstractContainerScreen<?> abstractContainerScreen)) return;
+
+        var clazz = abstractContainerScreen.getClass();
         if (feature().providers.blacklisted.contains(clazz)) return;
-        ItemTidyingButtonTweak tweak = feature().providers.tweaks.get(clazz);
+        var tweak = feature().providers.tweaks.get(clazz);
+        this.containerScreen = abstractContainerScreen;
 
         sortingButtons.clear();
         var menu = containerScreen.getMenu();
@@ -52,8 +74,8 @@ public class Handlers extends Setup<ItemTidying> {
         // Gather slot types.
         var slots = menu.slots;
 
-        List<Slot> playerSlots = new LinkedList<>();
-        List<Slot> containerSlots = new LinkedList<>();
+        playerSlots = new LinkedList<>();
+        containerSlots = new LinkedList<>();
 
         for (var slot : slots) {
             if (slot.container == player.getInventory()) {
@@ -65,18 +87,30 @@ public class Handlers extends Setup<ItemTidying> {
 
         if (!containerSlots.isEmpty() && feature().providers.whitelisted.contains(clazz)) {
             addSortingButton(screen, x, y + containerSlots.getFirst().y,
-                click -> sortContainer(containerSlots, containerScreen, -1, -1));
+                click -> sortContainer());
         }
 
         if (!playerSlots.isEmpty()) {
             addSortingButton(screen, x, y + playerSlots.getFirst().y,
-                click -> sortContainer(playerSlots, containerScreen, 9, -1));
+                click -> sortPlayer());
         }
 
         sortingButtons.forEach(containerScreen::addRenderableWidget);
     }
 
-    public void sortContainer(List<Slot> slots, AbstractContainerScreen<?> screen, int startIndex, int endIndex) {
+    public void sortPlayer() {
+        if (!playerSlots.isEmpty() && containerScreen != null) {
+            mergeAndSort(playerSlots, containerScreen, 9, -1);
+        }
+    }
+
+    public void sortContainer() {
+        if (!containerSlots.isEmpty() && containerScreen != null) {
+            mergeAndSort(containerSlots, containerScreen, -1, -1);
+        }
+    }
+
+    public void mergeAndSort(List<Slot> slots, AbstractContainerScreen<?> screen, int startIndex, int endIndex) {
         // Get a map of all the unique items and their stack size in each slot.
         Map<Item, CopyOnWriteArrayList<Pair<Slot, Integer>>> merge = new HashMap<>();
 
@@ -185,7 +219,7 @@ public class Handlers extends Setup<ItemTidying> {
     }
 
     public void addSortingButton(Screen screen, int x, int y, Button.OnPress callback) {
-        sortingButtons.add(new ImageButton(x, y, 10, 10, feature().registers.tidyButton, callback));
+        sortingButtons.add(new ImageButton(x, y, 10, 10, feature().registers.tidyButtonSprite, callback));
     }
 
     private boolean canUseSlotIndex(Slot slot, int start, int end) {

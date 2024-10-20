@@ -1,14 +1,14 @@
 package svenhjol.charmony.tweaks.client.compasses_show_position;
 
-import svenhjol.charmony.scaffold.base.Mod;
-import svenhjol.charmony.scaffold.base.ModFeature;
-import svenhjol.charmony.scaffold.annotations.Configurable;
-import svenhjol.charmony.scaffold.annotations.Feature;
-import svenhjol.charmony.scaffold.enums.Side;
+import svenhjol.charmony.core.base.Mod;
+import svenhjol.charmony.core.base.SidedFeature;
+import svenhjol.charmony.core.annotations.Configurable;
+import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.core.enums.Side;
 
-@Feature(side = Side.Client, description = """
+@FeatureDefinition(side = Side.Client, description = """
     Shows the direction that the player is facing, the position coordinates and current biome when holding a compass.""")
-public final class CompassesShowPosition extends ModFeature {
+public final class CompassesShowPosition extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
     public final Providers providers;

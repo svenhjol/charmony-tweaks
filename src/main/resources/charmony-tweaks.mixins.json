@@ -8,11 +8,17 @@
     "defaultRequire": 1
   },
   "client": [
+    "features.burning_reduced_view_blocking.ScreenEffectRendererMixin",
+    "features.item_tidying.AbstractContainerScreenMixin",
     "features.repair_cost_visible.AnvilScreenMixin",
+    "features.shields_reduced_view_blocking.ItemInHandRendererMixin",
     "features.spyglass_scope_hiding.GuiMixin",
     "features.telemetry.ClientTelemetryManagerMixin",
     "features.telemetry.DisableToastMixin",
     "features.telemetry.RealmsAvailabilityMixin",
-    "features.telemetry.WorldOpenFlowsMixin"
+    "features.telemetry.WorldOpenFlowsMixin",
+    "features.totem_emergency_swap.InventoryScreenMixin",
+    "features.totem_emergency_swap.KeyMappingMixin",
+    "registry.hud_item_scaling.GuiGraphicsMixin"
   ]
 }

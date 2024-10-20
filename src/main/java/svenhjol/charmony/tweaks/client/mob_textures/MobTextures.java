@@ -1,14 +1,14 @@
 package svenhjol.charmony.tweaks.client.mob_textures;
 
-import svenhjol.charmony.scaffold.base.Mod;
-import svenhjol.charmony.scaffold.base.ModFeature;
-import svenhjol.charmony.scaffold.annotations.Configurable;
-import svenhjol.charmony.scaffold.annotations.Feature;
-import svenhjol.charmony.scaffold.enums.Side;
+import svenhjol.charmony.core.base.Mod;
+import svenhjol.charmony.core.base.SidedFeature;
+import svenhjol.charmony.core.annotations.Configurable;
+import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.core.enums.Side;
 
-@Feature(side = Side.Client, description = """
+@FeatureDefinition(side = Side.Client, description = """
     Mobs may spawn with alternative textures.""")
-public final class MobTextures extends ModFeature {
+public final class MobTextures extends SidedFeature {
     public final Handlers handlers;
     public final Registers registers;
 
