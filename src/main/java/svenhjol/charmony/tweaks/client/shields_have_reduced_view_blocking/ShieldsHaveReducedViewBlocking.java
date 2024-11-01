@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.shields_reduced_view_blocking;
+package svenhjol.charmony.tweaks.client.shields_have_reduced_view_blocking;
 
 import net.minecraft.util.Mth;
 import svenhjol.charmony.core.annotations.Configurable;
@@ -10,7 +10,7 @@ import svenhjol.charmony.tweaks.Tweaks;
 
 @FeatureDefinition(side = Side.Client, description = """
     Reduces the size and position of the shield to prevent blocking the player's view.""")
-public class ShieldsReducedViewBlocking extends SidedFeature {
+public class ShieldsHaveReducedViewBlocking extends SidedFeature {
     public final Handlers handlers;
 
     @Configurable(
@@ -27,13 +27,13 @@ public class ShieldsReducedViewBlocking extends SidedFeature {
     )
     private static double scaledSize = 0.9d;
 
-    public ShieldsReducedViewBlocking(Mod mod) {
+    public ShieldsHaveReducedViewBlocking(Mod mod) {
         super(mod);
         handlers = new Handlers(this);
     }
 
-    public static ShieldsReducedViewBlocking feature() {
-        return Tweaks.instance().feature(ShieldsReducedViewBlocking.class);
+    public static ShieldsHaveReducedViewBlocking feature() {
+        return Tweaks.instance().feature(ShieldsHaveReducedViewBlocking.class);
     }
 
     public double verticalPosition() {

@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
+package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_book_on_hover;
 
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
@@ -19,8 +19,8 @@ import svenhjol.charmony.core.base.Setup;
 import java.util.Optional;
 import java.util.OptionalInt;
 
-public class Handlers extends Setup<ChiseledBookshelvesLabelling> {
-    public Handlers(ChiseledBookshelvesLabelling feature) {
+public class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
+    public Handlers(ChiseledBookshelvesShowBookOnHover feature) {
         super(feature);
     }
 

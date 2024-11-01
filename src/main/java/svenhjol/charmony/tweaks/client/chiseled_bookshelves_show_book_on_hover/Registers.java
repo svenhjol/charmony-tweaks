@@ -1,13 +1,13 @@
-package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
+package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_book_on_hover;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import svenhjol.charmony.core.base.Setup;
 
-public class Registers extends Setup<ChiseledBookshelvesLabelling> {
+public class Registers extends Setup<ChiseledBookshelvesShowBookOnHover> {
     public final HudRenderer hudRenderer;
 
-    public Registers(ChiseledBookshelvesLabelling feature) {
+    public Registers(ChiseledBookshelvesShowBookOnHover feature) {
         super(feature);
         this.hudRenderer = new HudRenderer();
     }
