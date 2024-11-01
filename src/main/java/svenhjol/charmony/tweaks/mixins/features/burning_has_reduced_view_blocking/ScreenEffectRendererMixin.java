@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.burning_reduced_view_blocking;
+package svenhjol.charmony.tweaks.mixins.features.burning_has_reduced_view_blocking;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import svenhjol.charmony.tweaks.client.burning_reduced_view_blocking.BurningReducedViewBlocking;
+import svenhjol.charmony.tweaks.client.burning_has_reduced_view_blocking.BurningHasReducedViewBlocking;
 
 @Mixin(ScreenEffectRenderer.class)
 public class ScreenEffectRendererMixin {
@@ -19,6 +19,6 @@ public class ScreenEffectRendererMixin {
         )
     )
     private static void hookRenderFire(Minecraft minecraft, PoseStack poseStack, CallbackInfo ci) {
-        BurningReducedViewBlocking.feature().handlers.changeFireSize(poseStack);
+        BurningHasReducedViewBlocking.feature().handlers.changeFireSize(poseStack);
     }
 }

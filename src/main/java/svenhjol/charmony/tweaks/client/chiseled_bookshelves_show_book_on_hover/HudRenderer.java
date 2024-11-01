@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.chiseled_bookshelves_labelling;
+package svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_book_on_hover;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;
@@ -82,7 +82,7 @@ public class HudRenderer extends BaseHudRenderer {
         scaleX = scaleY = 1.0f;
     }
 
-    private ChiseledBookshelvesLabelling feature() {
-        return ChiseledBookshelvesLabelling.feature();
+    private ChiseledBookshelvesShowBookOnHover feature() {
+        return ChiseledBookshelvesShowBookOnHover.feature();
     }
 }

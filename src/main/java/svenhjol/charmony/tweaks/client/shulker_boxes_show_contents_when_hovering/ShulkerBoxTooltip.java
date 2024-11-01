@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.shulker_boxes_show_when_hovering;
+package svenhjol.charmony.tweaks.client.shulker_boxes_show_contents_when_hovering;
 
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;

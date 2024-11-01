@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.shields_reduced_view_blocking;
+package svenhjol.charmony.tweaks.mixins.features.shields_have_reduced_view_blocking;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import svenhjol.charmony.tweaks.client.shields_reduced_view_blocking.ShieldsReducedViewBlocking;
+import svenhjol.charmony.tweaks.client.shields_have_reduced_view_blocking.ShieldsHaveReducedViewBlocking;
 
 @Mixin(ItemInHandRenderer.class)
 public class ItemInHandRendererMixin {
@@ -24,7 +24,7 @@ public class ItemInHandRendererMixin {
     )
     private void hookRenderArmWithItem(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci) {
         if (itemStack.is(Items.SHIELD)) {
-            ShieldsReducedViewBlocking.feature().handlers.changeShieldSize(poseStack);
+            ShieldsHaveReducedViewBlocking.feature().handlers.changeShieldSize(poseStack);
         }
     }
 }

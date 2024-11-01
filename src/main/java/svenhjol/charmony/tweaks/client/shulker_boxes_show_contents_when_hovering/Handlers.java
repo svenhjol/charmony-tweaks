@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.shulker_boxes_show_when_hovering;
+package svenhjol.charmony.tweaks.client.shulker_boxes_show_contents_when_hovering;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class Handlers extends Setup<ShulkerBoxesShowWhenHovering> {
-    public Handlers(ShulkerBoxesShowWhenHovering feature) {
+public class Handlers extends Setup<ShulkerBoxesShowContentsWhenHovering> {
+    public Handlers(ShulkerBoxesShowContentsWhenHovering feature) {
         super(feature);
     }
 

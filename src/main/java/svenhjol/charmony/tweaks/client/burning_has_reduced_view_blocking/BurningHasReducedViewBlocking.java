@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.client.burning_reduced_view_blocking;
+package svenhjol.charmony.tweaks.client.burning_has_reduced_view_blocking;
 
 import net.minecraft.util.Mth;
 import svenhjol.charmony.core.annotations.Configurable;
@@ -9,7 +9,7 @@ import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
 
 @FeatureDefinition(side = Side.Client)
-public final class BurningReducedViewBlocking extends SidedFeature {
+public final class BurningHasReducedViewBlocking extends SidedFeature {
     public final Handlers handlers;
 
     @Configurable(
@@ -26,13 +26,13 @@ public final class BurningReducedViewBlocking extends SidedFeature {
     )
     private static double scaledSize = 0.55d;
 
-    public BurningReducedViewBlocking(Mod mod) {
+    public BurningHasReducedViewBlocking(Mod mod) {
         super(mod);
         handlers = new Handlers(this);
     }
 
-    public static BurningReducedViewBlocking feature() {
-        return Tweaks.instance().feature(BurningReducedViewBlocking.class);
+    public static BurningHasReducedViewBlocking feature() {
+        return Tweaks.instance().feature(BurningHasReducedViewBlocking.class);
     }
 
     public double verticalPosition() {
