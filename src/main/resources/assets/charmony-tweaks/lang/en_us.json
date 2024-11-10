@@ -1,6 +1,8 @@
 {
   "advancements.charmony-tweaks.tweaks.title": "Tweaks",
   "advancements.charmony-tweaks.tweaks.description": "Small changes to vanilla behaviors",
+  "advancements.charmony-tweaks.negated_animal_damage.title": "Save the Animals",
+  "advancements.charmony-tweaks.negated_animal_damage.description": "Prevent direct player damage to a tamed animal",
   "advancements.charmony-tweaks.ground_animal_armor.title": "Recycle Armor",
   "advancements.charmony-tweaks.ground_animal_armor.description": "Use horse or wolf armor on a grindstone to return leather, scute, gold, iron or diamond",
   "gui.charmony-tweaks.compass.biome": "%s biome",

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2
+
+- Add AnimalDamageImmunity.
+
 ## 1.2.1
 
 - Add AnimalArmorGrinding.

@@ -20,5 +20,8 @@
     "client.features.totem_emergency_swap.InventoryScreenMixin",
     "client.features.totem_emergency_swap.KeyMappingMixin",
     "client.registry.hud_item_scaling.GuiGraphicsMixin"
+  ],
+  "mixins": [
+    "common.animal_damage_immunity.LivingEntityMixin"
   ]
 }
