@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.telemetry;
+package svenhjol.charmony.tweaks.mixins.client.features.telemetry;
 
 import com.mojang.serialization.Lifecycle;
 import net.minecraft.client.Minecraft;

@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.repair_cost_visible;
+package svenhjol.charmony.tweaks.mixins.client.features.repair_cost_visible;
 
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import net.minecraft.client.gui.screens.inventory.ItemCombinerScreen;

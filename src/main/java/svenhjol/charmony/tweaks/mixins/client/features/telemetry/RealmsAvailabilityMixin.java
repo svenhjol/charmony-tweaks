@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.telemetry;
+package svenhjol.charmony.tweaks.mixins.client.features.telemetry;
 
 import com.mojang.realmsclient.RealmsAvailability;
 import org.spongepowered.asm.mixin.Mixin;

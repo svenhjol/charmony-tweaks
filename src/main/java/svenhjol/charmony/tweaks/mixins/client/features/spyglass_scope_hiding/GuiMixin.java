@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.spyglass_scope_hiding;
+package svenhjol.charmony.tweaks.mixins.client.features.spyglass_scope_hiding;
 
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;

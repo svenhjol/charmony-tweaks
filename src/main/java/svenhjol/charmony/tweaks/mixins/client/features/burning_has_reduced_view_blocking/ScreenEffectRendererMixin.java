@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.burning_has_reduced_view_blocking;
+package svenhjol.charmony.tweaks.mixins.client.features.burning_has_reduced_view_blocking;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;

@@ -17,7 +17,7 @@ public class Handlers extends Setup<TotemEmergencySwap> {
 
     /**
      * Callback from mixin to prevent inventory screen from being rendered.
-     * @see svenhjol.charmony.tweaks.mixins.features.totem_emergency_swap.InventoryScreenMixin
+     * @see svenhjol.charmony.tweaks.mixins.client.features.totem_emergency_swap.InventoryScreenMixin
      */
     public boolean preventInventoryRendering() {
         return swapTicks > 0;
@@ -25,7 +25,7 @@ public class Handlers extends Setup<TotemEmergencySwap> {
 
     /**
      * Callback from mixin to prevent interruption of current keybinds.
-     * @see svenhjol.charmony.tweaks.mixins.features.totem_emergency_swap.KeyMappingMixin
+     * @see svenhjol.charmony.tweaks.mixins.client.features.totem_emergency_swap.KeyMappingMixin
      */
     public boolean preventKeybindReleasing() {
         return swapTicks > 0;

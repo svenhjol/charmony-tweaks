@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.totem_emergency_swap;
+package svenhjol.charmony.tweaks.mixins.client.features.totem_emergency_swap;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;

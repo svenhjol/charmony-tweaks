@@ -8,17 +8,17 @@
     "defaultRequire": 1
   },
   "client": [
-    "features.burning_has_reduced_view_blocking.ScreenEffectRendererMixin",
-    "features.item_tidying.AbstractContainerScreenMixin",
-    "features.repair_cost_visible.AnvilScreenMixin",
-    "features.shields_have_reduced_view_blocking.ItemInHandRendererMixin",
-    "features.spyglass_scope_hiding.GuiMixin",
-    "features.telemetry.ClientTelemetryManagerMixin",
-    "features.telemetry.DisableToastMixin",
-    "features.telemetry.RealmsAvailabilityMixin",
-    "features.telemetry.WorldOpenFlowsMixin",
-    "features.totem_emergency_swap.InventoryScreenMixin",
-    "features.totem_emergency_swap.KeyMappingMixin",
-    "registry.hud_item_scaling.GuiGraphicsMixin"
+    "client.features.burning_has_reduced_view_blocking.ScreenEffectRendererMixin",
+    "client.features.item_tidying.AbstractContainerScreenMixin",
+    "client.features.repair_cost_visible.AnvilScreenMixin",
+    "client.features.shields_have_reduced_view_blocking.ItemInHandRendererMixin",
+    "client.features.spyglass_scope_hiding.GuiMixin",
+    "client.features.telemetry.ClientTelemetryManagerMixin",
+    "client.features.telemetry.DisableToastMixin",
+    "client.features.telemetry.RealmsAvailabilityMixin",
+    "client.features.telemetry.WorldOpenFlowsMixin",
+    "client.features.totem_emergency_swap.InventoryScreenMixin",
+    "client.features.totem_emergency_swap.KeyMappingMixin",
+    "client.registry.hud_item_scaling.GuiGraphicsMixin"
   ]
 }

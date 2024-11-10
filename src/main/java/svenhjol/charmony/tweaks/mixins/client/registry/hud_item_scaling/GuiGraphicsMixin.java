@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.registry.hud_item_scaling;
+package svenhjol.charmony.tweaks.mixins.client.registry.hud_item_scaling;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.GuiGraphics;

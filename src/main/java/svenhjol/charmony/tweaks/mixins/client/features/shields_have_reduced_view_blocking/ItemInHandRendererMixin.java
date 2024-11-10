@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.shields_have_reduced_view_blocking;
+package svenhjol.charmony.tweaks.mixins.client.features.shields_have_reduced_view_blocking;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.player.AbstractClientPlayer;

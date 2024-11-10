@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.item_tidying;
+package svenhjol.charmony.tweaks.mixins.client.features.item_tidying;
 
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import org.spongepowered.asm.mixin.Mixin;

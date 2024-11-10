@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.features.telemetry;
+package svenhjol.charmony.tweaks.mixins.client.features.telemetry;
 
 import net.minecraft.client.telemetry.ClientTelemetryManager;
 import net.minecraft.client.telemetry.TelemetryEventSender;
