@@ -4,7 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helper.AdvancementHelper;
 
-public class Advancements extends Setup<AnimalDamageImmunity> {
+public final class Advancements extends Setup<AnimalDamageImmunity> {
     public Advancements(AnimalDamageImmunity feature) {
         super(feature);
     }

@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class Handlers extends Setup<ItemTidying> {
+public final class Handlers extends Setup<ItemTidying> {
     private static final int LEFT = 159;
     private static final int TOP = 12;
 

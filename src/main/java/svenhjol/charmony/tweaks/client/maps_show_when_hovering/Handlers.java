@@ -15,7 +15,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public class Handlers extends Setup<MapsShowWhenHovering> {
+public final class Handlers extends Setup<MapsShowWhenHovering> {
     public static final RenderType MAP_BACKGROUND = RenderType.text(ResourceLocation.parse("textures/map/map_background.png"));
     private final MapRenderState mapRenderState = new MapRenderState();
 

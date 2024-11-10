@@ -10,7 +10,7 @@ import svenhjol.charmony.tweaks.Tweaks;
 
 @FeatureDefinition(side = Side.Client, description = """
     Reduces the size and position of the shield to prevent blocking the player's view.""")
-public class ShieldsHaveReducedViewBlocking extends SidedFeature {
+public final class ShieldsHaveReducedViewBlocking extends SidedFeature {
     public final Handlers handlers;
 
     @Configurable(

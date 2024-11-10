@@ -14,7 +14,7 @@ import svenhjol.charmony.tweaks.client.mob_textures.custom_renderers.*;
 
 import java.util.*;
 
-public class Registers extends Setup<MobTextures> {
+public final class Registers extends Setup<MobTextures> {
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> chickens = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> cows = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> dolphins = Pair.of(new ArrayList<>(), new ArrayList<>());

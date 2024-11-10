@@ -8,7 +8,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
 
-public class Handlers extends Setup<TotemEmergencySwap> {
+public final class Handlers extends Setup<TotemEmergencySwap> {
     private int swapTicks;
 
     public Handlers(TotemEmergencySwap feature) {

@@ -7,7 +7,7 @@ import svenhjol.charmony.core.events.GrindstoneEvents;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Registers extends Setup<AnimalArmorGrinding> {
+public final class Registers extends Setup<AnimalArmorGrinding> {
     public final Map<ItemLike, ItemLike> recipes = new HashMap<>();
 
     public Registers(AnimalArmorGrinding feature) {

@@ -7,7 +7,7 @@ import net.minecraft.client.KeyMapping;
 import org.lwjgl.glfw.GLFW;
 import svenhjol.charmony.core.base.Setup;
 
-public class Registers extends Setup<CraftingTableNearby> {
+public final class Registers extends Setup<CraftingTableNearby> {
     public final KeyMapping openCraftingKey;
     public final HudRenderer hudRenderer;
 

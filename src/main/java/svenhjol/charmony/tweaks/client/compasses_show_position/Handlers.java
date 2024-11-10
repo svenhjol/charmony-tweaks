@@ -10,7 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
 
-public class Handlers extends Setup<CompassesShowPosition> {
+public final class Handlers extends Setup<CompassesShowPosition> {
     public Handlers(CompassesShowPosition feature) {
         super(feature);
     }

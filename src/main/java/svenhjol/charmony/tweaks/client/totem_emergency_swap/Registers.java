@@ -6,7 +6,7 @@ import net.minecraft.client.KeyMapping;
 import org.lwjgl.glfw.GLFW;
 import svenhjol.charmony.core.base.Setup;
 
-public class Registers extends Setup<TotemEmergencySwap> {
+public final class Registers extends Setup<TotemEmergencySwap> {
     public final KeyMapping swapTotemKey;
 
     public Registers(TotemEmergencySwap feature) {

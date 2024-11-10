@@ -9,7 +9,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public class Providers extends Setup<AnimalArmorGrinding> implements GrindableItemProvider {
+public final class Providers extends Setup<AnimalArmorGrinding> implements GrindableItemProvider {
     public Providers(AnimalArmorGrinding feature) {
         super(feature);
         Api.registerProvider(this); // Must register this provider with the Api

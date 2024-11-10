@@ -19,7 +19,7 @@ import svenhjol.charmony.core.base.Setup;
 import java.util.Optional;
 import java.util.OptionalInt;
 
-public class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
+public final class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
     public Handlers(ChiseledBookshelvesShowBookOnHover feature) {
         super(feature);
     }

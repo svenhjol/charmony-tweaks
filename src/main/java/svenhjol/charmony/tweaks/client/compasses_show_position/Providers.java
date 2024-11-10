@@ -8,7 +8,7 @@ import svenhjol.charmony.core.base.Setup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Providers extends Setup<CompassesShowPosition> {
+public final class Providers extends Setup<CompassesShowPosition> {
     public final List<CompassOverlayItem> overlayItems = new ArrayList<>();
 
     public Providers(CompassesShowPosition feature) {

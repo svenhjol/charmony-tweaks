@@ -14,7 +14,7 @@ import svenhjol.charmony.core.base.Setup;
 import java.util.List;
 import java.util.UUID;
 
-public class Handlers extends Setup<MobTextures> {
+public final class Handlers extends Setup<MobTextures> {
     public Handlers(MobTextures feature) {
         super(feature);
     }

@@ -13,7 +13,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.Optional;
 
-public class Handlers extends Setup<CraftingTableNearby> {
+public final class Handlers extends Setup<CraftingTableNearby> {
     private BlockPos craftingTablePos;
 
     public Handlers(CraftingTableNearby feature) {

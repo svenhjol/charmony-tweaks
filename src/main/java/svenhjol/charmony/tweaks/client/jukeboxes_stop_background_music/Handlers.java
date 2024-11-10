@@ -19,7 +19,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import svenhjol.charmony.core.base.Setup;
 
 @SuppressWarnings("unused")
-public class Handlers extends Setup<JukeboxesStopBackgroundMusic> {
+public final class Handlers extends Setup<JukeboxesStopBackgroundMusic> {
     private static final int CHECK_TICKS = 10;
     public SoundInstance musicToStop = null;
     public int ticksBeforeStop = 0;

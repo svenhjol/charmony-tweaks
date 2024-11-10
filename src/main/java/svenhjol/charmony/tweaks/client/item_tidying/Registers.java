@@ -9,7 +9,7 @@ import svenhjol.charmony.core.events.RenderScreenCallback;
 import svenhjol.charmony.core.events.SetupScreenCallback;
 import svenhjol.charmony.tweaks.Tweaks;
 
-public class Registers extends Setup<ItemTidying> {
+public final class Registers extends Setup<ItemTidying> {
     public final WidgetSprites tidyButtonSprite;
     public final KeyMapping tidyInventoryKey;
 
