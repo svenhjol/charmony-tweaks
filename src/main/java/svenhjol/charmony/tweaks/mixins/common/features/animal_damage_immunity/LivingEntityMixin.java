@@ -1,4 +1,4 @@
-package svenhjol.charmony.tweaks.mixins.common.animal_damage_immunity;
+package svenhjol.charmony.tweaks.mixins.common.features.animal_damage_immunity;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
