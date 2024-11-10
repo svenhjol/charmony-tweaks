@@ -22,6 +22,8 @@
     "client.registry.hud_item_scaling.GuiGraphicsMixin"
   ],
   "mixins": [
-    "common.features.animal_damage_immunity.LivingEntityMixin"
+    "common.features.animal_damage_immunity.LivingEntityMixin",
+    "common.features.animal_reviving.LivingEntityMixin",
+    "common.features.animal_reviving.NameTagItemMixin"
   ]
 }

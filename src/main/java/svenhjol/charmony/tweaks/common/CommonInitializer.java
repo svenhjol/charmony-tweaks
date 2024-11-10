@@ -5,6 +5,7 @@ import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
 import svenhjol.charmony.tweaks.common.animal_armor_grinding.AnimalArmorGrinding;
 import svenhjol.charmony.tweaks.common.animal_damage_immunity.AnimalDamageImmunity;
+import svenhjol.charmony.tweaks.common.animal_reviving.AnimalReviving;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -16,6 +17,7 @@ public class CommonInitializer implements ModInitializer {
         var tweaks = Tweaks.instance();
         tweaks.addFeature(AnimalArmorGrinding.class);
         tweaks.addFeature(AnimalDamageImmunity.class);
+        tweaks.addFeature(AnimalReviving.class);
         tweaks.run(Side.Common);
     }
 }
