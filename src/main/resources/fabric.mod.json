@@ -10,13 +10,16 @@
   ],
   "icon": "assets/charmony-tweaks/textures/gui/sprites/icon.png",
   "license": "MIT",
-  "environment": "client",
+  "environment": "*",
   "mixins": [
     "charmony-tweaks.mixins.json"
   ],
   "accessWidener": "charmony-tweaks.accesswidener",
 
   "entrypoints": {
+    "main": [
+      "svenhjol.charmony.tweaks.common.CommonInitializer"
+    ],
     "client": [
       "svenhjol.charmony.tweaks.client.ClientInitializer"
     ]

@@ -1,0 +1,24 @@
+package svenhjol.charmony.tweaks.common.animal_armor_grinding;
+
+import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.core.base.Mod;
+import svenhjol.charmony.core.base.SidedFeature;
+import svenhjol.charmony.core.enums.Side;
+
+@FeatureDefinition(side = Side.Common, description = """
+    Animal armor returns a single ingot, leather, scute or diamond when used on the grindstone.""")
+public final class AnimalArmorGrinding extends SidedFeature {
+    public final Registers registers;
+    public final Handlers handlers;
+    public final Advancements advancements;
+    public final Providers providers;
+
+    public AnimalArmorGrinding(Mod mod) {
+        super(mod);
+
+        registers = new Registers(this);
+        handlers = new Handlers(this);
+        advancements = new Advancements(this);
+        providers = new Providers(this);
+    }
+}

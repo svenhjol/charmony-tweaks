@@ -1,4 +1,8 @@
 {
+  "advancements.charmony-tweaks.tweaks.title": "Tweaks",
+  "advancements.charmony-tweaks.tweaks.description": "Small changes to vanilla behaviors",
+  "advancements.charmony-tweaks.ground_animal_armor.title": "Recycle Armor",
+  "advancements.charmony-tweaks.ground_animal_armor.description": "Use horse or wolf armor on a grindstone to return leather, scute, gold, iron or diamond",
   "gui.charmony-tweaks.compass.biome": "%s biome",
   "gui.charmony-tweaks.compass.coords": "X: %s   Y: %s   Z: %s",
   "gui.charmony-tweaks.compass.coords_only_xz": "X: %s   Z: %s",
