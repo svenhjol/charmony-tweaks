@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+- Add AnimalArmorGrinding.
+
 ## 1.2.0
 
 - Relabel some features.
