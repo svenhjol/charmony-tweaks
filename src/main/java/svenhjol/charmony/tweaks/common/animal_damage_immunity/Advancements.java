@@ -9,7 +9,7 @@ public final class Advancements extends Setup<AnimalDamageImmunity> {
         super(feature);
     }
     
-    public void negatedAnimalDamage(ServerPlayer player) {
-        AdvancementHelper.trigger("negated_animal_damage", player);
+    public void preventedAnimalDamage(ServerPlayer player) {
+        AdvancementHelper.trigger("prevented_animal_damage", player);
     }
 }

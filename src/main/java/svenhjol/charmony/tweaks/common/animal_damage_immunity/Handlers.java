@@ -30,7 +30,7 @@ public final class Handlers extends Setup<AnimalDamageImmunity> {
 
             if (player != null && !player.getAbilities().instabuild && isPet(entity)) {
                 if (player instanceof ServerPlayer serverPlayer) {
-                    feature().advancements.negatedAnimalDamage(serverPlayer);
+                    feature().advancements.preventedAnimalDamage(serverPlayer);
                 }
                 return false;
             }
