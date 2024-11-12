@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.3
+
+- Add AnimalReviving.
+- Add CampfiresHealPlayers.
+- Add CropFeatherFalling.
+- Add CropReplanting.
+- Description for "burning reduced view blocking"
+
 ## 1.2.2
 
 - Add AnimalDamageImmunity.
