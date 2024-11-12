@@ -3,11 +3,11 @@ package svenhjol.charmony.tweaks.common;
 import net.fabricmc.api.ModInitializer;
 import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
-import svenhjol.charmony.tweaks.common.animal_armor_grinding.AnimalArmorGrinding;
-import svenhjol.charmony.tweaks.common.animal_damage_immunity.AnimalDamageImmunity;
-import svenhjol.charmony.tweaks.common.animal_reviving.AnimalReviving;
-import svenhjol.charmony.tweaks.common.campfires_heal_players.CampfiresHealPlayers;
-import svenhjol.charmony.tweaks.common.crop_feather_falling.CropFeatherFalling;
+import svenhjol.charmony.tweaks.common.features.animal_armor_grinding.AnimalArmorGrinding;
+import svenhjol.charmony.tweaks.common.features.animal_damage_immunity.AnimalDamageImmunity;
+import svenhjol.charmony.tweaks.common.features.animal_reviving.AnimalReviving;
+import svenhjol.charmony.tweaks.common.features.campfires_heal_players.CampfiresHealPlayers;
+import svenhjol.charmony.tweaks.common.features.crop_feather_falling.CropFeatherFalling;
 
 public class CommonInitializer implements ModInitializer {
     @Override

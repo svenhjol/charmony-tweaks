@@ -3,20 +3,20 @@ package svenhjol.charmony.tweaks.client;
 import net.fabricmc.api.ClientModInitializer;
 import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
-import svenhjol.charmony.tweaks.client.burning_has_reduced_view_blocking.BurningHasReducedViewBlocking;
-import svenhjol.charmony.tweaks.client.chiseled_bookshelves_show_book_on_hover.ChiseledBookshelvesShowBookOnHover;
-import svenhjol.charmony.tweaks.client.compasses_show_position.CompassesShowPosition;
-import svenhjol.charmony.tweaks.client.crafting_table_nearby.CraftingTableNearby;
-import svenhjol.charmony.tweaks.client.item_tidying.ItemTidying;
-import svenhjol.charmony.tweaks.client.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
-import svenhjol.charmony.tweaks.client.maps_show_when_hovering.MapsShowWhenHovering;
-import svenhjol.charmony.tweaks.client.mob_textures.MobTextures;
-import svenhjol.charmony.tweaks.client.repair_cost_visible.RepairCostVisible;
-import svenhjol.charmony.tweaks.client.shields_have_reduced_view_blocking.ShieldsHaveReducedViewBlocking;
-import svenhjol.charmony.tweaks.client.shulker_boxes_show_contents_when_hovering.ShulkerBoxesShowContentsWhenHovering;
-import svenhjol.charmony.tweaks.client.spyglass_scope_hiding.SpyglassScopeHiding;
-import svenhjol.charmony.tweaks.client.telemetry.Telemetry;
-import svenhjol.charmony.tweaks.client.totem_emergency_swap.TotemEmergencySwap;
+import svenhjol.charmony.tweaks.client.features.burning_has_reduced_view_blocking.BurningHasReducedViewBlocking;
+import svenhjol.charmony.tweaks.client.features.chiseled_bookshelves_show_book_on_hover.ChiseledBookshelvesShowBookOnHover;
+import svenhjol.charmony.tweaks.client.features.compasses_show_position.CompassesShowPosition;
+import svenhjol.charmony.tweaks.client.features.crafting_table_nearby.CraftingTableNearby;
+import svenhjol.charmony.tweaks.client.features.item_tidying.ItemTidying;
+import svenhjol.charmony.tweaks.client.features.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
+import svenhjol.charmony.tweaks.client.features.maps_show_when_hovering.MapsShowWhenHovering;
+import svenhjol.charmony.tweaks.client.features.mob_textures.MobTextures;
+import svenhjol.charmony.tweaks.client.features.repair_cost_visible.RepairCostVisible;
+import svenhjol.charmony.tweaks.client.features.shields_have_reduced_view_blocking.ShieldsHaveReducedViewBlocking;
+import svenhjol.charmony.tweaks.client.features.shulker_boxes_show_contents_when_hovering.ShulkerBoxesShowContentsWhenHovering;
+import svenhjol.charmony.tweaks.client.features.spyglass_scope_hiding.SpyglassScopeHiding;
+import svenhjol.charmony.tweaks.client.features.telemetry.Telemetry;
+import svenhjol.charmony.tweaks.client.features.totem_emergency_swap.TotemEmergencySwap;
 
 public class ClientInitializer implements ClientModInitializer {
     @Override

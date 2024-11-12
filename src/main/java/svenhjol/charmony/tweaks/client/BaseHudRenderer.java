@@ -80,7 +80,7 @@ public abstract class BaseHudRenderer {
 
     /**
      * Call all registered hud renderers with the currently rendering stack and layer.
-     * @see svenhjol.charmony.tweaks.mixins.client.registry.hud_item_scaling.GuiGraphicsMixin
+     * @see svenhjol.charmony.tweaks.client.mixins.hud_item_scaling.GuiGraphicsMixin
      */
     public static void scaleItemsCallback(ItemStack stack, PoseStack pose) {
         REGISTERED.forEach(hud -> hud.scaleItem(stack, pose));

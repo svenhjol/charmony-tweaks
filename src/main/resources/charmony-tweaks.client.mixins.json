@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "package": "svenhjol.charmony.tweaks.client.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "${refmap_file}",
+  "plugin": "svenhjol.charmony.tweaks.client.mixins.ClientMixinConfig",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "burning_has_reduced_view_blocking.ScreenEffectRendererMixin",
+    "hud_item_scaling.GuiGraphicsMixin",
+    "item_tidying.AbstractContainerScreenMixin",
+    "repair_cost_visible.AnvilScreenMixin",
+    "shields_have_reduced_view_blocking.ItemInHandRendererMixin",
+    "spyglass_scope_hiding.GuiMixin",
+    "telemetry.ClientTelemetryManagerMixin",
+    "telemetry.DisableToastMixin",
+    "telemetry.RealmsAvailabilityMixin",
+    "telemetry.WorldOpenFlowsMixin",
+    "totem_emergency_swap.InventoryScreenMixin",
+    "totem_emergency_swap.KeyMappingMixin"
+  ]
+}

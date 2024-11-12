@@ -12,7 +12,8 @@
   "license": "MIT",
   "environment": "*",
   "mixins": [
-    "charmony-tweaks.mixins.json"
+    "charmony-tweaks.client.mixins.json",
+    "charmony-tweaks.common.mixins.json"
   ],
   "accessWidener": "charmony-tweaks.accesswidener",
 
