@@ -8,6 +8,7 @@ import svenhjol.charmony.tweaks.common.features.animal_damage_immunity.AnimalDam
 import svenhjol.charmony.tweaks.common.features.animal_reviving.AnimalReviving;
 import svenhjol.charmony.tweaks.common.features.campfires_heal_players.CampfiresHealPlayers;
 import svenhjol.charmony.tweaks.common.features.crop_feather_falling.CropFeatherFalling;
+import svenhjol.charmony.tweaks.common.features.crop_replanting.CropReplanting;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -22,6 +23,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(AnimalReviving.class);
         tweaks.addFeature(CampfiresHealPlayers.class);
         tweaks.addFeature(CropFeatherFalling.class);
+        tweaks.addFeature(CropReplanting.class);
         tweaks.run(Side.Common);
     }
 }
