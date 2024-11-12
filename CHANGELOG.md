@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.4
+
+- Add DeepslateDungeons.
+
 ## 1.2.3
 
 - Add AnimalReviving.

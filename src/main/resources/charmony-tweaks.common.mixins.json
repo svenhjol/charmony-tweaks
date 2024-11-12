@@ -12,6 +12,7 @@
     "animal_reviving.LivingEntityMixin",
     "animal_reviving.NameTagItemMixin",
     "campfires_heal_players.CampfireBlockEntityMixin",
-    "crop_feather_falling.FarmBlockMixin"
+    "crop_feather_falling.FarmBlockMixin",
+    "deepslate_dungeons.MonsterRoomFeatureMixin"
   ]
 }
