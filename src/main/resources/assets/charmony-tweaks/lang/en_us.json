@@ -1,6 +1,8 @@
 {
   "advancements.charmony-tweaks.tweaks.title": "Tweaks",
   "advancements.charmony-tweaks.tweaks.description": "Small changes to vanilla behaviors",
+  "advancements.charmony-tweaks.extracted_enchantment.title": "Extraction",
+  "advancements.charmony-tweaks.extracted_enchantment.description": "Use a book with an enchanted item on a grindstone to extract the item's enchantments",
   "advancements.charmony-tweaks.ground_animal_armor.title": "Recycle Armor",
   "advancements.charmony-tweaks.ground_animal_armor.description": "Use horse or wolf armor on a grindstone to return leather, scute, gold, iron or diamond",
   "advancements.charmony-tweaks.healed_near_campfire.title": "Rested",
