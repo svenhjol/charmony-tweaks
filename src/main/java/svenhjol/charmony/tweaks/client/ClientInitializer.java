@@ -8,6 +8,7 @@ import svenhjol.charmony.tweaks.client.features.chiseled_bookshelves_show_book_o
 import svenhjol.charmony.tweaks.client.features.compasses_show_position.CompassesShowPosition;
 import svenhjol.charmony.tweaks.client.features.crafting_table_nearby.CraftingTableNearby;
 import svenhjol.charmony.tweaks.client.features.grindstone_disenchanting.GrindstoneDisenchanting;
+import svenhjol.charmony.tweaks.client.features.item_frame_hiding.ItemFrameHiding;
 import svenhjol.charmony.tweaks.client.features.item_tidying.ItemTidying;
 import svenhjol.charmony.tweaks.client.features.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
 import svenhjol.charmony.tweaks.client.features.maps_show_when_hovering.MapsShowWhenHovering;
@@ -32,6 +33,7 @@ public class ClientInitializer implements ClientModInitializer {
         tweaks.addFeature(CompassesShowPosition.class);
         tweaks.addFeature(CraftingTableNearby.class);
         tweaks.addFeature(GrindstoneDisenchanting.class);
+        tweaks.addFeature(ItemFrameHiding.class);
         tweaks.addFeature(ItemTidying.class);
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
         tweaks.addFeature(MapsShowWhenHovering.class);

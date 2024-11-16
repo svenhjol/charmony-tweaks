@@ -1,6 +1,10 @@
 accessWidener v2 named
 
+accessible field net/minecraft/client/particle/Particle friction F
+accessible field net/minecraft/client/particle/Particle speedUpWhenYMotionIsBlocked Z
 accessible method net/minecraft/core/component/DataComponents register (Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/minecraft/core/component/DataComponentType;
+accessible method net/minecraft/client/particle/Particle setAlpha (F)V
+accessible class net/minecraft/client/particle/ParticleEngine$SpriteParticleRegistration
 
 # AnimalReviving
 accessible field net/minecraft/world/entity/animal/horse/AbstractHorse inventory Lnet/minecraft/world/SimpleContainer;

@@ -11,6 +11,7 @@ import svenhjol.charmony.tweaks.common.features.crop_feather_falling.CropFeather
 import svenhjol.charmony.tweaks.common.features.crop_replanting.CropReplanting;
 import svenhjol.charmony.tweaks.common.features.deepslate_dungeons.DeepslateDungeons;
 import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.GrindstoneDisenchanting;
+import svenhjol.charmony.tweaks.common.features.item_frame_hiding.ItemFrameHiding;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -28,6 +29,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(CropReplanting.class);
         tweaks.addFeature(DeepslateDungeons.class);
         tweaks.addFeature(GrindstoneDisenchanting.class);
+        tweaks.addFeature(ItemFrameHiding.class);
         tweaks.run(Side.Common);
     }
 }
