@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.5
+
+- Add GrindstoneDisenchanting.
+- Add ItemFrameHiding.
+- Add ItemRepairing.
+
 ## 1.2.4
 
 - Add DeepslateDungeons.
