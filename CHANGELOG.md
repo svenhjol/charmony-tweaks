@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+
+- Build for 1.21.4.
+- Fix broken refs in SnowGolem texture and renderer mixin.
+
 ## 1.2.5
 
 - Add GrindstoneDisenchanting.
