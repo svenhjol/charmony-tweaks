@@ -19,6 +19,8 @@
   "advancements.charmony-tweaks.repaired_trident.description": "Use prismarine shards to repair a Trident",
   "advancements.charmony-tweaks.replanted_crops.title": "Farmer Skills",
   "advancements.charmony-tweaks.replanted_crops.description": "Use a hoe to simultaneously harvest and replant a crop",
+  "advancements.charmony-tweaks.restocked_current_item.title": "Free Refill",
+  "advancements.charmony-tweaks.restocked_current_item.description": "Restock your current item when it runs out",
   "advancements.charmony-tweaks.revived_animal.title": "Second Chance",
   "advancements.charmony-tweaks.revived_animal.description": "Revive a tamed animal from its nametag using a Totem of Undying",
   "gui.charmony-tweaks.compass.biome": "%s biome",

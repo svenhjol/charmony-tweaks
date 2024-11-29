@@ -13,6 +13,7 @@ import svenhjol.charmony.tweaks.common.features.deepslate_dungeons.DeepslateDung
 import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.GrindstoneDisenchanting;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.ItemFrameHiding;
 import svenhjol.charmony.tweaks.common.features.item_repairing.ItemRepairing;
+import svenhjol.charmony.tweaks.common.features.item_restocking.ItemRestocking;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -32,6 +33,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(GrindstoneDisenchanting.class);
         tweaks.addFeature(ItemFrameHiding.class);
         tweaks.addFeature(ItemRepairing.class);
+        tweaks.addFeature(ItemRestocking.class);
         tweaks.run(Side.Common);
     }
 }

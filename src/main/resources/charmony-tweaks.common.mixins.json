@@ -13,6 +13,9 @@
     "animal_reviving.NameTagItemMixin",
     "campfires_heal_players.CampfireBlockEntityMixin",
     "crop_feather_falling.FarmBlockMixin",
-    "deepslate_dungeons.MonsterRoomFeatureMixin"
+    "deepslate_dungeons.MonsterRoomFeatureMixin",
+    "item_restocking.AnimalMixin",
+    "item_restocking.ComposterBlockMixin",
+    "item_restocking.ParrotMixin"
   ]
 }
