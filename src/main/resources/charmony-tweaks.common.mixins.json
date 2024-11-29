@@ -16,6 +16,7 @@
     "deepslate_dungeons.MonsterRoomFeatureMixin",
     "item_restocking.AnimalMixin",
     "item_restocking.ComposterBlockMixin",
-    "item_restocking.ParrotMixin"
+    "item_restocking.ParrotMixin",
+    "mineshaft_improvements.MineshaftPiecesMixin"
   ]
 }

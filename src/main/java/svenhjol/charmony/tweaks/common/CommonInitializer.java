@@ -14,6 +14,7 @@ import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.Grindst
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.ItemFrameHiding;
 import svenhjol.charmony.tweaks.common.features.item_repairing.ItemRepairing;
 import svenhjol.charmony.tweaks.common.features.item_restocking.ItemRestocking;
+import svenhjol.charmony.tweaks.common.features.mineshaft_improvements.MineshaftImprovements;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -34,6 +35,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(ItemFrameHiding.class);
         tweaks.addFeature(ItemRepairing.class);
         tweaks.addFeature(ItemRestocking.class);
+        tweaks.addFeature(MineshaftImprovements.class);
         tweaks.run(Side.Common);
     }
 }
