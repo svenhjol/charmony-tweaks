@@ -9,7 +9,7 @@ public final class Advancements extends Setup<CropReplanting> {
         super(feature);
     }
 
-    public void triggerReplantedCrops(ServerPlayer player) {
+    public void replantedCrops(ServerPlayer player) {
         AdvancementHelper.trigger("replanted_crops", player);
     }
 }

@@ -86,7 +86,7 @@ public final class Handlers extends Setup<CropReplanting> {
             level.setBlockAndUpdate(pos, newState);
             level.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
 
-            feature().advancements.triggerReplantedCrops(serverPlayer);
+            feature().advancements.replantedCrops(serverPlayer);
 
             // Damage the hoe a bit.
             if (!player.getAbilities().instabuild) {
