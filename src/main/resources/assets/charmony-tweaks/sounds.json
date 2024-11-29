@@ -1,0 +1,15 @@
+{
+  "shed_feather": {
+    "sounds": [
+      {
+        "name": "charmony-tweaks:chicken_shedding_feather1",
+        "volume": 1.0
+      },
+      {
+        "name": "charmony-tweaks:chicken_shedding_feather2",
+        "volume": 1.0
+      }
+    ],
+    "subtitle": "subtitles.charmony-tweaks.entity.chicken.shed_feather"
+  }
+}

@@ -9,6 +9,12 @@
   "advancements.charmony-tweaks.healed_near_campfire.description": "Receive a small health boost by resting near a campfire",
   "advancements.charmony-tweaks.hidden_item_frame.title": "Crystal Clear",
   "advancements.charmony-tweaks.hidden_item_frame.description": "Use an amethyst shard to hide an item frame",
+  "advancements.charmony-tweaks.dropped_cobwebs.title": "Webbing",
+  "advancements.charmony-tweaks.dropped_cobwebs.description": "Get a Cave Spider to drop a cobweb",
+  "advancements.charmony-tweaks.dropped_potion_of_luck.title": "Get Lucky",
+  "advancements.charmony-tweaks.dropped_potion_of_luck.description": "Get a Witch to drop a Potion of Luck",
+  "advancements.charmony-tweaks.dropped_sand.title": "Sandman",
+  "advancements.charmony-tweaks.dropped_sand.description": "Get a Husk to drop sand",
   "advancements.charmony-tweaks.prevented_animal_damage.title": "Save the Animals",
   "advancements.charmony-tweaks.prevented_animal_damage.description": "Prevent direct player damage to a tamed animal",
   "advancements.charmony-tweaks.prevented_crop_damage.title": "Save the Crops",
@@ -30,5 +36,6 @@
   "gui.charmony-tweaks.repair_cost": "Repair Cost: %s",
   "key.charmony-tweaks.openCrafting": "Open crafting",
   "key.charmony-tweaks.swapTotem": "Put totem in offhand",
-  "key.charmony-tweaks.tidyInventory": "Tidy inventory"
+  "key.charmony-tweaks.tidyInventory": "Tidy inventory",
+  "subtitles.charm.entity.chicken.shed_feather": "Chicken sheds feather"
 }

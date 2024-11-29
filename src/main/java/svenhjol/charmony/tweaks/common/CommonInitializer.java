@@ -15,6 +15,7 @@ import svenhjol.charmony.tweaks.common.features.item_frame_hiding.ItemFrameHidin
 import svenhjol.charmony.tweaks.common.features.item_repairing.ItemRepairing;
 import svenhjol.charmony.tweaks.common.features.item_restocking.ItemRestocking;
 import svenhjol.charmony.tweaks.common.features.mineshaft_improvements.MineshaftImprovements;
+import svenhjol.charmony.tweaks.common.features.mob_drops.MobDrops;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -36,6 +37,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(ItemRepairing.class);
         tweaks.addFeature(ItemRestocking.class);
         tweaks.addFeature(MineshaftImprovements.class);
+        tweaks.addFeature(MobDrops.class);
         tweaks.run(Side.Common);
     }
 }
