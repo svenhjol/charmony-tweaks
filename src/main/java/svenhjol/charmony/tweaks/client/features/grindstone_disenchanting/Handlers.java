@@ -20,7 +20,7 @@ public final class Handlers extends Setup<GrindstoneDisenchanting> {
     public void updateGrindstoneCost(GrindstoneScreen screen, Player player, GuiGraphics guiGraphics, Font font, int width) {
         var menu = screen.getMenu();
 
-        // Not a pure client-side feature.
+        // We don't have access to common if not using a charmony server-side mod, return early.
         if (!Environment.usesCharmonyServer()) return;
 
         // Add all slot stacks to list for checking.
@@ -29,19 +29,19 @@ public final class Handlers extends Setup<GrindstoneDisenchanting> {
         stacks.add(menu.getSlot(1).getItem());
 
         // If it's a disenchant operation.
-        if (feature().common.handlers.shouldExtract(stacks)) {
+        if (feature().common.get().handlers.shouldExtract(stacks)) {
 
             // Get the stack to disenchant.
-            var enchanted = feature().common.handlers.getEnchantedItemFromStacks(stacks);
+            var enchanted = feature().common.get().handlers.getEnchantedItemFromStacks(stacks);
             if (enchanted.isEmpty()) return;
 
             // Get the stack cost and render it.
-            var cost = feature().common.handlers.getCost(enchanted.get());
+            var cost = feature().common.get().handlers.getCost(enchanted.get());
 
             var color = 8453920;
             var string = I18n.get("container.repair.cost", cost);
 
-            if (!feature().common.handlers.hasEnoughXp(player, cost)) {
+            if (!feature().common.get().handlers.hasEnoughXp(player, cost)) {
                 color = 16736352;
             }
 

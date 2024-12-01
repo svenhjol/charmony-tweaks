@@ -16,7 +16,10 @@ public final class Handlers extends Setup<ItemFrameHiding> {
     }
 
     public void createParticle(Level level, BlockPos pos) {
-        var particleType = feature().common.registers.particleType;
+        var common = feature().common.get();
+        if (common == null) return;
+
+        var particleType = common.registers.particleType;
         var col = new ColorHelper.Color(DyeColor.PURPLE);
 
         var x = (double) pos.getX() + 0.5d;
