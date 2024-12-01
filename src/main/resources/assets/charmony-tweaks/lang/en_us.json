@@ -1,6 +1,10 @@
 {
   "advancements.charmony-tweaks.tweaks.title": "Tweaks",
   "advancements.charmony-tweaks.tweaks.description": "Small changes to vanilla behaviors",
+  "advancements.charmony-tweaks.converted_dirt_to_path.title": "Pathing",
+  "advancements.charmony-tweaks.converted_dirt_to_path.description": "Use a shovel to convert a dirt block to a dirt path",
+  "advancements.charmony-tweaks.converted_path_to_dirt.title": "Dirting",
+  "advancements.charmony-tweaks.converted_path_to_dirt.description": "Use a hoe to convert a dirt path to a dirt block",
   "advancements.charmony-tweaks.dismounted_from_shoulder.title": "Ride over",
   "advancements.charmony-tweaks.dismounted_from_shoulder.description": "Crouch to make a parrot leave its perch",
   "advancements.charmony-tweaks.extracted_enchantment.title": "Extraction",
@@ -41,5 +45,7 @@
   "key.charmony-tweaks.openCrafting": "Open crafting",
   "key.charmony-tweaks.swapTotem": "Put totem in offhand",
   "key.charmony-tweaks.tidyInventory": "Tidy inventory",
-  "subtitles.charm.entity.chicken.shed_feather": "Chicken sheds feather"
+  "subtitles.charmony-tweaks.entity.chicken.shed_feather": "Chicken sheds feather",
+  "subtitles.charmony-tweaks.block.dirt.convert_to_path": "Shovel flattens",
+  "subtitles.charmony-tweaks.block.path.convert_to_dirt": "Hoe works path"
 }
