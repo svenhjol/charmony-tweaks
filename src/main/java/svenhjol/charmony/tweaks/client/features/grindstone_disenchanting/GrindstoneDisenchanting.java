@@ -16,7 +16,7 @@ public final class GrindstoneDisenchanting extends SidedFeature {
     public GrindstoneDisenchanting(Mod mod) {
         super(mod);
         handlers = new Handlers(this);
-        common = () -> new Common(this);
+        common = Common::new;
     }
 
     public static GrindstoneDisenchanting feature() {

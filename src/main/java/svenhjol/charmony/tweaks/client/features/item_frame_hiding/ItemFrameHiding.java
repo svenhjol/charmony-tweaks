@@ -15,7 +15,7 @@ public final class ItemFrameHiding extends SidedFeature {
 
     public ItemFrameHiding(Mod mod) {
         super(mod);
-        common = () -> new Common(this);
+        common = Common::new;
         handlers = new Handlers(this);
         registers = new Registers(this);
     }

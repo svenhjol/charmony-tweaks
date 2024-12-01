@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
+import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helper.ColorHelper;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Networking.S2CAddAmethyst;
@@ -16,10 +17,9 @@ public final class Handlers extends Setup<ItemFrameHiding> {
     }
 
     public void createParticle(Level level, BlockPos pos) {
-        var common = feature().common.get();
-        if (common == null) return;
+        if (!Environment.usesCharmonyServer()) return;
 
-        var particleType = common.registers.particleType;
+        var particleType = feature().common.get().registers.particleType;
         var col = new ColorHelper.Color(DyeColor.PURPLE);
 
         var x = (double) pos.getX() + 0.5d;

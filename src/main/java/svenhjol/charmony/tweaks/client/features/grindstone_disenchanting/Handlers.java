@@ -20,7 +20,7 @@ public final class Handlers extends Setup<GrindstoneDisenchanting> {
     public void updateGrindstoneCost(GrindstoneScreen screen, Player player, GuiGraphics guiGraphics, Font font, int width) {
         var menu = screen.getMenu();
 
-        // We don't have access to common if not using a charmony server-side mod, return early.
+        // We don't have access to common if not using a charmony server-side mod so return early.
         if (!Environment.usesCharmonyServer()) return;
 
         // Add all slot stacks to list for checking.
