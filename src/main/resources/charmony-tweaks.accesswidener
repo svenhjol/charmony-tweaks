@@ -36,5 +36,9 @@ accessible field net/minecraft/client/renderer/entity/LivingEntityRenderer layer
 accessible field net/minecraft/client/renderer/entity/layers/RenderLayer renderer Lnet/minecraft/client/renderer/entity/RenderLayerParent;
 mutable    field net/minecraft/client/renderer/entity/layers/RenderLayer renderer Lnet/minecraft/client/renderer/entity/RenderLayerParent;
 
+# NetherPortalBlocks
+accessible field net/minecraft/world/level/portal/PortalShape FRAME Lnet/minecraft/world/level/block/state/BlockBehaviour$StatePredicate;
+mutable    field net/minecraft/world/level/portal/PortalShape FRAME Lnet/minecraft/world/level/block/state/BlockBehaviour$StatePredicate;
+
 # TotemEmergencySwap
 accessible method net/minecraft/client/gui/screens/inventory/AbstractRecipeBookScreen slotClicked (Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V
