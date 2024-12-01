@@ -17,6 +17,7 @@ import svenhjol.charmony.tweaks.common.features.item_restocking.ItemRestocking;
 import svenhjol.charmony.tweaks.common.features.mineshaft_improvements.MineshaftImprovements;
 import svenhjol.charmony.tweaks.common.features.mob_drops.MobDrops;
 import svenhjol.charmony.tweaks.common.features.nether_portal_blocks.NetherPortalBlocks;
+import svenhjol.charmony.tweaks.common.features.parrots_stay_on_shoulder.ParrotsStayOnShoulder;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -40,6 +41,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(MineshaftImprovements.class);
         tweaks.addFeature(MobDrops.class);
         tweaks.addFeature(NetherPortalBlocks.class);
+        tweaks.addFeature(ParrotsStayOnShoulder.class);
         tweaks.run(Side.Common);
     }
 }

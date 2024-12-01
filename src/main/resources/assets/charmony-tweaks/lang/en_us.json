@@ -1,6 +1,8 @@
 {
   "advancements.charmony-tweaks.tweaks.title": "Tweaks",
   "advancements.charmony-tweaks.tweaks.description": "Small changes to vanilla behaviors",
+  "advancements.charmony-tweaks.dismounted_from_shoulder.title": "Ride over",
+  "advancements.charmony-tweaks.dismounted_from_shoulder.description": "Crouch to make a parrot leave its perch",
   "advancements.charmony-tweaks.extracted_enchantment.title": "Extraction",
   "advancements.charmony-tweaks.extracted_enchantment.description": "Use a book with an enchanted item on a grindstone to extract the item's enchantments",
   "advancements.charmony-tweaks.ground_animal_armor.title": "Repurposed Armor",
@@ -19,6 +21,8 @@
   "advancements.charmony-tweaks.prevented_animal_damage.description": "Prevent direct player damage to a tamed animal",
   "advancements.charmony-tweaks.prevented_crop_damage.title": "Save the Crops",
   "advancements.charmony-tweaks.prevented_crop_damage.description": "Prevent farmland damage while wearing boots enchanted with Feather Falling",
+  "advancements.charmony-tweaks.remained_on_shoulder.title": "Along for the ride",
+  "advancements.charmony-tweaks.remained_on_shoulder.description": "Jump while a parrot is perched",
   "advancements.charmony-tweaks.repaired_netherite.title": "Recycling",
   "advancements.charmony-tweaks.repaired_netherite.description": "Use netherite scrap to repair a netherite item",
   "advancements.charmony-tweaks.repaired_trident.title": "Shardening",

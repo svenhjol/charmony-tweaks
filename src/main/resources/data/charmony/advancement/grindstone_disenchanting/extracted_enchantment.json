@@ -1,5 +1,5 @@
 {
-  "parent": "charmony:tweaks",
+  "parent": "charmony:animal_armor_grinding/ground_animal_armor",
   "display": {
     "icon": {
       "id": "minecraft:grindstone"

@@ -1,0 +1,31 @@
+{
+  "parent": "charmony:parrots_stay_on_shoulder/remained_on_shoulder",
+  "display": {
+    "icon": {
+      "id": "minecraft:saddle"
+    },
+    "title": {
+      "translate": "advancements.charmony-tweaks.dismounted_from_shoulder.title"
+    },
+    "description": {
+      "translate": "advancements.charmony-tweaks.dismounted_from_shoulder.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "dismounted_from_shoulder": {
+      "trigger": "charmony_action_performed",
+      "conditions": {
+        "action": "charmony:dismounted_from_shoulder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dismounted_from_shoulder"
+    ]
+  ]
+}

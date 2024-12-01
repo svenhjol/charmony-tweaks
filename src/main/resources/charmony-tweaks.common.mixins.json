@@ -17,6 +17,7 @@
     "item_restocking.AnimalMixin",
     "item_restocking.ComposterBlockMixin",
     "item_restocking.ParrotMixin",
-    "mineshaft_improvements.MineshaftPiecesMixin"
+    "mineshaft_improvements.MineshaftPiecesMixin",
+    "parrots_stay_on_shoulder.PlayerMixin"
   ]
 }
