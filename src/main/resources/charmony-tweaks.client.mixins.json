@@ -12,6 +12,8 @@
     "grindstone_disenchanting.GrindstoneScreenMixin",
     "hud_item_scaling.GuiGraphicsMixin",
     "item_tidying.AbstractContainerScreenMixin",
+    "piglin_pointing.LivingEntityRendererMixin",
+    "piglin_pointing.PiglinModelMixin",
     "repair_cost_visible.AnvilScreenMixin",
     "shields_have_reduced_view_blocking.ItemInHandRendererMixin",
     "spyglass_scope_hiding.GuiMixin",

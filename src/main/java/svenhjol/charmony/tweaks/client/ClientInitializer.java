@@ -13,6 +13,7 @@ import svenhjol.charmony.tweaks.client.features.item_tidying.ItemTidying;
 import svenhjol.charmony.tweaks.client.features.jukeboxes_stop_background_music.JukeboxesStopBackgroundMusic;
 import svenhjol.charmony.tweaks.client.features.maps_show_when_hovering.MapsShowWhenHovering;
 import svenhjol.charmony.tweaks.client.features.mob_textures.MobTextures;
+import svenhjol.charmony.tweaks.client.features.piglin_pointing.PiglinPointing;
 import svenhjol.charmony.tweaks.client.features.repair_cost_visible.RepairCostVisible;
 import svenhjol.charmony.tweaks.client.features.shields_have_reduced_view_blocking.ShieldsHaveReducedViewBlocking;
 import svenhjol.charmony.tweaks.client.features.shulker_boxes_show_contents_when_hovering.ShulkerBoxesShowContentsWhenHovering;
@@ -38,6 +39,7 @@ public class ClientInitializer implements ClientModInitializer {
         tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
         tweaks.addFeature(MapsShowWhenHovering.class);
         tweaks.addFeature(MobTextures.class);
+        tweaks.addFeature(PiglinPointing.class);
         tweaks.addFeature(RepairCostVisible.class);
         tweaks.addFeature(ShieldsHaveReducedViewBlocking.class);
         tweaks.addFeature(ShulkerBoxesShowContentsWhenHovering.class);
