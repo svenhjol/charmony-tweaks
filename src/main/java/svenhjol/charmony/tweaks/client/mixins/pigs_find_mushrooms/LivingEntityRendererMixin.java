@@ -1,15 +1,15 @@
-package svenhjol.charmony.tweaks.client.mixins.piglin_pointing;
+package svenhjol.charmony.tweaks.client.mixins.pigs_find_mushrooms;
 
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.piglin.Piglin;
+import net.minecraft.world.entity.animal.Pig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import svenhjol.charmony.core.base.Environment;
-import svenhjol.charmony.tweaks.client.features.piglin_pointing.PiglinPointing;
+import svenhjol.charmony.tweaks.client.features.pigs_find_mushrooms.PigsFindMushrooms;
 
 @Mixin(LivingEntityRenderer.class)
 public abstract class LivingEntityRendererMixin<T extends LivingEntity, S extends LivingEntityRenderState> {
@@ -23,8 +23,8 @@ public abstract class LivingEntityRendererMixin<T extends LivingEntity, S extend
     private void hookExtractRenderState(T livingEntity, S livingEntityRenderState, float f, CallbackInfo ci) {
         if (!Environment.usesCharmonyServer()) return;
 
-        if (livingEntity instanceof Piglin piglin) {
-            PiglinPointing.feature().handlers.piglin = piglin;
+        if (livingEntity instanceof Pig pig) {
+            PigsFindMushrooms.feature().handlers.pig = pig;
         }
     }
 }

@@ -19,6 +19,7 @@
     "item_restocking.ParrotMixin",
     "mineshaft_improvements.MineshaftPiecesMixin",
     "parrots_stay_on_shoulder.PlayerMixin",
-    "piglin_pointing.PiglinAiMixin"
+    "piglin_pointing.PiglinAiMixin",
+    "pigs_find_mushrooms.PigMixin"
   ]
 }

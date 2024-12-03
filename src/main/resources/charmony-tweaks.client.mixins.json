@@ -14,6 +14,8 @@
     "item_tidying.AbstractContainerScreenMixin",
     "piglin_pointing.LivingEntityRendererMixin",
     "piglin_pointing.PiglinModelMixin",
+    "pigs_find_mushrooms.LivingEntityRendererMixin",
+    "pigs_find_mushrooms.PigModelMixin",
     "repair_cost_visible.AnvilScreenMixin",
     "shields_have_reduced_view_blocking.ItemInHandRendererMixin",
     "spyglass_scope_hiding.GuiMixin",

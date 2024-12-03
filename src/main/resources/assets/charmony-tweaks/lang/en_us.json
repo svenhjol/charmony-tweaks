@@ -39,6 +39,8 @@
   "advancements.charmony-tweaks.restocked_current_item.description": "Restock your current item when it runs out",
   "advancements.charmony-tweaks.revived_animal.title": "Second Chance",
   "advancements.charmony-tweaks.revived_animal.description": "Revive a tamed animal from its nametag using a Totem of Undying",
+  "advancements.charmony-tweaks.unearthed_mushroom.title": "Truffles",
+  "advancements.charmony-tweaks.unearthed_mushroom.description": "Use a pig to dig up a mushroom",
   "gui.charmony-tweaks.compass.biome": "%s biome",
   "gui.charmony-tweaks.compass.coords": "X: %s   Y: %s   Z: %s",
   "gui.charmony-tweaks.compass.coords_only_xz": "X: %s   Z: %s",
@@ -47,7 +49,8 @@
   "key.charmony-tweaks.openCrafting": "Open crafting",
   "key.charmony-tweaks.swapTotem": "Put totem in offhand",
   "key.charmony-tweaks.tidyInventory": "Tidy inventory",
-  "subtitles.charmony-tweaks.entity.chicken.shed_feather": "Chicken sheds feather",
   "subtitles.charmony-tweaks.block.dirt.convert_to_path": "Shovel flattens",
-  "subtitles.charmony-tweaks.block.path.convert_to_dirt": "Hoe works path"
+  "subtitles.charmony-tweaks.block.path.convert_to_dirt": "Hoe works path",
+  "subtitles.charmony-tweaks.entity.chicken.shed_feather": "Chicken sheds feather",
+  "subtitles.charmony-tweaks.entity.pig.sniffing": "Pig searches for mushrooms"
 }

@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public final class Handlers extends Setup<PiglinPointing> {
     // Track piglins that are currently in a pointing state.
-    public static final List<UUID> pointingPiglins = new ArrayList<>();
+    public static final List<UUID> POINTING_PIGLINS = new ArrayList<>();
 
     public Handlers(PiglinPointing feature) {
         super(feature);
@@ -51,10 +51,10 @@ public final class Handlers extends Setup<PiglinPointing> {
             pos -> {
                 piglin.getLookControl().setLookAt(pos.getX(), 60, pos.getZ());
                 piglin.getNavigation().stop();
-                pointingPiglins.add(piglin.getUUID());
+                POINTING_PIGLINS.add(piglin.getUUID());
             },
             () -> {
-                pointingPiglins.remove(piglin.getUUID());
+                POINTING_PIGLINS.remove(piglin.getUUID());
             }
         );
     }
@@ -89,7 +89,7 @@ public final class Handlers extends Setup<PiglinPointing> {
     }
 
     public boolean isPointing(Piglin piglin) {
-        return pointingPiglins.contains(piglin.getUUID());
+        return POINTING_PIGLINS.contains(piglin.getUUID());
     }
 
     public boolean isBarteringItem(ItemStack stack) {

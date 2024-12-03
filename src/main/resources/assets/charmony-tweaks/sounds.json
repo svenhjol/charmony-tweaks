@@ -53,5 +53,14 @@
       }
     ],
     "subtitle": "subtitles.charmony-tweaks.entity.chicken.shed_feather"
+  },
+  "pig_sniffing": {
+    "sounds": [
+      {
+        "name": "charmony-tweaks:pig_sniffing",
+        "volume": 0.65
+      }
+    ],
+    "subtitle": "subtitles.charmony-tweaks.entity.pig.sniffing"
   }
 }

@@ -20,6 +20,7 @@ import svenhjol.charmony.tweaks.common.features.nether_portal_blocks.NetherPorta
 import svenhjol.charmony.tweaks.common.features.parrots_stay_on_shoulder.ParrotsStayOnShoulder;
 import svenhjol.charmony.tweaks.common.features.path_converting.PathConverting;
 import svenhjol.charmony.tweaks.common.features.piglin_pointing.PiglinPointing;
+import svenhjol.charmony.tweaks.common.features.pigs_find_mushrooms.PigsFindMushrooms;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -46,6 +47,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(ParrotsStayOnShoulder.class);
         tweaks.addFeature(PathConverting.class);
         tweaks.addFeature(PiglinPointing.class);
+        tweaks.addFeature(PigsFindMushrooms.class);
         tweaks.run(Side.Common);
     }
 }
