@@ -21,6 +21,7 @@ import svenhjol.charmony.tweaks.common.features.parrots_stay_on_shoulder.Parrots
 import svenhjol.charmony.tweaks.common.features.path_converting.PathConverting;
 import svenhjol.charmony.tweaks.common.features.piglin_pointing.PiglinPointing;
 import svenhjol.charmony.tweaks.common.features.pigs_find_mushrooms.PigsFindMushrooms;
+import svenhjol.charmony.tweaks.common.features.repair_cost_unlimited.RepairCostUnlimited;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -48,6 +49,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(PathConverting.class);
         tweaks.addFeature(PiglinPointing.class);
         tweaks.addFeature(PigsFindMushrooms.class);
+        tweaks.addFeature(RepairCostUnlimited.class);
         tweaks.run(Side.Common);
     }
 }

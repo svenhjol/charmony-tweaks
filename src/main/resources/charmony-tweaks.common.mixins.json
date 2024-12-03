@@ -20,6 +20,7 @@
     "mineshaft_improvements.MineshaftPiecesMixin",
     "parrots_stay_on_shoulder.PlayerMixin",
     "piglin_pointing.PiglinAiMixin",
-    "pigs_find_mushrooms.PigMixin"
+    "pigs_find_mushrooms.PigMixin",
+    "repair_cost_unlimited.AnvilMenuMixin"
   ]
 }
