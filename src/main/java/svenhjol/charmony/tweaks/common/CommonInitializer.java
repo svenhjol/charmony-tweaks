@@ -23,6 +23,7 @@ import svenhjol.charmony.tweaks.common.features.piglin_pointing.PiglinPointing;
 import svenhjol.charmony.tweaks.common.features.pigs_find_mushrooms.PigsFindMushrooms;
 import svenhjol.charmony.tweaks.common.features.repair_cost_unlimited.RepairCostUnlimited;
 import svenhjol.charmony.tweaks.common.features.respawn_anchors_work_everywhere.RespawnAnchorsWorkEverywhere;
+import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.ShulkerBoxTransferring;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -52,6 +53,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(PigsFindMushrooms.class);
         tweaks.addFeature(RepairCostUnlimited.class);
         tweaks.addFeature(RespawnAnchorsWorkEverywhere.class);
+        tweaks.addFeature(ShulkerBoxTransferring.class);
         tweaks.run(Side.Common);
     }
 }
