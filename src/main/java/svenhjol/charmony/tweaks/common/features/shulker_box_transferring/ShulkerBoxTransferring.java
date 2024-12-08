@@ -10,6 +10,7 @@ public final class ShulkerBoxTransferring extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
     public final Advancements advancements;
+    public final Networking networking;
 
     public ShulkerBoxTransferring(Mod mod) {
         super(mod);
@@ -17,5 +18,6 @@ public final class ShulkerBoxTransferring extends SidedFeature {
         registers = new Registers(this);
         handlers = new Handlers(this);
         advancements = new Advancements(this);
+        networking = new Networking(this);
     }
 }

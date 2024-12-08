@@ -39,6 +39,8 @@
   "advancements.charmony-tweaks.restocked_current_item.description": "Restock your current item when it runs out",
   "advancements.charmony-tweaks.revived_animal.title": "Second Chance",
   "advancements.charmony-tweaks.revived_animal.description": "Revive a tamed animal from its nametag using a Totem of Undying",
+  "advancements.charmony-tweaks.transferred_to_shulker_box.title": "Drag and Drop",
+  "advancements.charmony-tweaks.transferred_to_shulker_box.description": "Drag an item to a Shulker Box inside your inventory",
   "advancements.charmony-tweaks.unearthed_mushroom.title": "Truffles",
   "advancements.charmony-tweaks.unearthed_mushroom.description": "Use a pig to dig up a mushroom",
   "gui.charmony-tweaks.compass.biome": "%s biome",

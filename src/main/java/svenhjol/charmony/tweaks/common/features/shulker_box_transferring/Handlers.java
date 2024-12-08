@@ -1,5 +1,6 @@
 package svenhjol.charmony.tweaks.common.features.shulker_box_transferring;
 
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
@@ -8,6 +9,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.SlotAccess;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
@@ -18,6 +20,7 @@ import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.ItemDragDropCallback.StackType;
 import svenhjol.charmony.core.helper.ItemStackHelper;
+import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking.C2SAddItemToShulkerBox;
 
 public final class Handlers extends Setup<ShulkerBoxTransferring> {
     public Handlers(ShulkerBoxTransferring feature) {
@@ -48,7 +51,7 @@ public final class Handlers extends Setup<ShulkerBoxTransferring> {
             var data = dest.get(DataComponents.CONTAINER);
 
             if (data != null) {
-                // Main a nonnulllist of itemstacks that represent the container contents.
+                // Main a NonNullList of itemstacks that represent the container contents.
                 // Read this from the shulkerbox data and then write it back after modification.
                 var containerItems = NonNullList.withSize(containerSize, ItemStack.EMPTY);
                 data.copyInto(containerItems);
@@ -79,6 +82,8 @@ public final class Handlers extends Setup<ShulkerBoxTransferring> {
                         playRemoveOneSound(player);
                     }
 
+                    broadcastChangesOnContainerMenu(player);
+
                 } else if (clickAction == ClickAction.PRIMARY && !source.isEmpty()) {
                     // Add hovering item into the container.
                     var result = container.addItem(source);
@@ -87,6 +92,9 @@ public final class Handlers extends Setup<ShulkerBoxTransferring> {
                     if (result.getCount() == 0) {
                         playInsertSound(player);
                     }
+
+                    broadcastChangesOnContainerMenu(player);
+
                 } else {
                     return InteractionResult.PASS;
                 }
@@ -99,12 +107,21 @@ public final class Handlers extends Setup<ShulkerBoxTransferring> {
 
                 var itemContainerContents = ItemContainerContents.fromItems(containerItems);
                 dest.set(DataComponents.CONTAINER, itemContainerContents);
-                feature().advancements.transferredToShulkerBox(player);
                 return InteractionResult.SUCCESS;
             }
         }
 
         return InteractionResult.PASS;
+    }
+
+    public void handleAddItemToShulkderBoxPacket(C2SAddItemToShulkerBox packet, ServerPlayNetworking.Context context) {
+        var player = context.player();
+        var server = player.server;
+
+        server.execute(() -> {
+            // Do the advancement
+            feature().advancements.transferredToShulkerBox(player);
+        });
     }
 
     /**
@@ -131,5 +148,18 @@ public final class Handlers extends Setup<ShulkerBoxTransferring> {
         entity.playSound(SoundEvents.SHULKER_BOX_OPEN,
             0.1f + entity.level().getRandom().nextFloat() * 0.3f,
             0.67f + entity.level().getRandom().nextFloat() * 0.4f);
+    }
+
+    /**
+     * Reflect the behavior of the BundleItem.
+     * @see net.minecraft.world.item.BundleItem -> broadcastChangesOnContainerMenu
+     */
+    private void broadcastChangesOnContainerMenu(Player player) {
+        // Send our custom packet to let the server know the action was completed.
+        C2SAddItemToShulkerBox.send();
+
+        if (player.containerMenu instanceof AbstractContainerMenu menu) {
+            menu.slotsChanged(player.getInventory());
+        }
     }
 }
