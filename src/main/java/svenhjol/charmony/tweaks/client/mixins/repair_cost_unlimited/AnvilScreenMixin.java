@@ -6,6 +6,7 @@ import net.minecraft.world.entity.player.Abilities;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.tweaks.common.mixins.repair_cost_unlimited.AnvilMenuMixin;
 
 @Mixin(AnvilScreen.class)
@@ -24,6 +25,9 @@ public class AnvilScreenMixin {
         )
     )
     private boolean hookRenderLabelsCheckAbilities(Abilities abilities, GuiGraphics guiGraphics, int x, int y) {
+        if (!Environment.usesCharmonyServer()) {
+            return abilities.instabuild; // Default behaviour
+        }
         return true;
     }
 }
