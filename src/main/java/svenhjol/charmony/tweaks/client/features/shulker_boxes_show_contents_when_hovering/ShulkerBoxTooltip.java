@@ -5,6 +5,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.world.item.ItemStack;
 import svenhjol.charmony.core.client.ItemContainerTooltip;
+import svenhjol.charmony.tweaks.client.features.shulker_box_transferring.ShulkerBoxTransferring;
 
 import java.util.List;
 
@@ -35,6 +36,14 @@ public record ShulkerBoxTooltip(List<ItemStack> items) implements ClientTooltipC
 
     @Override
     public void renderImage(Font font, int x, int y, int k, int l, GuiGraphics guiGraphics) {
-        defaultRenderImage(font, x, y, guiGraphics);
+        defaultRenderImage(guiGraphics, font, Texture.Slot, x, y);
+    }
+
+    @Override
+    public void renderSlotWithIndex(GuiGraphics guiGraphics, Font font, Texture texture, int index, int x, int y) {
+        if (index == 0 && ShulkerBoxTransferring.feature().enabled()) {
+            texture = Texture.SelectedSlot;
+        }
+        ItemContainerTooltip.super.renderSlotWithIndex(guiGraphics, font, texture, index, x, y);
     }
 }

@@ -18,6 +18,7 @@ import svenhjol.charmony.tweaks.client.features.pigs_find_mushrooms.PigsFindMush
 import svenhjol.charmony.tweaks.client.features.repair_cost_unlimited.RepairCostUnlimited;
 import svenhjol.charmony.tweaks.client.features.repair_cost_visible.RepairCostVisible;
 import svenhjol.charmony.tweaks.client.features.shields_have_reduced_view_blocking.ShieldsHaveReducedViewBlocking;
+import svenhjol.charmony.tweaks.client.features.shulker_box_transferring.ShulkerBoxTransferring;
 import svenhjol.charmony.tweaks.client.features.shulker_boxes_show_contents_when_hovering.ShulkerBoxesShowContentsWhenHovering;
 import svenhjol.charmony.tweaks.client.features.spyglass_scope_hiding.SpyglassScopeHiding;
 import svenhjol.charmony.tweaks.client.features.telemetry.Telemetry;
@@ -46,6 +47,7 @@ public class ClientInitializer implements ClientModInitializer {
         tweaks.addFeature(RepairCostUnlimited.class);
         tweaks.addFeature(RepairCostVisible.class);
         tweaks.addFeature(ShieldsHaveReducedViewBlocking.class);
+        tweaks.addFeature(ShulkerBoxTransferring.class);
         tweaks.addFeature(ShulkerBoxesShowContentsWhenHovering.class);
         tweaks.addFeature(SpyglassScopeHiding.class);
         tweaks.addFeature(Telemetry.class);
