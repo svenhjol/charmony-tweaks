@@ -6,6 +6,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.entity.state.PigRenderState;
 import net.minecraft.world.entity.animal.Pig;
 import org.spongepowered.asm.mixin.Mixin;
+import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.tweaks.client.features.pigs_find_mushrooms.PigsFindMushrooms;
 
 /**
@@ -20,6 +21,7 @@ public abstract class PigModelMixin extends QuadrupedModel<PigRenderState> {
     @Override
     public void setupAnim(PigRenderState state) {
         super.setupAnim(state);
+        if (!Environment.usesCharmonyServer()) return;
 
         var handlers = PigsFindMushrooms.feature().handlers;
         var age = state.ageScale;

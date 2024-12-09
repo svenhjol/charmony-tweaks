@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.tweaks.client.features.grindstone_disenchanting.GrindstoneDisenchanting;
 
 @SuppressWarnings("UnreachableCode")
@@ -37,9 +38,10 @@ public abstract class GrindstoneScreenMixin<T extends AbstractContainerMenu> ext
 
     @Override
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        var screen = (GrindstoneScreen)(Object)this;
-
-        GrindstoneDisenchanting.feature().handlers.updateGrindstoneCost(screen, player.get(), guiGraphics, font, imageWidth);
+        if (Environment.usesCharmonyServer()) {
+            var screen = (GrindstoneScreen) (Object) this;
+            GrindstoneDisenchanting.feature().handlers.updateGrindstoneCost(screen, player.get(), guiGraphics, font, imageWidth);
+        }
         super.renderLabels(guiGraphics, mouseX, mouseY);
     }
 }
