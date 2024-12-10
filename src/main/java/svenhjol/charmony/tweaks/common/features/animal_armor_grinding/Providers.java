@@ -12,7 +12,6 @@ import java.util.List;
 public final class Providers extends Setup<AnimalArmorGrinding> implements GrindableItemProvider {
     public Providers(AnimalArmorGrinding feature) {
         super(feature);
-        Api.registerProvider(this); // Must register this provider with the Api
     }
 
     @Override
@@ -29,8 +28,12 @@ public final class Providers extends Setup<AnimalArmorGrinding> implements Grind
 
     @Override
     public Runnable boot() {
-        return () -> Api.consume(GrindableItemProvider.class,
-            provider -> provider.getItemGrindResults().forEach(
-                result -> feature().registers.recipes.put(result.getFirst(), result.getSecond())));
+        return () -> {
+            Api.registerProvider(this);
+
+            Api.consume(GrindableItemProvider.class,
+                provider -> provider.getItemGrindResults().forEach(
+                    result -> feature().registers.recipes.put(result.getFirst(), result.getSecond())));
+        };
     }
 }

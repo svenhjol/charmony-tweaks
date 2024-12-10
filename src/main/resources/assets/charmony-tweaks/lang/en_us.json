@@ -45,6 +45,8 @@
   "advancements.charmony-tweaks.transferred_to_shulker_box.description": "Drag an item to a Shulker Box inside your inventory",
   "advancements.charmony-tweaks.unearthed_mushroom.title": "Truffles",
   "advancements.charmony-tweaks.unearthed_mushroom.description": "Use a pig to dig up a mushroom",
+  "advancements.charmony-tweaks.used_totem_from_inventory.title": "Backup Plan",
+  "advancements.charmony-tweaks.used_totem_from_inventory.description": "Use a Totem of Undying from your inventory instead of your hand",
   "gui.charmony-tweaks.compass.biome": "%s biome",
   "gui.charmony-tweaks.compass.coords": "X: %s   Y: %s   Z: %s",
   "gui.charmony-tweaks.compass.coords_only_xz": "X: %s   Z: %s",
