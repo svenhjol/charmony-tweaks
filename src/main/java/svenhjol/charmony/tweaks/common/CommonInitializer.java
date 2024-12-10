@@ -25,6 +25,7 @@ import svenhjol.charmony.tweaks.common.features.repair_cost_unlimited.RepairCost
 import svenhjol.charmony.tweaks.common.features.respawn_anchors_work_everywhere.RespawnAnchorsWorkEverywhere;
 import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.ShulkerBoxTransferring;
 import svenhjol.charmony.tweaks.common.features.spawners_drop_items.SpawnersDropItems;
+import svenhjol.charmony.tweaks.common.features.suspicious_block_creating.SuspiciousBlockCreating;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -56,6 +57,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(RespawnAnchorsWorkEverywhere.class);
         tweaks.addFeature(ShulkerBoxTransferring.class);
         tweaks.addFeature(SpawnersDropItems.class);
+        tweaks.addFeature(SuspiciousBlockCreating.class);
         tweaks.run(Side.Common);
     }
 }
