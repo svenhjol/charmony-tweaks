@@ -86,7 +86,7 @@ public final class Handlers extends Setup<SuspiciousBlockCreating> {
                 }
             }
 
-            level.playSound(null, pos, feature().registers.createBlockSound, SoundSource.BLOCKS, 1.0f, 1.0f);
+            level.playSound(null, pos, feature().registers.createBlockSound.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
             return true;
         }
 

@@ -6,9 +6,11 @@ import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
 import svenhjol.charmony.tweaks.Tweaks;
 
+import java.util.function.Supplier;
+
 public final class Registers extends Setup<PathConverting> {
-    public final SoundEvent dirtToPathSound;
-    public final SoundEvent pathToDirtSound;
+    public final Supplier<SoundEvent> dirtToPathSound;
+    public final Supplier<SoundEvent> pathToDirtSound;
 
     public Registers(PathConverting feature) {
         super(feature);

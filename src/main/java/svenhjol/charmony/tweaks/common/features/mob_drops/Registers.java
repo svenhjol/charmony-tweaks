@@ -10,10 +10,11 @@ import svenhjol.charmony.tweaks.common.features.mob_drops.mobs.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public final class Registers extends Setup<MobDrops> {
     public final List<DropProvider> drops = new ArrayList<>();
-    public final SoundEvent shedFeatherSound;
+    public final Supplier<SoundEvent> shedFeatherSound;
 
     public Registers(MobDrops feature) {
         super(feature);

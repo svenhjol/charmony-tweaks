@@ -28,7 +28,7 @@ public final class Handlers extends Setup<PathConverting> {
 
             if (!level.isClientSide) {
                 level.setBlock(pos, Blocks.DIRT.defaultBlockState(), 11);
-                level.playSound(null, pos, feature().registers.pathToDirtSound, SoundSource.BLOCKS, 1.0f, 1.0f);
+                level.playSound(null, pos, feature().registers.pathToDirtSound.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
                 feature().advancements.convertedPathToDirt((ServerPlayer) player);
             }
             success = true;
@@ -39,7 +39,7 @@ public final class Handlers extends Setup<PathConverting> {
 
             if (!level.isClientSide) {
                 level.setBlock(pos, Blocks.DIRT_PATH.defaultBlockState(), 11);
-                level.playSound(null, pos, feature().registers.dirtToPathSound, SoundSource.BLOCKS, 1.0f, 1.0f);
+                level.playSound(null, pos, feature().registers.dirtToPathSound.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
                 feature().advancements.convertedDirtToPath((ServerPlayer) player);
             }
             success = true;

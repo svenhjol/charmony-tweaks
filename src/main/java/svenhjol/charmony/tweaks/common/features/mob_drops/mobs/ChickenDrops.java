@@ -25,7 +25,7 @@ public class ChickenDrops extends Setup<MobDrops> implements DropProvider {
                 && chicken.level().random.nextInt(feature().featherDropChance()) == 0
             ) {
                 var random = chicken.level().random;
-                chicken.playSound(feature().registers.shedFeatherSound, 0.2f, 0.9f + (random.nextFloat() * 0.5f));
+                chicken.playSound(feature().registers.shedFeatherSound.get(), 0.2f, 0.9f + (random.nextFloat() * 0.5f));
                 return Optional.of(new ItemStack(Items.FEATHER));
             }
         }

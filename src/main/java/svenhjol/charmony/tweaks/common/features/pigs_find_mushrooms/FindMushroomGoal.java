@@ -47,7 +47,7 @@ public class FindMushroomGoal extends Goal {
         feature().handlers.eating.put(pig.getUUID(), adjustedTickDelay(40));
         level.broadcastEntityEvent(pig, (byte)10); // Might need change?
         pig.getNavigation().stop();
-        level.playSound(null, pig.blockPosition(), feature().registers.sniffingSound, SoundSource.NEUTRAL, 1.0f, 1.0f);
+        level.playSound(null, pig.blockPosition(), feature().registers.sniffingSound.get(), SoundSource.NEUTRAL, 1.0f, 1.0f);
     }
 
     @Override

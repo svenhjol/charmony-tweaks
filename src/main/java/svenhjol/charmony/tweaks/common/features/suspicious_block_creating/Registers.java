@@ -9,10 +9,11 @@ import svenhjol.charmony.tweaks.Tweaks;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 
 public final class Registers extends Setup<SuspiciousBlockCreating> {
     public final Map<Block, Block> blockConversions = new HashMap<>();
-    public final SoundEvent createBlockSound;
+    public final Supplier<SoundEvent> createBlockSound;
 
     public Registers(SuspiciousBlockCreating feature) {
         super(feature);
