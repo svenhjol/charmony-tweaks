@@ -29,6 +29,7 @@ import svenhjol.charmony.tweaks.common.features.suspicious_block_creating.Suspic
 import svenhjol.charmony.tweaks.common.features.torchflowers_emit_light.TorchflowersEmitLight;
 import svenhjol.charmony.tweaks.common.features.totems_work_from_inventory.TotemsWorkFromInventory;
 import svenhjol.charmony.tweaks.common.features.trade_improvements.TradeImprovements;
+import svenhjol.charmony.tweaks.common.features.villager_attracting.VillagerAttracting;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -64,6 +65,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(TorchflowersEmitLight.class);
         tweaks.addFeature(TotemsWorkFromInventory.class);
         tweaks.addFeature(TradeImprovements.class);
+        tweaks.addFeature(VillagerAttracting.class);
         tweaks.run(Side.Common);
     }
 }
