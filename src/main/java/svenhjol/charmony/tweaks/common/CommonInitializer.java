@@ -28,6 +28,7 @@ import svenhjol.charmony.tweaks.common.features.spawners_drop_items.SpawnersDrop
 import svenhjol.charmony.tweaks.common.features.suspicious_block_creating.SuspiciousBlockCreating;
 import svenhjol.charmony.tweaks.common.features.torchflowers_emit_light.TorchflowersEmitLight;
 import svenhjol.charmony.tweaks.common.features.totems_work_from_inventory.TotemsWorkFromInventory;
+import svenhjol.charmony.tweaks.common.features.trade_improvements.TradeImprovements;
 
 public class CommonInitializer implements ModInitializer {
     @Override
@@ -62,6 +63,7 @@ public class CommonInitializer implements ModInitializer {
         tweaks.addFeature(SuspiciousBlockCreating.class);
         tweaks.addFeature(TorchflowersEmitLight.class);
         tweaks.addFeature(TotemsWorkFromInventory.class);
+        tweaks.addFeature(TradeImprovements.class);
         tweaks.run(Side.Common);
     }
 }
