@@ -27,7 +27,7 @@ public final class CraftingTableNearby extends SidedFeature {
     }
 
     public static CraftingTableNearby feature() {
-        return Tweaks.instance().feature(CraftingTableNearby.class);
+        return Tweaks.instance().sidedFeature(CraftingTableNearby.class);
     }
 
     public boolean showCraftingIcon() {

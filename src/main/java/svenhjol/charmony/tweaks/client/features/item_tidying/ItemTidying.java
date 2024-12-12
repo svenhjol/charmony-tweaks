@@ -31,7 +31,7 @@ public final class ItemTidying extends SidedFeature {
     }
 
     public static ItemTidying feature() {
-        return Tweaks.instance().feature(ItemTidying.class);
+        return Tweaks.instance().sidedFeature(ItemTidying.class);
     }
 
     public boolean keybindSortsMultipleInventories() {

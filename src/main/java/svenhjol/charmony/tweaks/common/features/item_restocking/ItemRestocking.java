@@ -21,6 +21,6 @@ public final class ItemRestocking extends SidedFeature {
     }
 
     public static ItemRestocking feature() {
-        return Tweaks.instance().feature(ItemRestocking.class);
+        return Tweaks.instance().sidedFeature(ItemRestocking.class);
     }
 }

@@ -19,6 +19,6 @@ public final class ChiseledBookshelvesShowBookOnHover extends SidedFeature {
     }
 
     public static ChiseledBookshelvesShowBookOnHover feature() {
-        return Tweaks.instance().feature(ChiseledBookshelvesShowBookOnHover.class);
+        return Tweaks.instance().sidedFeature(ChiseledBookshelvesShowBookOnHover.class);
     }
 }

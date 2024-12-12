@@ -33,7 +33,7 @@ public final class SpawnersDropItems extends SidedFeature {
     }
 
     public static SpawnersDropItems feature() {
-        return Tweaks.instance().feature(SpawnersDropItems.class);
+        return Tweaks.instance().sidedFeature(SpawnersDropItems.class);
     }
 
     public boolean onlyPeaceful() {

@@ -8,7 +8,7 @@ public final class Common {
     public final Handlers handlers;
 
     public Common() {
-        var common = Tweaks.instance().feature(GrindstoneDisenchanting.class);
+        var common = Tweaks.instance().sidedFeature(GrindstoneDisenchanting.class);
         handlers = common.handlers;
     }
 }

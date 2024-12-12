@@ -20,6 +20,6 @@ public final class TotemEmergencySwap extends SidedFeature {
     }
 
     public static TotemEmergencySwap feature() {
-        return Tweaks.instance().feature(TotemEmergencySwap.class);
+        return Tweaks.instance().sidedFeature(TotemEmergencySwap.class);
     }
 }

@@ -22,6 +22,6 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     @Override
     public List<Component> getTooltipFromContainerItem(ItemStack stack) {
         var tooltip = super.getTooltipFromContainerItem(stack);
-        return Tweaks.instance().feature(RepairCostVisible.class).handlers.addRepairCostToTooltip(stack, tooltip);
+        return Tweaks.instance().sidedFeature(RepairCostVisible.class).handlers.addRepairCostToTooltip(stack, tooltip);
     }
 }

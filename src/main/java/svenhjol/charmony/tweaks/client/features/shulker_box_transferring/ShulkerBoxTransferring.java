@@ -16,6 +16,6 @@ public final class ShulkerBoxTransferring extends SidedFeature {
     }
 
     public static ShulkerBoxTransferring feature() {
-        return Tweaks.instance().feature(ShulkerBoxTransferring.class);
+        return Tweaks.instance().sidedFeature(ShulkerBoxTransferring.class);
     }
 }

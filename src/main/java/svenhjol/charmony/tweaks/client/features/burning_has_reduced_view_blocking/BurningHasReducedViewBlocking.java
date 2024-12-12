@@ -33,7 +33,7 @@ public final class BurningHasReducedViewBlocking extends SidedFeature {
     }
 
     public static BurningHasReducedViewBlocking feature() {
-        return Tweaks.instance().feature(BurningHasReducedViewBlocking.class);
+        return Tweaks.instance().sidedFeature(BurningHasReducedViewBlocking.class);
     }
 
     public double verticalPosition() {

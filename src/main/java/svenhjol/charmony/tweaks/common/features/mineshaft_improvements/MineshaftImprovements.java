@@ -67,7 +67,7 @@ public final class MineshaftImprovements extends SidedFeature {
     }
 
     public static MineshaftImprovements feature() {
-        return Tweaks.instance().feature(MineshaftImprovements.class);
+        return Tweaks.instance().sidedFeature(MineshaftImprovements.class);
     }
 
     public double floorBlockChance() {

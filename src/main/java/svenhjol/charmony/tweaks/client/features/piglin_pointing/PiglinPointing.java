@@ -21,6 +21,6 @@ public final class PiglinPointing extends SidedFeature {
     }
 
     public static PiglinPointing feature() {
-        return Tweaks.instance().feature(PiglinPointing.class);
+        return Tweaks.instance().sidedFeature(PiglinPointing.class);
     }
 }

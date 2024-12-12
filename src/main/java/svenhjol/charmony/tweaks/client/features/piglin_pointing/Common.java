@@ -8,7 +8,7 @@ public final class Common {
     public final Handlers handlers;
 
     public Common() {
-        var feature = Tweaks.instance().feature(PiglinPointing.class);
+        var feature = Tweaks.instance().sidedFeature(PiglinPointing.class);
         handlers = feature.handlers;
     }
 }

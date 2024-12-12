@@ -22,6 +22,6 @@ public final class ParrotsStayOnShoulder extends SidedFeature {
     }
 
     public static ParrotsStayOnShoulder feature() {
-        return Tweaks.instance().feature(ParrotsStayOnShoulder.class);
+        return Tweaks.instance().sidedFeature(ParrotsStayOnShoulder.class);
     }
 }

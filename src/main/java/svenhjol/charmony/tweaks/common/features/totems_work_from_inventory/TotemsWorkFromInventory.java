@@ -23,6 +23,6 @@ public final class TotemsWorkFromInventory extends SidedFeature {
     }
 
     public static TotemsWorkFromInventory feature() {
-        return Tweaks.instance().feature(TotemsWorkFromInventory.class);
+        return Tweaks.instance().sidedFeature(TotemsWorkFromInventory.class);
     }
 }

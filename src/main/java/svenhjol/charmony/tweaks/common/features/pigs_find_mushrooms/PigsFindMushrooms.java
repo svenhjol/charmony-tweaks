@@ -39,7 +39,7 @@ public final class PigsFindMushrooms extends SidedFeature {
     }
 
     public static PigsFindMushrooms feature() {
-        return Tweaks.instance().feature(PigsFindMushrooms.class);
+        return Tweaks.instance().sidedFeature(PigsFindMushrooms.class);
     }
 
     public int findChance() {

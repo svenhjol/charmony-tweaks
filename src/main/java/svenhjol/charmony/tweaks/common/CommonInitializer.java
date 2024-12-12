@@ -31,6 +31,8 @@ import svenhjol.charmony.tweaks.common.features.totems_work_from_inventory.Totem
 import svenhjol.charmony.tweaks.common.features.trade_improvements.TradeImprovements;
 import svenhjol.charmony.tweaks.common.features.villager_attracting.VillagerAttracting;
 
+import java.util.List;
+
 public class CommonInitializer implements ModInitializer {
     @Override
     public void onInitialize() {
@@ -39,33 +41,35 @@ public class CommonInitializer implements ModInitializer {
 
         // Prepare and run the mod.
         var tweaks = Tweaks.instance();
-        tweaks.addFeature(AnimalArmorGrinding.class);
-        tweaks.addFeature(AnimalDamageImmunity.class);
-        tweaks.addFeature(AnimalReviving.class);
-        tweaks.addFeature(CampfiresHealPlayers.class);
-        tweaks.addFeature(CropFeatherFalling.class);
-        tweaks.addFeature(CropReplanting.class);
-        tweaks.addFeature(DeepslateDungeons.class);
-        tweaks.addFeature(GrindstoneDisenchanting.class);
-        tweaks.addFeature(ItemFrameHiding.class);
-        tweaks.addFeature(ItemRepairing.class);
-        tweaks.addFeature(ItemRestocking.class);
-        tweaks.addFeature(MineshaftImprovements.class);
-        tweaks.addFeature(MobDrops.class);
-        tweaks.addFeature(NetherPortalBlocks.class);
-        tweaks.addFeature(ParrotsStayOnShoulder.class);
-        tweaks.addFeature(PathConverting.class);
-        tweaks.addFeature(PiglinPointing.class);
-        tweaks.addFeature(PigsFindMushrooms.class);
-        tweaks.addFeature(RepairCostUnlimited.class);
-        tweaks.addFeature(RespawnAnchorsWorkEverywhere.class);
-        tweaks.addFeature(ShulkerBoxTransferring.class);
-        tweaks.addFeature(SpawnersDropItems.class);
-        tweaks.addFeature(SuspiciousBlockCreating.class);
-        tweaks.addFeature(TorchflowersEmitLight.class);
-        tweaks.addFeature(TotemsWorkFromInventory.class);
-        tweaks.addFeature(TradeImprovements.class);
-        tweaks.addFeature(VillagerAttracting.class);
+        tweaks.addSidedFeatures(List.of(
+            AnimalArmorGrinding.class,
+            AnimalDamageImmunity.class,
+            AnimalReviving.class,
+            CampfiresHealPlayers.class,
+            CropFeatherFalling.class,
+            CropReplanting.class,
+            DeepslateDungeons.class,
+            GrindstoneDisenchanting.class,
+            ItemFrameHiding.class,
+            ItemRepairing.class,
+            ItemRestocking.class,
+            MineshaftImprovements.class,
+            MobDrops.class,
+            NetherPortalBlocks.class,
+            ParrotsStayOnShoulder.class,
+            PathConverting.class,
+            PiglinPointing.class,
+            PigsFindMushrooms.class,
+            RepairCostUnlimited.class,
+            RespawnAnchorsWorkEverywhere.class,
+            ShulkerBoxTransferring.class,
+            SpawnersDropItems.class,
+            SuspiciousBlockCreating.class,
+            TorchflowersEmitLight.class,
+            TotemsWorkFromInventory.class,
+            TradeImprovements.class,
+            VillagerAttracting.class
+        ));
         tweaks.run(Side.Common);
     }
 }

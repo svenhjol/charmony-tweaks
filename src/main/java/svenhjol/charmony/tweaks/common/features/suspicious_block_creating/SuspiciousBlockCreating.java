@@ -21,6 +21,6 @@ public final class SuspiciousBlockCreating extends SidedFeature {
     }
 
     public static SuspiciousBlockCreating feature() {
-        return Tweaks.instance().feature(SuspiciousBlockCreating.class);
+        return Tweaks.instance().sidedFeature(SuspiciousBlockCreating.class);
     }
 }

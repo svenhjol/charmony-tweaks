@@ -39,7 +39,7 @@ public final class AnimalReviving extends SidedFeature {
     }
 
     public static AnimalReviving feature() {
-        return Tweaks.instance().feature(AnimalReviving.class);
+        return Tweaks.instance().sidedFeature(AnimalReviving.class);
     }
 
     public boolean dropLootOnDeath() {

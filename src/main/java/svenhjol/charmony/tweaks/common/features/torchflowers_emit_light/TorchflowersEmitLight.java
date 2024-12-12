@@ -24,7 +24,7 @@ public final class TorchflowersEmitLight extends SidedFeature {
     }
 
     public static TorchflowersEmitLight feature() {
-        return Tweaks.instance().feature(TorchflowersEmitLight.class);
+        return Tweaks.instance().sidedFeature(TorchflowersEmitLight.class);
     }
 
     public int lightLevel() {

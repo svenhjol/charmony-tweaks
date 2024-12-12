@@ -8,7 +8,7 @@ public final class Common {
     public final Registers registers;
 
     public Common() {
-        var common = Tweaks.instance().feature(ItemFrameHiding.class);
+        var common = Tweaks.instance().sidedFeature(ItemFrameHiding.class);
         registers = common.registers;
     }
 }

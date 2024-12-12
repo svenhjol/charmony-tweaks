@@ -19,6 +19,6 @@ public final class CropFeatherFalling extends SidedFeature {
     }
 
     public static CropFeatherFalling feature() {
-        return Tweaks.instance().feature(CropFeatherFalling.class);
+        return Tweaks.instance().sidedFeature(CropFeatherFalling.class);
     }
 }

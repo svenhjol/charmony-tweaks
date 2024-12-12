@@ -17,6 +17,6 @@ public final class DeepslateDungeons extends SidedFeature {
     }
 
     public static DeepslateDungeons feature() {
-        return Tweaks.instance().feature(DeepslateDungeons.class);
+        return Tweaks.instance().sidedFeature(DeepslateDungeons.class);
     }
 }

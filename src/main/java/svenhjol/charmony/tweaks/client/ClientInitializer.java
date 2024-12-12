@@ -24,6 +24,8 @@ import svenhjol.charmony.tweaks.client.features.spyglass_scope_hiding.SpyglassSc
 import svenhjol.charmony.tweaks.client.features.telemetry.Telemetry;
 import svenhjol.charmony.tweaks.client.features.totem_emergency_swap.TotemEmergencySwap;
 
+import java.util.List;
+
 public class ClientInitializer implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
@@ -32,26 +34,28 @@ public class ClientInitializer implements ClientModInitializer {
 
         // Prepare and run the mod.
         var tweaks = Tweaks.instance();
-        tweaks.addFeature(BurningHasReducedViewBlocking.class);
-        tweaks.addFeature(ChiseledBookshelvesShowBookOnHover.class);
-        tweaks.addFeature(CompassesShowPosition.class);
-        tweaks.addFeature(CraftingTableNearby.class);
-        tweaks.addFeature(GrindstoneDisenchanting.class);
-        tweaks.addFeature(ItemFrameHiding.class);
-        tweaks.addFeature(ItemTidying.class);
-        tweaks.addFeature(JukeboxesStopBackgroundMusic.class);
-        tweaks.addFeature(MapsShowWhenHovering.class);
-        tweaks.addFeature(MobTextures.class);
-        tweaks.addFeature(PiglinPointing.class);
-        tweaks.addFeature(PigsFindMushrooms.class);
-        tweaks.addFeature(RepairCostUnlimited.class);
-        tweaks.addFeature(RepairCostVisible.class);
-        tweaks.addFeature(ShieldsHaveReducedViewBlocking.class);
-        tweaks.addFeature(ShulkerBoxTransferring.class);
-        tweaks.addFeature(ShulkerBoxesShowContentsWhenHovering.class);
-        tweaks.addFeature(SpyglassScopeHiding.class);
-        tweaks.addFeature(Telemetry.class);
-        tweaks.addFeature(TotemEmergencySwap.class);
+        tweaks.addSidedFeatures(List.of(
+            BurningHasReducedViewBlocking.class,
+            ChiseledBookshelvesShowBookOnHover.class,
+            CompassesShowPosition.class,
+            CraftingTableNearby.class,
+            GrindstoneDisenchanting.class,
+            ItemFrameHiding.class,
+            ItemTidying.class,
+            JukeboxesStopBackgroundMusic.class,
+            MapsShowWhenHovering.class,
+            MobTextures.class,
+            PiglinPointing.class,
+            PigsFindMushrooms.class,
+            RepairCostUnlimited.class,
+            RepairCostVisible.class,
+            ShieldsHaveReducedViewBlocking.class,
+            ShulkerBoxTransferring.class,
+            ShulkerBoxesShowContentsWhenHovering.class,
+            SpyglassScopeHiding.class,
+            Telemetry.class,
+            TotemEmergencySwap.class
+        ));
         tweaks.run(Side.Client);
     }
 }

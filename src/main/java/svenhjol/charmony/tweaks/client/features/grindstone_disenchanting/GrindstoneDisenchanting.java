@@ -20,6 +20,6 @@ public final class GrindstoneDisenchanting extends SidedFeature {
     }
 
     public static GrindstoneDisenchanting feature() {
-        return Tweaks.instance().feature(GrindstoneDisenchanting.class);
+        return Tweaks.instance().sidedFeature(GrindstoneDisenchanting.class);
     }
 }

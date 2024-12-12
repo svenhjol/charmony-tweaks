@@ -19,6 +19,6 @@ public final class AnimalDamageImmunity extends SidedFeature {
     }
 
     public static AnimalDamageImmunity feature() {
-        return Tweaks.instance().feature(AnimalDamageImmunity.class);
+        return Tweaks.instance().sidedFeature(AnimalDamageImmunity.class);
     }
 }

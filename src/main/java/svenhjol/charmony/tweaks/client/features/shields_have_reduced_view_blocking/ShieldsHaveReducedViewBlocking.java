@@ -33,7 +33,7 @@ public final class ShieldsHaveReducedViewBlocking extends SidedFeature {
     }
 
     public static ShieldsHaveReducedViewBlocking feature() {
-        return Tweaks.instance().feature(ShieldsHaveReducedViewBlocking.class);
+        return Tweaks.instance().sidedFeature(ShieldsHaveReducedViewBlocking.class);
     }
 
     public double verticalPosition() {

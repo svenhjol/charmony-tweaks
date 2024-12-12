@@ -20,6 +20,6 @@ public final class CampfiresHealPlayers extends SidedFeature {
     }
 
     public static CampfiresHealPlayers feature() {
-        return Tweaks.instance().feature(CampfiresHealPlayers.class);
+        return Tweaks.instance().sidedFeature(CampfiresHealPlayers.class);
     }
 }
