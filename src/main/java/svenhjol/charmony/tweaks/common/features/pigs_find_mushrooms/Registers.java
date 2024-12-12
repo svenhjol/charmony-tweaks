@@ -1,10 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.pigs_find_mushrooms;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import svenhjol.charmony.core.base.Setup;
+import svenhjol.charmony.core.common.CommonRegistry;
 import svenhjol.charmony.tweaks.Tweaks;
 
 public final class Registers extends Setup<PigsFindMushrooms> {
@@ -12,10 +11,7 @@ public final class Registers extends Setup<PigsFindMushrooms> {
 
     public Registers(PigsFindMushrooms feature) {
         super(feature);
-
-        var sniffingSoundId = Tweaks.id("pig_sniffing");
-        sniffingSound = Registry.register(BuiltInRegistries.SOUND_EVENT, sniffingSoundId,
-            SoundEvent.createVariableRangeEvent(sniffingSoundId));
+        sniffingSound = CommonRegistry.instance().sound(Tweaks.id("pig_sniffing"));
     }
 
     @Override

@@ -1,9 +1,8 @@
 package svenhjol.charmony.tweaks.common.features.mob_drops;
 
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import svenhjol.charmony.core.base.Setup;
+import svenhjol.charmony.core.common.CommonRegistry;
 import svenhjol.charmony.core.events.EntityKilledDropCallback;
 import svenhjol.charmony.core.events.EntityTickCallback;
 import svenhjol.charmony.tweaks.Tweaks;
@@ -23,9 +22,7 @@ public final class Registers extends Setup<MobDrops> {
         drops.add(new GoatDrops(feature));
         drops.add(new HuskDrops(feature));
         drops.add(new WitchDrops(feature));
-
-        var shedFeatherSoundId = Tweaks.id("shed_feather");
-        shedFeatherSound = Registry.register(BuiltInRegistries.SOUND_EVENT, shedFeatherSoundId, SoundEvent.createVariableRangeEvent(shedFeatherSoundId));
+        shedFeatherSound = CommonRegistry.instance().sound(Tweaks.id("shed_feather"));
     }
 
     @Override
