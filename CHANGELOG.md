@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.2
+
+- Add ShulkerBoxTransferring.
+- Add SpawnerDropItems.
+- Add TorchflowersEmitLight.
+- Add TotemsWorkFromInventory.
+- Add TradeImprovements.
+- Add VillagerAttracting.
+
 ## 1.3.1
 
 - Update icon.
