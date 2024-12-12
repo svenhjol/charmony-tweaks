@@ -5,7 +5,9 @@ import svenhjol.charmony.core.annotations.ModDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.enums.Side;
 
-@ModDefinition(id = Tweaks.ID, sides = {Side.Client},
+@ModDefinition(
+    id = Tweaks.ID,
+    sides = {Side.Client, Side.Common},
     name = "Tweaks",
     description = "Small tweaks that don't change core gameplay. Compatible with vanilla servers such as Realms.")
 public final class Tweaks extends Mod {
