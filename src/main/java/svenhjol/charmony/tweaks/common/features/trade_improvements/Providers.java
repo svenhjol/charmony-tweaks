@@ -17,7 +17,7 @@ public final class Providers extends Setup<TradeImprovements> {
             Api.registerProvider(this);
 
             if (feature().charmonyModItems()) {
-                var registry = CommonRegistry.instance();
+                var registry = CommonRegistry.forFeature(feature());
 
                 Api.consume(WandererTradeProvider.class,
                     provider -> {

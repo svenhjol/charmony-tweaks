@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.sounds.SoundEvent;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
-import svenhjol.charmony.tweaks.Tweaks;
 
 import java.util.function.Supplier;
 
@@ -13,7 +12,9 @@ public final class Registers extends Setup<PigsFindMushrooms> {
 
     public Registers(PigsFindMushrooms feature) {
         super(feature);
-        sniffingSound = CommonRegistry.instance().sound(Tweaks.id("pig_sniffing"));
+
+        var registry = CommonRegistry.forFeature(feature);
+        sniffingSound = registry.sound("pig_sniffing");
     }
 
     @Override

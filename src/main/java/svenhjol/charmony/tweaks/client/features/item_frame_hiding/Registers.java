@@ -12,7 +12,8 @@ public final class Registers extends Setup<ItemFrameHiding> {
 
         if (Environment.usesCharmonyServer()) {
             // Create a particle to show when applying and removing amethyst.
-            ClientRegistry.instance().particle(feature.common.get().registers.particleType, Particle::new);
+            var registry = ClientRegistry.forFeature(feature);
+            registry.particle(feature.common.get().registers.particleType, Particle::new);
 
             // Handle packets being sent from the server.
             ClientPlayNetworking.registerGlobalReceiver(Networking.S2CAddAmethyst.TYPE,

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3
+
+- Refactor for Charmony 1.15.0 changes.
+
 ## 1.3.2
 
 - Add ShulkerBoxTransferring.

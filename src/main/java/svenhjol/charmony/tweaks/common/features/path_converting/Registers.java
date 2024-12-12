@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.sounds.SoundEvent;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
-import svenhjol.charmony.tweaks.Tweaks;
 
 import java.util.function.Supplier;
 
@@ -14,10 +13,10 @@ public final class Registers extends Setup<PathConverting> {
 
     public Registers(PathConverting feature) {
         super(feature);
-        var registry = CommonRegistry.instance();
+        var registry = CommonRegistry.forFeature(feature);
 
-        dirtToPathSound = registry.sound(Tweaks.id("convert_dirt_to_path"));
-        pathToDirtSound = registry.sound(Tweaks.id("convert_path_to_dirt"));
+        dirtToPathSound = registry.sound("convert_dirt_to_path");
+        pathToDirtSound = registry.sound("convert_path_to_dirt");
     }
 
     @Override

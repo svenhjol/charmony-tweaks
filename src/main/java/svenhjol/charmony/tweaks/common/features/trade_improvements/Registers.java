@@ -22,7 +22,7 @@ public final class Registers extends Setup<TradeImprovements> {
     @Override
     public Runnable boot() {
         return () -> {
-            var registry = CommonRegistry.instance();
+            var registry = CommonRegistry.forFeature(feature());
 
             if (feature().enchantedBooks()) {
                 var tier = 2;
