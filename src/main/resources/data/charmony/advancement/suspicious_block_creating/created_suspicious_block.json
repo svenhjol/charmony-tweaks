@@ -5,10 +5,10 @@
       "id": "minecraft:piston"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.created_suspicious_block.title"
+      "translate": "advancements.charmony.created_suspicious_block.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.created_suspicious_block.description"
+      "translate": "advancements.charmony.created_suspicious_block.description"
     },
     "frame": "goal",
     "show_toast": true,

@@ -8,10 +8,10 @@
       }
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.revived_animal.title"
+      "translate": "advancements.charmony.revived_animal.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.revived_animal.description"
+      "translate": "advancements.charmony.revived_animal.description"
     },
     "frame": "goal",
     "show_toast": true,

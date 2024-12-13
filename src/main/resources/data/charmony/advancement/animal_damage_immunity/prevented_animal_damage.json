@@ -5,10 +5,10 @@
       "id": "minecraft:stone_sword"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.prevented_animal_damage.title"
+      "translate": "advancements.charmony.prevented_animal_damage.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.prevented_animal_damage.description"
+      "translate": "advancements.charmony.prevented_animal_damage.description"
     },
     "frame": "goal",
     "show_toast": true,

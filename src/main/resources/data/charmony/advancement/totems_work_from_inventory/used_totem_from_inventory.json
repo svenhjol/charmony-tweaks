@@ -5,10 +5,10 @@
       "id": "minecraft:totem_of_undying"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.used_totem_from_inventory.title"
+      "translate": "advancements.charmony.used_totem_from_inventory.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.used_totem_from_inventory.description"
+      "translate": "advancements.charmony.used_totem_from_inventory.description"
     },
     "frame": "goal",
     "show_toast": true,

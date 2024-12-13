@@ -5,10 +5,10 @@
       "id": "minecraft:campfire"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.healed_near_campfire.title"
+      "translate": "advancements.charmony.healed_near_campfire.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.healed_near_campfire.description"
+      "translate": "advancements.charmony.healed_near_campfire.description"
     },
     "frame": "goal",
     "show_toast": true,

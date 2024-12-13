@@ -5,10 +5,10 @@
       "id": "minecraft:cobblestone"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.restocked_current_item.title"
+      "translate": "advancements.charmony.restocked_current_item.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.restocked_current_item.description"
+      "translate": "advancements.charmony.restocked_current_item.description"
     },
     "frame": "goal",
     "show_toast": true,

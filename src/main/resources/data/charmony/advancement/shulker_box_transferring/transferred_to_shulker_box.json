@@ -5,10 +5,10 @@
       "id": "minecraft:magenta_shulker_box"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.transferred_to_shulker_box.title"
+      "translate": "advancements.charmony.transferred_to_shulker_box.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.transferred_to_shulker_box.description"
+      "translate": "advancements.charmony.transferred_to_shulker_box.description"
     },
     "frame": "goal",
     "show_toast": true,

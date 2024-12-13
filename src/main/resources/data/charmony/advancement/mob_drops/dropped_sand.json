@@ -5,10 +5,10 @@
       "id": "minecraft:sand"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.dropped_sand.title"
+      "translate": "advancements.charmony.dropped_sand.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.dropped_sand.description"
+      "translate": "advancements.charmony.dropped_sand.description"
     },
     "frame": "goal",
     "show_toast": true,

@@ -5,10 +5,10 @@
       "id": "minecraft:netherite_scrap"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.repaired_netherite.title"
+      "translate": "advancements.charmony.repaired_netherite.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.repaired_netherite.description"
+      "translate": "advancements.charmony.repaired_netherite.description"
     },
     "frame": "goal",
     "show_toast": true,

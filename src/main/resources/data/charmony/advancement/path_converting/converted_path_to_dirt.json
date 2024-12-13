@@ -5,10 +5,10 @@
       "id": "minecraft:dirt"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.converted_path_to_dirt.title"
+      "translate": "advancements.charmony.converted_path_to_dirt.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.converted_path_to_dirt.description"
+      "translate": "advancements.charmony.converted_path_to_dirt.description"
     },
     "frame": "goal",
     "show_toast": true,

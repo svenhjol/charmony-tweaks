@@ -5,10 +5,10 @@
       "id": "minecraft:wheat"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.replanted_crops.title"
+      "translate": "advancements.charmony.replanted_crops.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.replanted_crops.description"
+      "translate": "advancements.charmony.replanted_crops.description"
     },
     "frame": "goal",
     "show_toast": true,

@@ -5,10 +5,10 @@
       "id": "minecraft:chiseled_nether_bricks"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.piglin_provided_directions.title"
+      "translate": "advancements.charmony.piglin_provided_directions.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.piglin_provided_directions.description"
+      "translate": "advancements.charmony.piglin_provided_directions.description"
     },
     "frame": "challenge",
     "show_toast": true,

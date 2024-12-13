@@ -5,10 +5,10 @@
       "id": "minecraft:item_frame"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.hidden_item_frame.title"
+      "translate": "advancements.charmony.hidden_item_frame.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.hidden_item_frame.description"
+      "translate": "advancements.charmony.hidden_item_frame.description"
     },
     "frame": "goal",
     "show_toast": true,

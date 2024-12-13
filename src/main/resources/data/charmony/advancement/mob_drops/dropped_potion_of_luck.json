@@ -10,10 +10,10 @@
       }
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.dropped_potion_of_luck.title"
+      "translate": "advancements.charmony.dropped_potion_of_luck.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.dropped_potion_of_luck.description"
+      "translate": "advancements.charmony.dropped_potion_of_luck.description"
     },
     "frame": "challenge",
     "show_toast": true,

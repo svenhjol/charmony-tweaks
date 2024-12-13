@@ -5,10 +5,10 @@
       "id": "minecraft:stone_pickaxe"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.tweaks.title"
+      "translate": "advancements.charmony.tweaks.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.tweaks.description"
+      "translate": "advancements.charmony.tweaks.description"
     },
     "frame": "task",
     "show_toast": false,

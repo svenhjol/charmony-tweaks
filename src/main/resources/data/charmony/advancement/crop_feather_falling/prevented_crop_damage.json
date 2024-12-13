@@ -5,10 +5,10 @@
       "id": "minecraft:farmland"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.prevented_crop_damage.title"
+      "translate": "advancements.charmony.prevented_crop_damage.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.prevented_crop_damage.description"
+      "translate": "advancements.charmony.prevented_crop_damage.description"
     },
     "frame": "goal",
     "show_toast": true,

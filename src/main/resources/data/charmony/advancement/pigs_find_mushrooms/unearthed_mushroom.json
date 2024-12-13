@@ -5,10 +5,10 @@
       "id": "minecraft:red_mushroom"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.unearthed_mushroom.title"
+      "translate": "advancements.charmony.unearthed_mushroom.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.unearthed_mushroom.description"
+      "translate": "advancements.charmony.unearthed_mushroom.description"
     },
     "frame": "challenge",
     "show_toast": true,

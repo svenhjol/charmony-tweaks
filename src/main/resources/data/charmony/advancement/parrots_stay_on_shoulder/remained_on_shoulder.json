@@ -5,10 +5,10 @@
       "id": "minecraft:saddle"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.remained_on_shoulder.title"
+      "translate": "advancements.charmony.remained_on_shoulder.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.remained_on_shoulder.description"
+      "translate": "advancements.charmony.remained_on_shoulder.description"
     },
     "frame": "goal",
     "show_toast": true,

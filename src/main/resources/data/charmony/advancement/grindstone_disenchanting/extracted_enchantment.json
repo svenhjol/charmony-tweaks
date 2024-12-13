@@ -5,10 +5,10 @@
       "id": "minecraft:grindstone"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.extracted_enchantment.title"
+      "translate": "advancements.charmony.extracted_enchantment.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.extracted_enchantment.description"
+      "translate": "advancements.charmony.extracted_enchantment.description"
     },
     "frame": "goal",
     "show_toast": true,

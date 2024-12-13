@@ -5,10 +5,10 @@
       "id": "minecraft:leather_horse_armor"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.ground_animal_armor.title"
+      "translate": "advancements.charmony.ground_animal_armor.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.ground_animal_armor.description"
+      "translate": "advancements.charmony.ground_animal_armor.description"
     },
     "frame": "goal",
     "show_toast": true,

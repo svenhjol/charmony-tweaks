@@ -5,10 +5,10 @@
       "id": "minecraft:cobweb"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.dropped_cobwebs.title"
+      "translate": "advancements.charmony.dropped_cobwebs.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.dropped_cobwebs.description"
+      "translate": "advancements.charmony.dropped_cobwebs.description"
     },
     "frame": "goal",
     "show_toast": true,

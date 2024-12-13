@@ -5,10 +5,10 @@
       "id": "minecraft:saddle"
     },
     "title": {
-      "translate": "advancements.charmony-tweaks.dismounted_from_shoulder.title"
+      "translate": "advancements.charmony.dismounted_from_shoulder.title"
     },
     "description": {
-      "translate": "advancements.charmony-tweaks.dismounted_from_shoulder.description"
+      "translate": "advancements.charmony.dismounted_from_shoulder.description"
     },
     "frame": "goal",
     "show_toast": true,
