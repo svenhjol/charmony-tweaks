@@ -7,8 +7,7 @@ import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.tweaks.Tweaks;
 
 @FeatureDefinition(side = Side.Common, description = """
-    A totem will work from anywhere in the player's inventory as well as held in the main or offhand.
-    This includes the Totem of Preserving, if enabled.""")
+    A Totem of Undying will work from anywhere in the player's inventory as well as held in the main or offhand.""")
 public final class TotemsWorkFromInventory extends SidedFeature {
     public final Providers providers;
     public final Handlers handlers;
