@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Parrots stay on player's shoulder when jumping and falling. Crouch to make them dismount.""")
@@ -22,6 +22,6 @@ public final class ParrotsStayOnShoulder extends SidedFeature {
     }
 
     public static ParrotsStayOnShoulder feature() {
-        return Tweaks.instance().sidedFeature(ParrotsStayOnShoulder.class);
+        return TweaksMod.instance().sidedFeature(ParrotsStayOnShoulder.class);
     }
 }

@@ -11,7 +11,7 @@ import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class Registers extends Setup<PiglinPointing> {
     public Registers(PiglinPointing feature) {
         super(feature);
 
-        var pointingAtTargetId = Tweaks.id("pointing_at_target");
+        var pointingAtTargetId = TweaksMod.id("pointing_at_target");
         pointingAtTarget = Registry.register(BuiltInRegistries.MEMORY_MODULE_TYPE, pointingAtTargetId,
             new MemoryModuleType<>(Optional.empty()));
 

@@ -6,7 +6,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Pigs have a chance to find mushrooms from certain blocks. By default mushrooms are unearthed from mycelium and podzol blocks.
@@ -39,7 +39,7 @@ public final class PigsFindMushrooms extends SidedFeature {
     }
 
     public static PigsFindMushrooms feature() {
-        return Tweaks.instance().sidedFeature(PigsFindMushrooms.class);
+        return TweaksMod.instance().sidedFeature(PigsFindMushrooms.class);
     }
 
     public int findChance() {

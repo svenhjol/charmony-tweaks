@@ -6,7 +6,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Extract enchantments from any enchanted item onto an empty book using the grindstone.""")
@@ -32,7 +32,7 @@ public final class GrindstoneDisenchanting extends SidedFeature {
     }
 
     public static GrindstoneDisenchanting feature() {
-        return Tweaks.instance().sidedFeature(GrindstoneDisenchanting.class);
+        return TweaksMod.instance().sidedFeature(GrindstoneDisenchanting.class);
     }
 
     public int initialCost() {

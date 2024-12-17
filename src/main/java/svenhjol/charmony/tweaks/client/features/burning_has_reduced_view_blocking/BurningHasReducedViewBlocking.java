@@ -6,7 +6,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Client, description = """
     Reduces the size and position of the burning animation to prevent blocking the player's view.""")
@@ -33,7 +33,7 @@ public final class BurningHasReducedViewBlocking extends SidedFeature {
     }
 
     public static BurningHasReducedViewBlocking feature() {
-        return Tweaks.instance().sidedFeature(BurningHasReducedViewBlocking.class);
+        return TweaksMod.instance().sidedFeature(BurningHasReducedViewBlocking.class);
     }
 
     public double verticalPosition() {

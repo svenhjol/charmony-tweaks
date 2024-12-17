@@ -7,7 +7,7 @@ import org.lwjgl.glfw.GLFW;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.RenderScreenCallback;
 import svenhjol.charmony.core.events.SetupScreenCallback;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 public final class Registers extends Setup<ItemTidying> {
     public final WidgetSprites tidyButtonSprite;
@@ -17,8 +17,8 @@ public final class Registers extends Setup<ItemTidying> {
         super(feature);
 
         this.tidyButtonSprite = new WidgetSprites(
-            Tweaks.id("widget/item_tidying/tidy_button"),
-            Tweaks.id("widget/item_tidying/tidy_button_highlighted")
+            TweaksMod.id("widget/item_tidying/tidy_button"),
+            TweaksMod.id("widget/item_tidying/tidy_button_highlighted")
         );
 
         this.tidyInventoryKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(

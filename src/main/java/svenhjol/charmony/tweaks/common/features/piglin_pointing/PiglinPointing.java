@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Piglins turn and point in the rough direction of a nether fortress or bastion remnant.
@@ -24,6 +24,6 @@ public final class PiglinPointing extends SidedFeature {
     }
 
     public static PiglinPointing feature() {
-        return Tweaks.instance().sidedFeature(PiglinPointing.class);
+        return TweaksMod.instance().sidedFeature(PiglinPointing.class);
     }
 }

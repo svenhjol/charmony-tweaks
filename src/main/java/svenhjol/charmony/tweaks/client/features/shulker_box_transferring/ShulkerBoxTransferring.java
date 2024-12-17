@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 /**
  * This is the client-side processing of the ShulkerBoxTransferring common feature.
@@ -16,6 +16,6 @@ public final class ShulkerBoxTransferring extends SidedFeature {
     }
 
     public static ShulkerBoxTransferring feature() {
-        return Tweaks.instance().sidedFeature(ShulkerBoxTransferring.class);
+        return TweaksMod.instance().sidedFeature(ShulkerBoxTransferring.class);
     }
 }

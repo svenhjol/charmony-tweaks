@@ -1,6 +1,6 @@
 package svenhjol.charmony.tweaks.client.features.grindstone_disenchanting;
 
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.GrindstoneDisenchanting;
 import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.Handlers;
 
@@ -8,7 +8,7 @@ public final class Common {
     public final Handlers handlers;
 
     public Common() {
-        var common = Tweaks.instance().sidedFeature(GrindstoneDisenchanting.class);
+        var common = TweaksMod.instance().sidedFeature(GrindstoneDisenchanting.class);
         handlers = common.handlers;
     }
 }

@@ -7,7 +7,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 public final class Registers extends Setup<ItemFrameHiding> {
     public final SimpleParticleType particleType;
@@ -15,7 +15,7 @@ public final class Registers extends Setup<ItemFrameHiding> {
     public Registers(ItemFrameHiding feature) {
         super(feature);
 
-        particleType = Registry.register(BuiltInRegistries.PARTICLE_TYPE, Tweaks.id("apply_amethyst"), new ParticleType());
+        particleType = Registry.register(BuiltInRegistries.PARTICLE_TYPE, TweaksMod.id("apply_amethyst"), new ParticleType());
     }
 
     @Override

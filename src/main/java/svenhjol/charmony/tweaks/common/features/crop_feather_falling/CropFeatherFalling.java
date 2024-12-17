@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Prevents crop trampling when wearing boots enchanted with Feather Falling.""")
@@ -19,6 +19,6 @@ public final class CropFeatherFalling extends SidedFeature {
     }
 
     public static CropFeatherFalling feature() {
-        return Tweaks.instance().sidedFeature(CropFeatherFalling.class);
+        return TweaksMod.instance().sidedFeature(CropFeatherFalling.class);
     }
 }

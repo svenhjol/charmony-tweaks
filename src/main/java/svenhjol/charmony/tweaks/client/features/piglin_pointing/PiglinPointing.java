@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.function.Supplier;
 
@@ -21,6 +21,6 @@ public final class PiglinPointing extends SidedFeature {
     }
 
     public static PiglinPointing feature() {
-        return Tweaks.instance().sidedFeature(PiglinPointing.class);
+        return TweaksMod.instance().sidedFeature(PiglinPointing.class);
     }
 }

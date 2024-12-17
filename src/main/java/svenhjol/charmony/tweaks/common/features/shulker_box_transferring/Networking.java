@@ -5,7 +5,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 public final class Networking extends Setup<ShulkerBoxTransferring> {
     public Networking(ShulkerBoxTransferring feature) {
@@ -13,7 +13,7 @@ public final class Networking extends Setup<ShulkerBoxTransferring> {
     }
 
     public record C2SAddItemToShulkerBox() implements CustomPacketPayload {
-        public static Type<C2SAddItemToShulkerBox> TYPE = new Type<>(Tweaks.id("add_item_to_shulker_box"));
+        public static Type<C2SAddItemToShulkerBox> TYPE = new Type<>(TweaksMod.id("add_item_to_shulker_box"));
         static StreamCodec<FriendlyByteBuf, C2SAddItemToShulkerBox> CODEC = StreamCodec.of(C2SAddItemToShulkerBox::encode, C2SAddItemToShulkerBox::decode);
 
         public static void send() {

@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.function.Supplier;
 
@@ -20,6 +20,6 @@ public final class PigsFindMushrooms extends SidedFeature {
     }
 
     public static PigsFindMushrooms feature() {
-        return Tweaks.instance().sidedFeature(PigsFindMushrooms.class);
+        return TweaksMod.instance().sidedFeature(PigsFindMushrooms.class);
     }
 }

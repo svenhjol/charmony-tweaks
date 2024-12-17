@@ -2,7 +2,7 @@ package svenhjol.charmony.tweaks.common;
 
 import net.fabricmc.api.ModInitializer;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 import svenhjol.charmony.tweaks.common.features.animal_armor_grinding.AnimalArmorGrinding;
 import svenhjol.charmony.tweaks.common.features.animal_damage_immunity.AnimalDamageImmunity;
 import svenhjol.charmony.tweaks.common.features.animal_reviving.AnimalReviving;
@@ -40,7 +40,7 @@ public class CommonInitializer implements ModInitializer {
         svenhjol.charmony.core.common.CommonInitializer.init();
 
         // Prepare and run the mod.
-        var tweaks = Tweaks.instance();
+        var tweaks = TweaksMod.instance();
         tweaks.addSidedFeatures(List.of(
             AnimalArmorGrinding.class,
             AnimalDamageImmunity.class,

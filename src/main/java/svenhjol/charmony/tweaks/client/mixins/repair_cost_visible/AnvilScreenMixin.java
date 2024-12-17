@@ -8,7 +8,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AnvilMenu;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 import svenhjol.charmony.tweaks.client.features.repair_cost_visible.RepairCostVisible;
 
 import java.util.List;
@@ -22,6 +22,6 @@ public abstract class AnvilScreenMixin extends ItemCombinerScreen<AnvilMenu> {
     @Override
     public List<Component> getTooltipFromContainerItem(ItemStack stack) {
         var tooltip = super.getTooltipFromContainerItem(stack);
-        return Tweaks.instance().sidedFeature(RepairCostVisible.class).handlers.addRepairCostToTooltip(stack, tooltip);
+        return TweaksMod.instance().sidedFeature(RepairCostVisible.class).handlers.addRepairCostToTooltip(stack, tooltip);
     }
 }

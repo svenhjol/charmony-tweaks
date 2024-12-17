@@ -2,12 +2,12 @@ package svenhjol.charmony.tweaks.client.mixins;
 
 import svenhjol.charmony.core.base.MixinConfig;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 public class ClientMixinConfig extends MixinConfig {
     @Override
     protected String modId() {
-        return Tweaks.ID;
+        return TweaksMod.ID;
     }
 
     @Override

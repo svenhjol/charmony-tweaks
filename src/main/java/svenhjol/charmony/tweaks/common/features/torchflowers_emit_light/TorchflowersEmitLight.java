@@ -6,7 +6,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = "Torchflowers emit ambient light.")
 public final class TorchflowersEmitLight extends SidedFeature {
@@ -24,7 +24,7 @@ public final class TorchflowersEmitLight extends SidedFeature {
     }
 
     public static TorchflowersEmitLight feature() {
-        return Tweaks.instance().sidedFeature(TorchflowersEmitLight.class);
+        return TweaksMod.instance().sidedFeature(TorchflowersEmitLight.class);
     }
 
     public int lightLevel() {

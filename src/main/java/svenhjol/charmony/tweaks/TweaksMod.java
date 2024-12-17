@@ -6,19 +6,19 @@ import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.enums.Side;
 
 @ModDefinition(
-    id = Tweaks.ID,
+    id = TweaksMod.ID,
     sides = {Side.Client, Side.Common},
     name = "Tweaks",
     description = "Small tweaks that don't change core gameplay. Compatible with vanilla servers such as Realms.")
-public final class Tweaks extends Mod {
+public final class TweaksMod extends Mod {
     public static final String ID = "charmony-tweaks";
-    private static Tweaks instance;
+    private static TweaksMod instance;
 
-    private Tweaks() {}
+    private TweaksMod() {}
 
-    public static Tweaks instance() {
+    public static TweaksMod instance() {
         if (instance == null) {
-            instance = new Tweaks();
+            instance = new TweaksMod();
         }
         return instance;
     }

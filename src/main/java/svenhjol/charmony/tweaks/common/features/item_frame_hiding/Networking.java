@@ -9,7 +9,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 public final class Networking extends Setup<ItemFrameHiding> {
     public Networking(ItemFrameHiding feature) {
@@ -18,7 +18,7 @@ public final class Networking extends Setup<ItemFrameHiding> {
     
     // Server-to-client
     public record S2CAddAmethyst(BlockPos pos) implements CustomPacketPayload, ItemFrameInteraction {
-        public static Type<S2CAddAmethyst> TYPE = new Type<>(Tweaks.id("add_amethyst_to_item_frame"));
+        public static Type<S2CAddAmethyst> TYPE = new Type<>(TweaksMod.id("add_amethyst_to_item_frame"));
         static StreamCodec<FriendlyByteBuf, S2CAddAmethyst> CODEC = StreamCodec.of(S2CAddAmethyst::encode, S2CAddAmethyst::decode);
         
         public static void send(ServerPlayer player, BlockPos pos) {
@@ -49,7 +49,7 @@ public final class Networking extends Setup<ItemFrameHiding> {
 
     // Server-to-client
     public record S2CRemoveAmethyst(BlockPos pos) implements CustomPacketPayload, ItemFrameInteraction {
-        public static Type<S2CRemoveAmethyst> TYPE = new Type<>(Tweaks.id("remove_amethyst_from_item_frame"));
+        public static Type<S2CRemoveAmethyst> TYPE = new Type<>(TweaksMod.id("remove_amethyst_from_item_frame"));
         static StreamCodec<FriendlyByteBuf, S2CRemoveAmethyst> CODEC = StreamCodec.of(S2CRemoveAmethyst::encode, S2CRemoveAmethyst::decode);
 
         public static void send(ServerPlayer player, BlockPos pos) {

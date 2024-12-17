@@ -13,7 +13,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +38,11 @@ public final class Registers extends Setup<MineshaftImprovements> {
         super(feature);
 
         minecartLoot.addAll(feature().minecartLoot().stream().map(s -> ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(s))).toList());
-        floorBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, Tweaks.id("mineshaft_improvements/floor_blocks"));
-        pileBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, Tweaks.id("mineshaft_improvements/pile_blocks"));
-        ceilingBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, Tweaks.id("mineshaft_improvements/ceiling_blocks"));
-        roomBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, Tweaks.id("mineshaft_improvements/room_blocks"));
-        roomDecorationLoot = ResourceKey.create(Registries.LOOT_TABLE, Tweaks.id("mineshaft_improvements/room_decorations"));
+        floorBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, TweaksMod.id("mineshaft_improvements/floor_blocks"));
+        pileBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, TweaksMod.id("mineshaft_improvements/pile_blocks"));
+        ceilingBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, TweaksMod.id("mineshaft_improvements/ceiling_blocks"));
+        roomBlockLoot = ResourceKey.create(Registries.LOOT_TABLE, TweaksMod.id("mineshaft_improvements/room_blocks"));
+        roomDecorationLoot = ResourceKey.create(Registries.LOOT_TABLE, TweaksMod.id("mineshaft_improvements/room_decorations"));
     }
 
     @Override

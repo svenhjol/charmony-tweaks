@@ -4,7 +4,7 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.Tweaks;
+import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Standing within range and sight of a lit campfire provides a small regeneration boost.
@@ -20,6 +20,6 @@ public final class CampfiresHealPlayers extends SidedFeature {
     }
 
     public static CampfiresHealPlayers feature() {
-        return Tweaks.instance().sidedFeature(CampfiresHealPlayers.class);
+        return TweaksMod.instance().sidedFeature(CampfiresHealPlayers.class);
     }
 }
