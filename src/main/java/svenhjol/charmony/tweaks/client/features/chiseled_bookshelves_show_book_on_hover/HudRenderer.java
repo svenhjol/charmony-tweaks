@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
-import svenhjol.charmony.tweaks.client.BaseHudRenderer;
+import svenhjol.charmony.core.client.BaseHudRenderer;
 
 public class HudRenderer extends BaseHudRenderer {
     private ItemStack hitStack; // A reference to the item stack currently being pointed at.

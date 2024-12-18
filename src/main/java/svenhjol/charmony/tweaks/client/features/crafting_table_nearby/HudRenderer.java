@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.entity.player.Player;
-import svenhjol.charmony.tweaks.client.BaseHudRenderer;
+import svenhjol.charmony.core.client.BaseHudRenderer;
 
 public class HudRenderer extends BaseHudRenderer {
     public ResourceLocation getImage() {
