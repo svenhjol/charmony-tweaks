@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.5
+
+- Refactor for Charmony 1.16.0 changes.
+
 ## 1.3.4
 
 - Refactor for Charmony 1.15.6 changes. BaseHudRenderer has been moved into core.

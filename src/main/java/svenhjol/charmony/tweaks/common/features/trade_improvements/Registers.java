@@ -27,36 +27,36 @@ public final class Registers extends Setup<TradeImprovements> {
             if (feature().enchantedBooks()) {
                 var tier = 2;
                 var xp = 5;
-                registry.villagerTrade(VillagerProfession.LIBRARIAN, tier, new GenericTrades.EmeraldsForItems(
+                registry.villagerTrade(() -> VillagerProfession.LIBRARIAN, tier, () -> new GenericTrades.EmeraldsForItems(
                     Items.ENCHANTED_BOOK, 1, 0, 5, 0, xp, 16));
             }
 
             if (feature().repairedAnvils()) {
                 var tier = 2;
                 var xp = 5;
-                registry.villagerTrade(VillagerProfession.ARMORER, tier, new AnvilRepair(tier, xp));
-                registry.villagerTrade(VillagerProfession.WEAPONSMITH, tier, new AnvilRepair(tier, xp));
-                registry.villagerTrade(VillagerProfession.TOOLSMITH, tier, new AnvilRepair(tier, xp));
+                registry.villagerTrade(() -> VillagerProfession.ARMORER, tier, () -> new AnvilRepair(tier, xp));
+                registry.villagerTrade(() -> VillagerProfession.WEAPONSMITH, tier, () -> new AnvilRepair(tier, xp));
+                registry.villagerTrade(() -> VillagerProfession.TOOLSMITH, tier, () -> new AnvilRepair(tier, xp));
             }
 
             if (feature().leatherForRottenFlesh()) {
                 var tier = 3;
                 var xp = 10;
-                registry.villagerTrade(VillagerProfession.LEATHERWORKER, tier, new GenericTrades.ItemsForItems(
+                registry.villagerTrade(() -> VillagerProfession.LEATHERWORKER, tier, () -> new GenericTrades.ItemsForItems(
                     Items.ROTTEN_FLESH, Items.LEATHER, 10, 5, 1, 0, xp, 8));
             }
 
             if (feature().beefForRottenFlesh()) {
                 var tier = 3;
                 var xp = 10;
-                registry.villagerTrade(VillagerProfession.BUTCHER, tier, new GenericTrades.ItemsForItems(
+                registry.villagerTrade(() -> VillagerProfession.BUTCHER, tier, () -> new GenericTrades.ItemsForItems(
                     Items.ROTTEN_FLESH, Items.BEEF, 8, 5, 1, 0, xp, 8));
             }
 
             if (feature().phantomMembrane()) {
                 var tier = 4;
                 var xp = 15;
-                registry.villagerTrade(VillagerProfession.CLERIC, tier, new GenericTrades.EmeraldsForItems(
+                registry.villagerTrade(() -> VillagerProfession.CLERIC, tier, () -> new GenericTrades.EmeraldsForItems(
                     Items.PHANTOM_MEMBRANE, 3, 3, 1, 0, xp, 8));
             }
         };

@@ -23,7 +23,7 @@ public final class Providers extends Setup<TradeImprovements> {
                     provider -> {
                         provider.getWandererTrades().forEach(
                             trade -> registry.wandererTrade(
-                                new GenericTrades.ItemsForEmeralds(trade.getItem(),
+                                () -> new GenericTrades.ItemsForEmeralds(trade.getItem(),
                                     trade.getCost(),
                                     trade.getCount(),
                                     0,
@@ -32,7 +32,7 @@ public final class Providers extends Setup<TradeImprovements> {
 
                         provider.getRareWandererTrades().forEach(
                             trade -> registry.wandererTrade(
-                                new GenericTrades.ItemsForEmeralds(trade.getItem(),
+                                () -> new GenericTrades.ItemsForEmeralds(trade.getItem(),
                                     trade.getCost(),
                                     trade.getCount(),
                                     0,
