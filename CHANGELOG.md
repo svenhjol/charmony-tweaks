@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0
+
+- Refactor for API 1.7.0 changes.
+
 ## 1.3.5
 
 - Refactor for Charmony 1.16.0 changes.

@@ -21,7 +21,7 @@ public final class Providers extends Setup<TotemsWorkFromInventory> implements T
 
     @Override
     public Optional<ItemStack> findTotemFromInventory(Player player, TotemType totemType) {
-        if (totemType == TotemType.UNDYING) {
+        if (totemType == TotemType.Undying) {
             var mainHand = player.getMainHandItem();
             if (mainHand.is(Items.TOTEM_OF_UNDYING)) {
                 return Optional.of(mainHand);

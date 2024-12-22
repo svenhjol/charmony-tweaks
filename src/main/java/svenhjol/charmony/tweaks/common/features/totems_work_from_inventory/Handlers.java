@@ -15,7 +15,7 @@ public final class Handlers extends Setup<TotemsWorkFromInventory> {
         if (entity instanceof Player player) {
             ItemStack found = null;
             for (var provider : feature().providers.inventoryCheckProviders) {
-                var item = provider.findTotemFromInventory(player, TotemType.UNDYING);
+                var item = provider.findTotemFromInventory(player, TotemType.Undying);
                 if (item.isPresent()) {
                     found = item.get();
                     break;
