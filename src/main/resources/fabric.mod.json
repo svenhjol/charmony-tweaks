@@ -22,6 +22,9 @@
     ],
     "client": [
         "svenhjol.charmony.tweaks.client.ClientInitializer"
+    ],
+    "modmenu": [
+        "svenhjol.charmony.tweaks.integration.ModMenuPlugin"
     ]
   },
 

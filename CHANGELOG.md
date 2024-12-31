@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+
+- Modmenu support.
+
 ## 1.4.0
 
 - Refactor for API 1.7.0 changes.
