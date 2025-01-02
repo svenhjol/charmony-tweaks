@@ -4,7 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.EnchantmentsHelper;
+import svenhjol.charmony.core.helpers.EnchantmentsHelper;
 
 public final class Handlers extends Setup<CropFeatherFalling> {
     public Handlers(CropFeatherFalling feature) {

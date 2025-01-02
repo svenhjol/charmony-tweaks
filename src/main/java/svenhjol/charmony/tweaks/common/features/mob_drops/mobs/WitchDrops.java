@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.EnchantmentsHelper;
+import svenhjol.charmony.core.helpers.EnchantmentsHelper;
 import svenhjol.charmony.tweaks.common.features.mob_drops.DropProvider;
 import svenhjol.charmony.tweaks.common.features.mob_drops.MobDrops;
 

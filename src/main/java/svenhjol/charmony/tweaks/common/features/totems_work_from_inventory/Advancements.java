@@ -4,7 +4,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.AdvancementHelper;
+import svenhjol.charmony.core.helpers.AdvancementHelper;
 
 public final class Advancements extends Setup<TotemsWorkFromInventory> {
     public Advancements(TotemsWorkFromInventory feature) {

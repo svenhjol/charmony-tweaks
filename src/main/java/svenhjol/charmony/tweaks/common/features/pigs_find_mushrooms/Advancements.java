@@ -3,8 +3,8 @@ package svenhjol.charmony.tweaks.common.features.pigs_find_mushrooms;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.AdvancementHelper;
-import svenhjol.charmony.core.helper.PlayerHelper;
+import svenhjol.charmony.core.helpers.AdvancementHelper;
+import svenhjol.charmony.core.helpers.PlayerHelper;
 
 public final class Advancements extends Setup<PigsFindMushrooms> {
     public Advancements(PigsFindMushrooms feature) {

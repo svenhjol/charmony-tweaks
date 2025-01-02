@@ -7,7 +7,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.ColorHelper;
+import svenhjol.charmony.core.helpers.ColorHelper;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Networking.S2CAddAmethyst;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Networking.S2CRemoveAmethyst;
 

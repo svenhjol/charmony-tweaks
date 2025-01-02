@@ -3,8 +3,8 @@ package svenhjol.charmony.tweaks.common.features.suspicious_block_creating;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.AdvancementHelper;
-import svenhjol.charmony.core.helper.PlayerHelper;
+import svenhjol.charmony.core.helpers.AdvancementHelper;
+import svenhjol.charmony.core.helpers.PlayerHelper;
 
 public final class Advancements extends Setup<SuspiciousBlockCreating> {
     public Advancements(SuspiciousBlockCreating feature) {

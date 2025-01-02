@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.ShulkerBoxBlock;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.ItemDragDropCallback.StackType;
-import svenhjol.charmony.core.helper.ItemStackHelper;
+import svenhjol.charmony.core.helpers.ItemStackHelper;
 import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking.C2SAddItemToShulkerBox;
 
 public final class Handlers extends Setup<ShulkerBoxTransferring> {

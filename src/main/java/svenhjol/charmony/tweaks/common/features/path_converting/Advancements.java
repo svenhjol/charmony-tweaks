@@ -2,7 +2,7 @@ package svenhjol.charmony.tweaks.common.features.path_converting;
 
 import net.minecraft.server.level.ServerPlayer;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.AdvancementHelper;
+import svenhjol.charmony.core.helpers.AdvancementHelper;
 
 public final class Advancements extends Setup<PathConverting> {
     public Advancements(PathConverting feature) {

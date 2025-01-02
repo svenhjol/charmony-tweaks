@@ -9,7 +9,7 @@ import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemContainerContents;
-import svenhjol.charmony.core.helper.ItemStackHelper;
+import svenhjol.charmony.core.helpers.ItemStackHelper;
 
 import java.util.ArrayList;
 

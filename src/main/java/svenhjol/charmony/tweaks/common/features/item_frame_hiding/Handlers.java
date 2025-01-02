@@ -12,7 +12,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.PlayerHelper;
+import svenhjol.charmony.core.helpers.PlayerHelper;
 
 import javax.annotation.Nullable;
 

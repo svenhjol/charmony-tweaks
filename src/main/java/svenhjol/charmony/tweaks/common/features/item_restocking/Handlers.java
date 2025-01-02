@@ -8,7 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.EnchantmentsHelper;
+import svenhjol.charmony.core.helpers.EnchantmentsHelper;
 
 import java.util.EnumMap;
 import java.util.Map;

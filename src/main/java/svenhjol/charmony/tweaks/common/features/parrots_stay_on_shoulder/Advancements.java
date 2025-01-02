@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.common.features.parrots_stay_on_shoulder;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.helper.AdvancementHelper;
+import svenhjol.charmony.core.helpers.AdvancementHelper;
 
 public final class Advancements extends Setup<ParrotsStayOnShoulder> {
     public Advancements(ParrotsStayOnShoulder feature) {
