@@ -9,6 +9,7 @@
   "key.charmony-tweaks.tidyInventory": "Tidy inventory",
   "subtitles.charmony-tweaks.block.dirt.convert_to_path": "Shovel flattens",
   "subtitles.charmony-tweaks.block.path.convert_to_dirt": "Hoe works path",
+  "subtitles.charmony-tweaks.block.suspicious_block.create": "Item added suspiciously",
   "subtitles.charmony-tweaks.entity.chicken.shed_feather": "Chicken sheds feather",
   "subtitles.charmony-tweaks.entity.pig.sniffing": "Pig searches for mushrooms"
 }

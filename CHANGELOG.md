@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.1
+
+- Add missing sound when creating a suspicious block.
+
 ## 1.5.0
 
 - Refactor for Charmony 1.19.0.
