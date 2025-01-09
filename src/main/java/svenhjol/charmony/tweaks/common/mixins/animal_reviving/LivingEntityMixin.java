@@ -15,7 +15,7 @@ public class LivingEntityMixin {
     )
     private boolean hookShouldDropLoot(boolean original) {
         if (this instanceof OwnableEntity ownable
-                && ownable.getOwnerUUID() != null) {
+                && ownable.getOwner() != null) {
             return AnimalReviving.feature().dropLootOnDeath();
         }
         return original;
@@ -27,7 +27,7 @@ public class LivingEntityMixin {
     )
     private boolean hookShouldDropExperience(boolean original) {
         if (this instanceof OwnableEntity ownable
-                && ownable.getOwnerUUID() != null) {
+                && ownable.getOwner() != null) {
             return AnimalReviving.feature().dropExperienceOnDeath();
         }
         return original;

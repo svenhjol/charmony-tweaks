@@ -25,7 +25,7 @@ public final class Handlers extends Setup<AnimalReviving> {
     public void entityKilled(LivingEntity entity, DamageSource source) {
         if (entity instanceof OwnableEntity animal
             && entity.hasCustomName()
-            && animal.getOwnerUUID() != null
+            && animal.getOwner() != null
             && !entity.level().isClientSide)
         {
             var level = entity.level();
@@ -78,7 +78,7 @@ public final class Handlers extends Setup<AnimalReviving> {
                 revived.setPosRaw(pos.getX(), pos.getY(), pos.getZ());
 
                 if (revived instanceof TamableAnimal animal) {
-                    animal.setOwnerUUID(player.getUUID());
+                    animal.setOwner(player);
                 }
 
                 level.addFreshEntity(revived);
