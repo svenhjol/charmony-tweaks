@@ -18,7 +18,6 @@ public final class Registers extends Setup<MobTextures> {
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> chickens = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> cows = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> dolphins = Pair.of(new ArrayList<>(), new ArrayList<>());
-    public final Pair<List<ResourceLocation>, List<ResourceLocation>> pigs = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> snowGolems = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> squids = Pair.of(new ArrayList<>(), new ArrayList<>());
     public final Pair<List<ResourceLocation>, List<ResourceLocation>> turtles = Pair.of(new ArrayList<>(), new ArrayList<>());
