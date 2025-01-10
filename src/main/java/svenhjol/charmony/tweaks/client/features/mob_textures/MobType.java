@@ -11,7 +11,6 @@ public enum MobType implements StringRepresentable {
     CHICKEN("chicken"),
     COW("cow/cow"),
     DOLPHIN("dolphin"),
-    PIG("pig/pig"),
     SHEEP("sheep"),
     SNOW_GOLEM("snow_golem"),
     SQUID("squid/squid"),

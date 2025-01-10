@@ -21,9 +21,6 @@ public final class MobTextures extends SidedFeature {
     @Configurable(name = "Dolphin textures", description = "If true, dolphins may spawn with alternative textures.")
     private static boolean dolphins = true;
 
-    @Configurable(name = "Pig textures", description = "If true, pigs may spawn with alternative textures.")
-    private static boolean pigs = true;
-
     @Configurable(name = "Sheep textures", description = "If true, sheep face and 'shorn' textures match their wool color.")
     private static boolean sheep = true;
 
@@ -49,10 +46,6 @@ public final class MobTextures extends SidedFeature {
 
     public boolean dolphins() {
         return dolphins;
-    }
-
-    public boolean pigs() {
-        return pigs;
     }
 
     public boolean sheep() {
