@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.2
+
+- No longer uses scaling and translation when rendering compass text on the hud.
+
 ## 1.5.1
 
 - Add missing sound when creating a suspicious block.
