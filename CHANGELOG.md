@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.3
+
+- Bump for Charm.
+
 ## 1.5.2
 
 - No longer uses scaling and translation when rendering compass text on the hud.
