@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.4
+
+- Chiseled bookshelves show on hover is now a server-client feature due to permission error fetching block entity data.
+- Add config option to change the vertical offset of the chiseled bookshelves hover text.
+
 ## 1.5.3
 
 - Bump for Charm.
