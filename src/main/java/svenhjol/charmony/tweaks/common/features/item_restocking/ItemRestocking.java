@@ -4,7 +4,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = "Refills hotbar from your inventory.")
 public final class ItemRestocking extends SidedFeature {
@@ -21,6 +20,6 @@ public final class ItemRestocking extends SidedFeature {
     }
 
     public static ItemRestocking feature() {
-        return TweaksMod.instance().sidedFeature(ItemRestocking.class);
+        return Mod.getSidedFeature(ItemRestocking.class);
     }
 }

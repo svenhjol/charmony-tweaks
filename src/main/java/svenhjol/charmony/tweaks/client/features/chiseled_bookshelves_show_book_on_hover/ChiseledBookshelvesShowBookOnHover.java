@@ -6,9 +6,8 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
-@FeatureDefinition(side = Side.Client)
+@FeatureDefinition(side = Side.Client, canBeDisabledInConfig = false)
 public final class ChiseledBookshelvesShowBookOnHover extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
@@ -27,7 +26,7 @@ public final class ChiseledBookshelvesShowBookOnHover extends SidedFeature {
     }
 
     public static ChiseledBookshelvesShowBookOnHover feature() {
-        return TweaksMod.instance().sidedFeature(ChiseledBookshelvesShowBookOnHover.class);
+        return Mod.getSidedFeature(ChiseledBookshelvesShowBookOnHover.class);
     }
 
     public int offsetFromCenter() {

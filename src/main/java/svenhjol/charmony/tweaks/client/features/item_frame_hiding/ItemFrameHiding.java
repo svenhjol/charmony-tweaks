@@ -7,7 +7,7 @@ import svenhjol.charmony.core.enums.Side;
 
 import java.util.function.Supplier;
 
-@FeatureDefinition(side = Side.Client, showInConfig = false)
+@FeatureDefinition(side = Side.Client, canBeDisabledInConfig = false)
 public final class ItemFrameHiding extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

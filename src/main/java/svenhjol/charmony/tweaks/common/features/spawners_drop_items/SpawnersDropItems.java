@@ -8,7 +8,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     Monster spawners drop mob-related items when broken. This allows items such as gunpowder, string
@@ -33,7 +32,7 @@ public final class SpawnersDropItems extends SidedFeature {
     }
 
     public static SpawnersDropItems feature() {
-        return TweaksMod.instance().sidedFeature(SpawnersDropItems.class);
+        return Mod.getSidedFeature(SpawnersDropItems.class);
     }
 
     public boolean onlyPeaceful() {

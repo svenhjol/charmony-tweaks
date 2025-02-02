@@ -5,7 +5,7 @@ import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
 
-@FeatureDefinition(side = Side.Client, showInConfig = false)
+@FeatureDefinition(side = Side.Client, canBeDisabledInConfig = false)
 public class RepairCostUnlimited extends SidedFeature {
     public RepairCostUnlimited(Mod mod) {
         super(mod);

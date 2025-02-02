@@ -5,7 +5,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Client, description = """
     Open the 3x3 crafting grid using a hotkey when within 4 blocks of any crafting table.""")
@@ -27,7 +26,7 @@ public final class CraftingTableNearby extends SidedFeature {
     }
 
     public static CraftingTableNearby feature() {
-        return TweaksMod.instance().sidedFeature(CraftingTableNearby.class);
+        return Mod.getSidedFeature(CraftingTableNearby.class);
     }
 
     public boolean showCraftingIcon() {

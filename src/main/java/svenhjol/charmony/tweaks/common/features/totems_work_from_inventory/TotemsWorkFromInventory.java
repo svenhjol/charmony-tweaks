@@ -4,7 +4,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     A Totem of Undying will work from anywhere in the player's inventory as well as held in the main or offhand.""")
@@ -22,6 +21,6 @@ public final class TotemsWorkFromInventory extends SidedFeature {
     }
 
     public static TotemsWorkFromInventory feature() {
-        return TweaksMod.instance().sidedFeature(TotemsWorkFromInventory.class);
+        return Mod.getSidedFeature(TotemsWorkFromInventory.class);
     }
 }

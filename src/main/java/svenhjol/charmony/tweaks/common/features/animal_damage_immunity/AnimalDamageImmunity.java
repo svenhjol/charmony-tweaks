@@ -4,7 +4,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = "Tamed animals do not take direct damage from players.")
 public final class AnimalDamageImmunity extends SidedFeature {
@@ -19,6 +18,6 @@ public final class AnimalDamageImmunity extends SidedFeature {
     }
 
     public static AnimalDamageImmunity feature() {
-        return TweaksMod.instance().sidedFeature(AnimalDamageImmunity.class);
+        return Mod.getSidedFeature(AnimalDamageImmunity.class);
     }
 }
