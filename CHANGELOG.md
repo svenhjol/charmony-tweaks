@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.6.0
+
+- Refactor for Charmony 1.20.0
+
+## 1.5.4
+
+- Chiseled bookshelves show on hover is now a server-client feature due to permission error fetching block entity data.
+- Add config option to change the vertical offset of the chiseled bookshelves hover text.
+
+## 1.5.3
+
+- Bump for Charm.
+
+## 1.5.2
+
+- No longer uses scaling and translation when rendering compass text on the hud.
+
 ## 1.5.1
 
 - Add missing sound when creating a suspicious block.

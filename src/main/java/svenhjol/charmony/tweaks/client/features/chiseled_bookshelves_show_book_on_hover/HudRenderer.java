@@ -4,12 +4,10 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
 import svenhjol.charmony.core.client.BaseHudRenderer;
 
@@ -27,7 +25,7 @@ public class HudRenderer extends BaseHudRenderer {
         var midX = (int)(window.getGuiScaledWidth() / 2.0f);
         var alpha = Math.max(4, Math.min(MAX_FADE_TICKS, ticksFade)) << 24 & 0xff000000;
         var scale = Math.max(0f, Math.min(1.0f, (ticksFade / (float) MAX_FADE_TICKS)));
-        var top = window.getGuiScaledHeight() - 150;
+        var top = (window.getGuiScaledHeight() / 2) + feature().offsetFromCenter();
 
         if (hitStack != null && !hitStack.isEmpty()) {
             var lines = hitStack.getTooltipLines(Item.TooltipContext.EMPTY, minecraft.player, TooltipFlag.NORMAL);
@@ -51,15 +49,6 @@ public class HudRenderer extends BaseHudRenderer {
         var pos = lookedAt.getBlockPos();
 
         if (level.getBlockEntity(pos) instanceof ChiseledBookShelfBlockEntity blockEntity) {
-            if (player instanceof LocalPlayer localPlayer) {
-                // Use the debugger's queryBlockEntity to get the entity data from
-                // the server and populate the client blockEntity with it.
-                localPlayer.connection.getDebugQueryHandler().queryBlockEntityTag(pos, tag -> {
-                    var out = CustomData.of(tag);
-                    out.loadInto(blockEntity, level.registryAccess());
-                });
-            }
-
             var slot = feature().handlers.getHitSlot(lookedAt, level.getBlockState(pos));
             if (slot.isPresent()) {
                 var stack = feature().handlers.getItem(blockEntity, slot.getAsInt());

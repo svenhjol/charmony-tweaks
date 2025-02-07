@@ -6,7 +6,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.List;
 
@@ -67,7 +66,7 @@ public final class MineshaftImprovements extends SidedFeature {
     }
 
     public static MineshaftImprovements feature() {
-        return TweaksMod.instance().sidedFeature(MineshaftImprovements.class);
+        return Mod.getSidedFeature(MineshaftImprovements.class);
     }
 
     public double floorBlockChance() {

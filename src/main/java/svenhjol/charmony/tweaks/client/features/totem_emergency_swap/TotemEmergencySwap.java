@@ -4,7 +4,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Client, description = """
     Adds a keybind to swap any totem in your inventory with your offhand.
@@ -20,6 +19,6 @@ public final class TotemEmergencySwap extends SidedFeature {
     }
 
     public static TotemEmergencySwap feature() {
-        return TweaksMod.instance().sidedFeature(TotemEmergencySwap.class);
+        return Mod.getSidedFeature(TotemEmergencySwap.class);
     }
 }

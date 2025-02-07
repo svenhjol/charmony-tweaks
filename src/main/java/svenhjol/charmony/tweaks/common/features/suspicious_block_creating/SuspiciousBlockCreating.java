@@ -4,7 +4,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = "Use a piston to push an item into sand or gravel, making it suspicious.")
 public final class SuspiciousBlockCreating extends SidedFeature {
@@ -21,6 +20,6 @@ public final class SuspiciousBlockCreating extends SidedFeature {
     }
 
     public static SuspiciousBlockCreating feature() {
-        return TweaksMod.instance().sidedFeature(SuspiciousBlockCreating.class);
+        return Mod.getSidedFeature(SuspiciousBlockCreating.class);
     }
 }

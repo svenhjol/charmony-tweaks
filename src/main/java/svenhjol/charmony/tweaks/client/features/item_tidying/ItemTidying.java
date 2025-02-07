@@ -5,7 +5,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Client, description = """
     Button to automatically stack and arrange items in inventory and containers.""")
@@ -31,7 +30,7 @@ public final class ItemTidying extends SidedFeature {
     }
 
     public static ItemTidying feature() {
-        return TweaksMod.instance().sidedFeature(ItemTidying.class);
+        return Mod.getSidedFeature(ItemTidying.class);
     }
 
     public boolean keybindSortsMultipleInventories() {

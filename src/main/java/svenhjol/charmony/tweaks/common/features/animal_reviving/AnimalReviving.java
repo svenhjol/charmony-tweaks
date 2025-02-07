@@ -5,7 +5,6 @@ import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 @FeatureDefinition(side = Side.Common, description = """
     A tamed animal with a name drops its name tag on death.
@@ -39,7 +38,7 @@ public final class AnimalReviving extends SidedFeature {
     }
 
     public static AnimalReviving feature() {
-        return TweaksMod.instance().sidedFeature(AnimalReviving.class);
+        return Mod.getSidedFeature(AnimalReviving.class);
     }
 
     public boolean dropLootOnDeath() {
