@@ -18,7 +18,7 @@ public class FarmBlockMixin {
         at = @At("HEAD"),
         cancellable = true
     )
-    private void hookOnLandedUpon(Level level, BlockState state, BlockPos pos, Entity entity, float distance, CallbackInfo ci) {
+    private void hookOnLandedUpon(Level level, BlockState blockState, BlockPos blockPos, Entity entity, double d, CallbackInfo ci) {
         if (CropFeatherFalling.feature().handlers.shouldPreventCropDamage(entity)) {
             ci.cancel();
         }

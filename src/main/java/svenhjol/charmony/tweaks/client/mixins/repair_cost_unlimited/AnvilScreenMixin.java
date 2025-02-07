@@ -2,6 +2,7 @@ package svenhjol.charmony.tweaks.client.mixins.repair_cost_unlimited;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Abilities;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,13 +21,13 @@ public class AnvilScreenMixin {
     @Redirect(
         method = "renderLabels",
         at = @At(
-            value = "FIELD",
-            target = "Lnet/minecraft/world/entity/player/Abilities;instabuild:Z"
+            value = "INVOKE",
+            target = "Lnet/minecraft/client/player/LocalPlayer;hasInfiniteMaterials()Z"
         )
     )
-    private boolean hookRenderLabelsCheckAbilities(Abilities abilities, GuiGraphics guiGraphics, int x, int y) {
+    private boolean hookRenderLabelsCheckAbilities(LocalPlayer instance) {
         if (!Environment.usesCharmonyServer()) {
-            return abilities.instabuild; // Default behaviour
+            return instance.hasInfiniteMaterials(); // Default behaviour
         }
         return true;
     }

@@ -31,8 +31,6 @@ public final class Registers extends Setup<MobTextures> {
     @Override
     public Runnable boot() {
         return () -> {
-            if (feature().chickens()) EntityRendererRegistry.register(EntityType.CHICKEN, CustomChickenRenderer::new);
-            if (feature().cows()) EntityRendererRegistry.register(EntityType.COW, CustomCowRenderer::new);
             if (feature().dolphins()) EntityRendererRegistry.register(EntityType.DOLPHIN, CustomDolphinRenderer::new);
             if (feature().sheep()) EntityRendererRegistry.register(EntityType.SHEEP, CustomSheepRenderer::new);
             if (feature().snowGolems()) EntityRendererRegistry.register(EntityType.SNOW_GOLEM, CustomSnowGolemRenderer::new);
@@ -47,10 +45,6 @@ public final class Registers extends Setup<MobTextures> {
     private void clientEntityLoad(Entity entity, ClientLevel level) {
         if (!(entity instanceof Player)) return;
         setupColorTextures(sheep, MobType.SHEEP, "sheep");
-        setupCustomTextures(chickens.getFirst(), MobType.CHICKEN, "chicken", 5, true);
-        setupCustomTextures(chickens.getSecond(), MobType.CHICKEN, "rare_chicken", 2, false);
-        setupCustomTextures(cows.getFirst(), MobType.COW, "cow", 7, true);
-        setupCustomTextures(cows.getSecond(), MobType.COW, "rare_cow", 1, false);
         setupCustomTextures(dolphins.getFirst(), MobType.DOLPHIN, "dolphin", 3, true);
         setupCustomTextures(dolphins.getSecond(), MobType.DOLPHIN, "rare_dolphin", 2, false);
         setupCustomTextures(snowGolems.getFirst(), MobType.SNOW_GOLEM, "snow_golem", 5, true);

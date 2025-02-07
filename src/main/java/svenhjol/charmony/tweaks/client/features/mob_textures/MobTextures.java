@@ -12,12 +12,6 @@ public final class MobTextures extends SidedFeature {
     public final Handlers handlers;
     public final Registers registers;
 
-    @Configurable(name = "Cow textures", description = "If true, cows may spawn with alternative textures.")
-    private static boolean cows = true;
-
-    @Configurable(name = "Chicken textures", description = "If true, chickens may spawn with alternative textures.")
-    private static boolean chickens = true;
-
     @Configurable(name = "Dolphin textures", description = "If true, dolphins may spawn with alternative textures.")
     private static boolean dolphins = true;
 
@@ -35,14 +29,6 @@ public final class MobTextures extends SidedFeature {
 
     @Configurable(name = "Wandering trader textures", description = "If true, wandering traders may spawn with alternative textures.")
     private static boolean wanderingTraders = true;
-
-    public boolean cows() {
-        return cows;
-    }
-
-    public boolean chickens() {
-        return chickens;
-    }
 
     public boolean dolphins() {
         return dolphins;

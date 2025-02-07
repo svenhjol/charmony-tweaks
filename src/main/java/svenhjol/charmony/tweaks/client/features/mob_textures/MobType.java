@@ -8,8 +8,6 @@ import svenhjol.charmony.core.base.Mod;
 import java.util.Locale;
 
 public enum MobType implements StringRepresentable {
-    CHICKEN("chicken"),
-    COW("cow/cow"),
     DOLPHIN("dolphin"),
     SHEEP("sheep"),
     SNOW_GOLEM("snow_golem"),

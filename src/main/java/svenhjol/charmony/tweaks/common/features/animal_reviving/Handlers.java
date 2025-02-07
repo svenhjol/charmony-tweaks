@@ -85,7 +85,7 @@ public final class Handlers extends Setup<AnimalReviving> {
                 level.playSound(null, pos, SoundEvents.TOTEM_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
                 level.broadcastEntityEvent(revived, (byte)35);
 
-                revived.moveTo(player.position());
+                revived.move(MoverType.SELF, player.position());
 
                 if (!player.getAbilities().instabuild) {
                     otherStack.shrink(otherStack.getCount());

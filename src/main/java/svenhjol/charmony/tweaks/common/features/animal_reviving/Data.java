@@ -8,7 +8,7 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 
 public record Data(CompoundTag tag) {
-    public static final Codec<Data> CODEC = Codec.withAlternative(CompoundTag.CODEC, TagParser.AS_CODEC)
+    public static final Codec<Data> CODEC = Codec.withAlternative(CompoundTag.CODEC, TagParser.FLATTENED_CODEC)
         .xmap(Data::new, data -> data.tag);
 
     public static final StreamCodec<ByteBuf, Data> STREAM_CODEC = ByteBufCodecs.COMPOUND_TAG

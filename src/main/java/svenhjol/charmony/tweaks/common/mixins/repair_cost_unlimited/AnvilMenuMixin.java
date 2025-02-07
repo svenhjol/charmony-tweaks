@@ -1,6 +1,7 @@
 package svenhjol.charmony.tweaks.common.mixins.repair_cost_unlimited;
 
 import net.minecraft.world.entity.player.Abilities;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AnvilMenu;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,12 +19,12 @@ public class AnvilMenuMixin {
     @Redirect(
         method = "createResult",
         at = @At(
-            value = "FIELD",
-            target = "Lnet/minecraft/world/entity/player/Abilities;instabuild:Z",
+            value = "INVOKE",
+            target = "Lnet/minecraft/world/entity/player/Player;hasInfiniteMaterials()Z",
             ordinal = 1
         )
     )
-    private boolean hookCreateResultCheckAbilities(Abilities abilities) {
+    private boolean hookCreateResultCheckAbilities(Player instance) {
         return true;
     }
 }
