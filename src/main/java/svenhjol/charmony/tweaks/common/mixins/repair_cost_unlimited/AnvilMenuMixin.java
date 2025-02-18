@@ -1,6 +1,5 @@
 package svenhjol.charmony.tweaks.common.mixins.repair_cost_unlimited;
 
-import net.minecraft.world.entity.player.Abilities;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AnvilMenu;
 import org.spongepowered.asm.mixin.Mixin;
