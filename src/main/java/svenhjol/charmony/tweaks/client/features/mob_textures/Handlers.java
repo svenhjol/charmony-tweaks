@@ -1,6 +1,5 @@
 package svenhjol.charmony.tweaks.client.features.mob_textures;
 
-import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -11,6 +10,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import svenhjol.charmony.core.base.Setup;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,21 +35,13 @@ public final class Handlers extends Setup<MobTextures> {
         }
     }
 
-    public ResourceLocation texture(UUID uuid, Pair<List<ResourceLocation>, List<ResourceLocation>> textures) {
-        // TODO: simple UUID caching.
-        var normal = textures.getFirst();
-        var rare = textures.getSecond();
-
-        var isRare = feature().rareTypeChance() > 0
-            && !rare.isEmpty()
-            && (uuid.getLeastSignificantBits() + uuid.getMostSignificantBits()) % feature().rareTypeChance() == 0;
-
-        var set = isRare ? rare : normal;
-        if (set.isEmpty()) {
+    @Nullable
+    public ResourceLocation texture(UUID uuid, List<ResourceLocation> textures) {
+        if (textures.isEmpty()) {
             return null;
         }
 
-        var choice = Math.abs((int)(uuid.getMostSignificantBits() % set.size()));
-        return set.get(choice);
+        var choice = Math.abs((int)(uuid.getMostSignificantBits() % textures.size()));
+        return textures.get(choice);
     }
 }

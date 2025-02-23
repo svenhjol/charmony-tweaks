@@ -8,11 +8,7 @@ import svenhjol.charmony.core.base.Mod;
 import java.util.Locale;
 
 public enum MobType implements StringRepresentable {
-    DOLPHIN("dolphin"),
-    SHEEP("sheep"),
     SNOW_GOLEM("snow_golem"),
-    SQUID("squid/squid"),
-    TURTLE("turtle/big_sea_turtle"),
     WANDERING_TRADER("wandering_trader");
 
     private final ResourceLocation vanillaTexture;
