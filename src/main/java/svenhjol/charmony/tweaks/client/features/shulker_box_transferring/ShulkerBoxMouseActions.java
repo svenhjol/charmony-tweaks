@@ -31,23 +31,25 @@ public class ShulkerBoxMouseActions implements ItemSlotMouseAction {
         var vector = scrollWheelHandler.onMouseScroll(d, e);
         var direction = vector.y == 0 ? -vector.x : vector.y;
 
-        var data = stack.get(DataComponents.CONTAINER);
-        if (data != null && direction != 0) {
-            var stacks = new ArrayList<>(data.stream().toList());
-            ItemStackHelper.mergeStacks(stacks);
+        if (stack.is(ItemTags.SHULKER_BOXES)) {
+            var data = stack.get(DataComponents.CONTAINER);
+            if (data != null && direction != 0) {
+                var stacks = new ArrayList<>(data.stream().toList());
+                ItemStackHelper.mergeStacks(stacks);
 
-            if (direction > 0) {
-                ItemStack last = stacks.removeLast();
-                stacks.addFirst(last);
+                if (direction > 0) {
+                    ItemStack last = stacks.removeLast();
+                    stacks.addFirst(last);
+                }
+
+                if (direction < 0) {
+                    ItemStack first = stacks.removeFirst();
+                    stacks.add(first);
+                }
+
+                var itemContainerContents = ItemContainerContents.fromItems(stacks);
+                stack.set(DataComponents.CONTAINER, itemContainerContents);
             }
-
-            if (direction < 0) {
-                ItemStack first = stacks.removeFirst();
-                stacks.add(first);
-            }
-
-            var itemContainerContents = ItemContainerContents.fromItems(stacks);
-            stack.set(DataComponents.CONTAINER, itemContainerContents);
         }
 
         return stack.is(ItemTags.SHULKER_BOXES);
