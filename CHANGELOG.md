@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.8
+
+- Add CompactRecipes.
+- Fix for snapshots and pre-release 2
+- Fix crash bug when scrolling items in creative menu.
+- Remove sheep dye color fix now that vanilla has it.
+- Remove variants except for snow golems and wandering traders.
+
 ## 1.6.0
 
 - Refactor for Charmony 1.20.0
