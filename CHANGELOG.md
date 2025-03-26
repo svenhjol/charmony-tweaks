@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.0
+
+- Update for Minecraft 1.21.5.
+- Fix shulker box item reordering not syncing with server.
+
 ## 1.7.8
 
 - Add CompactRecipes.

@@ -33,4 +33,27 @@ public final class Networking extends Setup<ShulkerBoxTransferring> {
             // no op
         }
     }
+
+    public record C2SReorderShulkerBoxItems(int slot, int direction) implements CustomPacketPayload {
+        public static Type<C2SReorderShulkerBoxItems> TYPE = new Type<>(TweaksMod.id("reorder_shulker_box_items"));
+        static StreamCodec<FriendlyByteBuf, C2SReorderShulkerBoxItems> CODEC = StreamCodec.of(C2SReorderShulkerBoxItems::encode, C2SReorderShulkerBoxItems::decode);
+
+        public static void send(int slot, int direction) {
+            ClientPlayNetworking.send(new C2SReorderShulkerBoxItems(slot, direction));
+        }
+
+        @Override
+        public Type<? extends CustomPacketPayload> type() {
+            return TYPE;
+        }
+
+        private static C2SReorderShulkerBoxItems decode(FriendlyByteBuf buf) {
+            return new C2SReorderShulkerBoxItems(buf.readInt(), buf.readInt());
+        }
+
+        private static void encode(FriendlyByteBuf buf, C2SReorderShulkerBoxItems self) {
+            buf.writeInt(self.slot);
+            buf.writeInt(self.direction);
+        }
+    }
 }

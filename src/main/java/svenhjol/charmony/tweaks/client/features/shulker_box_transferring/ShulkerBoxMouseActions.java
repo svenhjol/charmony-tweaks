@@ -3,15 +3,11 @@ package svenhjol.charmony.tweaks.client.features.shulker_box_transferring;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.ScrollWheelHandler;
 import net.minecraft.client.gui.ItemSlotMouseAction;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.ItemContainerContents;
-import svenhjol.charmony.core.helpers.ItemStackHelper;
-
-import java.util.ArrayList;
+import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking;
 
 @SuppressWarnings("unused")
 public class ShulkerBoxMouseActions implements ItemSlotMouseAction {
@@ -27,29 +23,14 @@ public class ShulkerBoxMouseActions implements ItemSlotMouseAction {
     }
 
     @Override
-    public boolean onMouseScrolled(double d, double e, int i, ItemStack stack) {
-        var vector = scrollWheelHandler.onMouseScroll(d, e);
+    public boolean onMouseScrolled(double mouseX, double mouseY, int slot, ItemStack stack) {
+        var vector = scrollWheelHandler.onMouseScroll(mouseX, mouseY);
         var direction = vector.y == 0 ? -vector.x : vector.y;
+        var common = ShulkerBoxTransferring.feature().common.get();
 
-        if (stack.is(ItemTags.SHULKER_BOXES)) {
-            var data = stack.get(DataComponents.CONTAINER);
-            if (data != null && direction != 0) {
-                var stacks = new ArrayList<>(data.stream().toList());
-                ItemStackHelper.mergeStacks(stacks);
-
-                if (direction > 0) {
-                    ItemStack last = stacks.removeLast();
-                    stacks.addFirst(last);
-                }
-
-                if (direction < 0) {
-                    ItemStack first = stacks.removeFirst();
-                    stacks.add(first);
-                }
-
-                var itemContainerContents = ItemContainerContents.fromItems(stacks);
-                stack.set(DataComponents.CONTAINER, itemContainerContents);
-            }
+        if (common.handlers.reorderShulkerBoxItems(stack, direction)) {
+            // Sync with server.
+            Networking.C2SReorderShulkerBoxItems.send(slot, direction);
         }
 
         return stack.is(ItemTags.SHULKER_BOXES);

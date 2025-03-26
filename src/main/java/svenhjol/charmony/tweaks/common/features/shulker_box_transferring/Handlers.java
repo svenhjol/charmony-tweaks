@@ -1,9 +1,10 @@
 package svenhjol.charmony.tweaks.common.features.shulker_box_transferring;
 
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.Entity;
@@ -21,6 +22,9 @@ import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.ItemDragDropCallback.StackType;
 import svenhjol.charmony.core.helpers.ItemStackHelper;
 import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking.C2SAddItemToShulkerBox;
+import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking.C2SReorderShulkerBoxItems;
+
+import java.util.ArrayList;
 
 public final class Handlers extends Setup<ShulkerBoxTransferring> {
     public Handlers(ShulkerBoxTransferring feature) {
@@ -114,14 +118,52 @@ public final class Handlers extends Setup<ShulkerBoxTransferring> {
         return InteractionResult.PASS;
     }
 
-    public void handleAddItemToShulkderBoxPacket(C2SAddItemToShulkerBox packet, ServerPlayNetworking.Context context) {
-        var player = context.player();
-        var server = player.server;
+    /**
+     * Perform the advancement on the server.
+     */
+    public void handleAddItemToShulkerBoxPacket(Player player, C2SAddItemToShulkerBox payload) {
+        feature().advancements.transferredToShulkerBox(player);
+    }
 
-        server.execute(() -> {
-            // Do the advancement
-            feature().advancements.transferredToShulkerBox(player);
-        });
+    /**
+     * Perform the scroll operation on the server-side as well as the client.
+     */
+    public void handleReorderShulkerBoxItemsPacket(Player player, C2SReorderShulkerBoxItems payload) {
+        if (!(player instanceof ServerPlayer serverPlayer)) return;
+        var direction = payload.direction();
+        var slotId = payload.slot();
+        var slots = serverPlayer.containerMenu.slots;
+
+        if (slotId >= 0 && slotId < slots.size()) {
+            var stack = slots.get(slotId).getItem();
+            reorderShulkerBoxItems(stack, direction);
+        }
+    }
+
+    public boolean reorderShulkerBoxItems(ItemStack stack, int direction) {
+        if (stack.is(ItemTags.SHULKER_BOXES)) {
+            var data = stack.get(DataComponents.CONTAINER);
+            if (data != null && direction != 0) {
+                var stacks = new ArrayList<>(data.stream().toList());
+                ItemStackHelper.mergeStacks(stacks);
+
+                if (direction > 0) {
+                    ItemStack last = stacks.removeLast();
+                    stacks.addFirst(last);
+                }
+
+                if (direction < 0) {
+                    ItemStack first = stacks.removeFirst();
+                    stacks.add(first);
+                }
+
+                var itemContainerContents = ItemContainerContents.fromItems(stacks);
+                stack.set(DataComponents.CONTAINER, itemContainerContents);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

@@ -20,4 +20,8 @@ public final class ShulkerBoxTransferring extends SidedFeature {
         advancements = new Advancements(this);
         networking = new Networking(this);
     }
+
+    public static ShulkerBoxTransferring feature() {
+        return Mod.getSidedFeature(ShulkerBoxTransferring.class);
+    }
 }
