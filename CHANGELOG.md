@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.3
+
+- Added wandering trader tier options to Trade Improvements.
+
 ## 1.9.0
 
 - Update for Minecraft 1.21.5.

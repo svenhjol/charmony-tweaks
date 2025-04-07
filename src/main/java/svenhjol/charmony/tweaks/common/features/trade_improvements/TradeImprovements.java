@@ -26,6 +26,30 @@ public final class TradeImprovements extends SidedFeature {
     @Configurable(name = "Phantom membrane", description = "If true, clerics will sell phantom membrane in return for emeralds.")
     private static boolean phantomMembrane = true;
 
+    @Configurable(name = "Colored wools", description = "If true, wandering traders can sell all colors of wool in return for emeralds.")
+    private static boolean coloredWools = true;
+
+    @Configurable(name = "Concrete powders", description = "If true, wandering traders can sell all colors of concrete powder in return for emeralds.")
+    private static boolean concretePowders = true;
+
+    @Configurable(name = "Colored concrete", description = "If true, wandering traders can sell all colors of concrete in return for emeralds.")
+    private static boolean coloredConcretes = true;
+
+    @Configurable(name = "Glazed terracotta", description = "If true, wandering traders can sell all variants of glazed terracotta in return for emeralds.")
+    private static boolean glazedTerracottas = true;
+
+    @Configurable(name = "Colored terracotta", description = "If true, wandering traders can sell all colors of terracotta in return for emeralds.")
+    private static boolean coloredTerracottas = true;
+
+    @Configurable(name = "Colored glass", description = "If true, wandering traders can sell all colors of stained glass in return for emeralds.")
+    private static boolean coloredGlass = true;
+
+    @Configurable(name = "Colored bundles", description = "If true, wandering traders can sell all colors of bundles in return for emeralds.")
+    private static boolean coloredBundles = false;
+
+    @Configurable(name = "Colored candles", description = "If true, wandering traders can sell all colors of candles in return for emeralds.")
+    private static boolean coloredCandles = false;
+
     @Configurable(name = "Charmony mod items", description = "If true, wandering traders have a chance to sell various items from Charmony mods.")
     private static boolean charmonyModItems = true;
 
@@ -53,6 +77,38 @@ public final class TradeImprovements extends SidedFeature {
 
     public boolean phantomMembrane() {
         return phantomMembrane;
+    }
+
+    public boolean coloredWools() {
+        return coloredWools;
+    }
+
+    public boolean concretePowders() {
+        return concretePowders;
+    }
+
+    public boolean coloredConcretes() {
+        return coloredConcretes;
+    }
+
+    public boolean glazedTerracottas() {
+        return glazedTerracottas;
+    }
+
+    public boolean coloredTerracottas() {
+        return coloredTerracottas;
+    }
+
+    public boolean coloredGlass() {
+        return coloredGlass;
+    }
+
+    public boolean coloredBundles() {
+        return coloredBundles;
+    }
+
+    public boolean coloredCandles() {
+        return coloredCandles;
     }
 
     public boolean charmonyModItems() {

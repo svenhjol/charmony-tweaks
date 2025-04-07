@@ -6,7 +6,7 @@ import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
 import svenhjol.charmony.core.common.GenericTrades;
 
-public final class Providers extends Setup<TradeImprovements> {
+public class Providers extends Setup<TradeImprovements> {
     public Providers(TradeImprovements feature) {
         super(feature);
     }
