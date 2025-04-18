@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.4
+
+- Move advancement definitions into the mod namespace.
+
 ## 1.9.3
 
 - Added wandering trader tier options to Trade Improvements.

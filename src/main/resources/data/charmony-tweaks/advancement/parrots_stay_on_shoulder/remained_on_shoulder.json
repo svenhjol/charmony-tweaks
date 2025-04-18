@@ -1,0 +1,31 @@
+{
+  "parent": "charmony-tweaks:animal_damage_immunity/prevented_animal_damage",
+  "display": {
+    "icon": {
+      "id": "minecraft:saddle"
+    },
+    "title": {
+      "translate": "advancements.charmony-tweaks.remained_on_shoulder.title"
+    },
+    "description": {
+      "translate": "advancements.charmony-tweaks.remained_on_shoulder.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "remained_on_shoulder": {
+      "trigger": "charmony_action_performed",
+      "conditions": {
+        "action": "charmony:remained_on_shoulder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "remained_on_shoulder"
+    ]
+  ]
+}

@@ -15,6 +15,7 @@ public final class Registers extends Setup<ItemFrameHiding> {
     public Registers(ItemFrameHiding feature) {
         super(feature);
 
+        // TODO: make common registry method for this and for ChorusNetwork mod.
         particleType = Registry.register(BuiltInRegistries.PARTICLE_TYPE, TweaksMod.id("apply_amethyst"), new ParticleType());
     }
 
