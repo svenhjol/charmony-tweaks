@@ -53,6 +53,11 @@ public final class Providers extends Setup<ItemTidying> implements
                 public Pair<Integer, Integer> getPlayerXYOffset() {
                     return Pair.of(0, 76);
                 }
+
+                @Override
+                public boolean hasRecipeButton() {
+                    return true;
+                }
             }
         );
     }

@@ -1,6 +1,6 @@
 package svenhjol.charmony.tweaks.client.features.item_tidying;
 
-import com.ibm.icu.impl.Pair;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -14,17 +14,23 @@ import net.minecraft.world.item.Item;
 import svenhjol.charmony.core.base.Setup;
 
 import javax.annotation.Nullable;
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public final class Handlers extends Setup<ItemTidying> {
     private static final int LEFT = 159;
     private static final int TOP = 12;
 
-    private final List<ImageButton> sortingButtons = new ArrayList<>();
+    private final Map<ButtonType, ImageButton> sortingButtons = new HashMap<>();
     private List<Slot> playerSlots = new LinkedList<>();
     private List<Slot> containerSlots = new LinkedList<>();
     private @Nullable AbstractContainerScreen<?> containerScreen;
+    private Pair<Integer, Integer> containerXY;
+    private Pair<Integer, Integer> playerXY;
+    private Map<ButtonType, Integer> defaultX = new HashMap<>();
 
     public Handlers(ItemTidying feature) {
         super(feature);
@@ -46,7 +52,6 @@ public final class Handlers extends Setup<ItemTidying> {
         }
     }
 
-    @SuppressWarnings("deprecation")
     public void setupScreen(Screen screen) {
         this.containerScreen = null;
 
@@ -54,40 +59,18 @@ public final class Handlers extends Setup<ItemTidying> {
         var player = minecraft.player;
         if (player == null) return;
 
-        if (!(screen instanceof AbstractContainerScreen<?> abstractContainerScreen)) return;
+        if (!(screen instanceof AbstractContainerScreen<?> acs)) return;
 
-        var clazz = abstractContainerScreen.getClass();
+        this.containerScreen = acs;
+        var clazz = acs.getClass();
         if (feature().providers.blacklisted.contains(clazz)) return;
-        var tweak = feature().providers.tweaks.get(clazz);
-        this.containerScreen = abstractContainerScreen;
 
         sortingButtons.clear();
         var menu = containerScreen.getMenu();
         var baseX = containerScreen.leftPos + LEFT;
         var baseY = containerScreen.topPos - TOP;
 
-        // Set new bases for modification using tweak provider.
-        var containerX = baseX;
-        var containerY = baseY;
-        var playerX = baseX;
-        var playerY = baseY;
-
-        if (tweak != null) {
-            var oldOffset = tweak.getXYOffset();
-            var containerOffset = tweak.getContainerXYOffset();
-            var playerOffset = tweak.getPlayerXYOffset();
-
-            if (oldOffset.getFirst() != 0 || oldOffset.getSecond() != 0) {
-                containerX = baseX + oldOffset.getFirst();
-                containerY = baseY + oldOffset.getSecond();
-            } else {
-                containerX = baseX + containerOffset.getFirst();
-                containerY = baseY + containerOffset.getSecond();
-            }
-
-            playerX = baseX + playerOffset.getFirst();
-            playerY = baseY + playerOffset.getSecond();
-        }
+        processButtonCoordinates(acs, baseX, baseY);
 
         // Gather slot types.
         var slots = menu.slots;
@@ -103,17 +86,20 @@ public final class Handlers extends Setup<ItemTidying> {
             }
         }
 
+        var containerXY = containerXY();
+        var playerXY = playerXY();
+
         if (!containerSlots.isEmpty() && feature().providers.whitelisted.contains(clazz)) {
-            addSortingButton(screen, containerX, containerY + containerSlots.getFirst().y,
+            addSortingButton(screen, ButtonType.Container, containerXY.getFirst(), containerXY.getSecond() + containerSlots.getFirst().y,
                 click -> sortContainer());
         }
 
         if (!playerSlots.isEmpty()) {
-            addSortingButton(screen, playerX, playerY + playerSlots.getFirst().y,
+            addSortingButton(screen, ButtonType.Player, playerXY.getFirst(), playerXY.getSecond() + playerSlots.getFirst().y,
                 click -> sortPlayer());
         }
 
-        sortingButtons.forEach(containerScreen::addRenderableWidget);
+        sortingButtons.values().forEach(containerScreen::addRenderableWidget);
     }
 
     public void sortPlayer() {
@@ -165,15 +151,15 @@ public final class Handlers extends Setup<ItemTidying> {
 
                 for (int i = 0; i < holders.size() - 1; i++) {
                     var holder = holders.get(i);
-                    var slot = holder.first;
-                    var count = holder.second;
+                    var slot = holder.getFirst();
+                    var count = holder.getSecond();
 
                     // We need to deplete this holder by adding it to the next ones.
                     var pointer = i + 1;
                     while (pointer < holders.size() && count > 0) {
                         var nextHolder = holders.get(pointer);
-                        var nextSlot = nextHolder.first;
-                        var nextCount = nextHolder.second;
+                        var nextSlot = nextHolder.getFirst();
+                        var nextCount = nextHolder.getSecond();
                         if (nextCount == max) {
                             pointer++;
                             continue;
@@ -232,16 +218,84 @@ public final class Handlers extends Setup<ItemTidying> {
 
     public void renderScreen(AbstractContainerScreen<?> screen, GuiGraphics guiGraphics, int mouseX, int mouseY) {
         // Re-render when recipe is opened/closed.
-        var x = screen.leftPos;
-        sortingButtons.forEach(button -> button.setPosition(x + LEFT, button.getY()));
+        var clazz = screen.getClass();
+        if (feature().providers.blacklisted.contains(clazz)) return;
+        var tweak = feature().providers.tweaks.get(clazz);
+
+        if (tweak != null && !tweak.hasRecipeButton()) {
+            return;
+        }
+
+        // Recalculate the button X offsets.
+        processButtonCoordinates(screen, screen.leftPos + LEFT, 0);
+
+        var playerXY = playerXY();
+        var containerXY = containerXY();
+
+        if (sortingButtons.containsKey(ButtonType.Container)) {
+            var imageButton = sortingButtons.get(ButtonType.Container);
+            imageButton.setPosition(containerXY.getFirst(), imageButton.getY());
+        }
+        if (sortingButtons.containsKey(ButtonType.Player)) {
+            var imageButton = sortingButtons.get(ButtonType.Player);
+            imageButton.setPosition(playerXY.getFirst(), imageButton.getY());
+        }
     }
 
-    public void addSortingButton(Screen screen, int x, int y, Button.OnPress callback) {
-        sortingButtons.add(new ImageButton(x, y, 10, 10, feature().registers.tidyButtonSprite, callback));
+    public void addSortingButton(Screen screen, ButtonType type, int x, int y, Button.OnPress callback) {
+        sortingButtons.put(type, new ImageButton(x, y, 10, 10, feature().registers.tidyButtonSprite, callback));
     }
 
     private boolean canUseSlotIndex(Slot slot, int start, int end) {
         return (start == -1 || (start > -1 && slot.getContainerSlot() >= start))
             && (end == -1 || (end > -1 && slot.getContainerSlot() <= end));
+    }
+
+    @SuppressWarnings("deprecation")
+    private void processButtonCoordinates(AbstractContainerScreen<?> screen, int baseX, int baseY) {
+        var clazz = screen.getClass();
+        var tweak = feature().providers.tweaks.get(clazz);
+
+        // Set new bases for modification using tweak provider.
+        var containerX = baseX;
+        var containerY = baseY;
+        var playerX = baseX;
+        var playerY = baseY;
+
+        if (tweak != null) {
+            var oldOffset = tweak.getXYOffset();
+            var containerOffset = tweak.getContainerXYOffset();
+            var playerOffset = tweak.getPlayerXYOffset();
+
+            if (oldOffset.getFirst() != 0 || oldOffset.getSecond() != 0) {
+                containerX = baseX + oldOffset.getFirst();
+                containerY = baseY + oldOffset.getSecond();
+            } else {
+                containerX = baseX + containerOffset.getFirst();
+                containerY = baseY + containerOffset.getSecond();
+            }
+
+            playerX = baseX + playerOffset.getFirst();
+            playerY = baseY + playerOffset.getSecond();
+        }
+
+        this.containerXY = Pair.of(containerX, containerY);
+        this.playerXY = Pair.of(playerX, playerY);
+
+        this.defaultX.put(ButtonType.Container, containerX);
+        this.defaultX.put(ButtonType.Player, playerX);
+    }
+
+    public Pair<Integer, Integer> containerXY() {
+        return containerXY;
+    }
+
+    public Pair<Integer, Integer> playerXY() {
+        return playerXY;
+    }
+
+    public enum ButtonType {
+        Container,
+        Player
     }
 }
