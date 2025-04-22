@@ -46,6 +46,7 @@ public final class Handlers extends Setup<ItemTidying> {
         }
     }
 
+    @SuppressWarnings("deprecation")
     public void setupScreen(Screen screen) {
         this.containerScreen = null;
 
@@ -62,13 +63,30 @@ public final class Handlers extends Setup<ItemTidying> {
 
         sortingButtons.clear();
         var menu = containerScreen.getMenu();
-        var x = containerScreen.leftPos + LEFT;
-        var y = containerScreen.topPos - TOP;
+        var baseX = containerScreen.leftPos + LEFT;
+        var baseY = containerScreen.topPos - TOP;
+
+        // Set new bases for modification using tweak provider.
+        var containerX = baseX;
+        var containerY = baseY;
+        var playerX = baseX;
+        var playerY = baseY;
 
         if (tweak != null) {
-            var offset = tweak.getXYOffset();
-            x += offset.getFirst();
-            y += offset.getSecond();
+            var oldOffset = tweak.getXYOffset();
+            var containerOffset = tweak.getContainerXYOffset();
+            var playerOffset = tweak.getPlayerXYOffset();
+
+            if (oldOffset.getFirst() != 0 || oldOffset.getSecond() != 0) {
+                containerX = baseX + oldOffset.getFirst();
+                containerY = baseY + oldOffset.getSecond();
+            } else {
+                containerX = baseX + containerOffset.getFirst();
+                containerY = baseY + containerOffset.getSecond();
+            }
+
+            playerX = baseX + playerOffset.getFirst();
+            playerY = baseY + playerOffset.getSecond();
         }
 
         // Gather slot types.
@@ -86,12 +104,12 @@ public final class Handlers extends Setup<ItemTidying> {
         }
 
         if (!containerSlots.isEmpty() && feature().providers.whitelisted.contains(clazz)) {
-            addSortingButton(screen, x, y + containerSlots.getFirst().y,
+            addSortingButton(screen, containerX, containerY + containerSlots.getFirst().y,
                 click -> sortContainer());
         }
 
         if (!playerSlots.isEmpty()) {
-            addSortingButton(screen, x, y + playerSlots.getFirst().y,
+            addSortingButton(screen, playerX, playerY + playerSlots.getFirst().y,
                 click -> sortPlayer());
         }
 

@@ -30,7 +30,7 @@ public final class Providers extends Setup<ItemTidying> implements
 
     @Override
     public List<ItemTidyingButtonTweak> getItemTidyingButtonTweaks() {
-        // Offset the button by these X and Y coordinates on these screens.
+        // Offset the base button X and Y coordinates on these screens.
         return List.of(
             new ItemTidyingButtonTweak() {
                 @Override
@@ -39,7 +39,7 @@ public final class Providers extends Setup<ItemTidying> implements
                 }
 
                 @Override
-                public Pair<Integer, Integer> getXYOffset() {
+                public Pair<Integer, Integer> getPlayerXYOffset() {
                     return Pair.of(100, 0);
                 }
             },
@@ -50,7 +50,7 @@ public final class Providers extends Setup<ItemTidying> implements
                 }
 
                 @Override
-                public Pair<Integer, Integer> getXYOffset() {
+                public Pair<Integer, Integer> getPlayerXYOffset() {
                     return Pair.of(0, 76);
                 }
             }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.5
+
+- Handle container and player XY offsets.
+
 ## 1.9.4
 
 - Move advancement definitions into the mod namespace.
