@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
@@ -63,7 +64,7 @@ public final class Handlers extends Setup<ItemTidying> {
 
         this.containerScreen = acs;
         var clazz = acs.getClass();
-        if (feature().providers.blacklisted.contains(clazz)) return;
+        if (feature().registers.blacklisted.contains(clazz)) return;
 
         sortingButtons.clear();
         var menu = containerScreen.getMenu();
@@ -89,7 +90,7 @@ public final class Handlers extends Setup<ItemTidying> {
         var containerXY = containerXY();
         var playerXY = playerXY();
 
-        if (!containerSlots.isEmpty() && feature().providers.whitelisted.contains(clazz)) {
+        if (!containerSlots.isEmpty() && feature().registers.whitelisted.contains(clazz)) {
             addSortingButton(screen, ButtonType.Container, containerXY.getFirst(), containerXY.getSecond() + containerSlots.getFirst().y,
                 click -> sortContainer());
         }
@@ -219,8 +220,8 @@ public final class Handlers extends Setup<ItemTidying> {
     public void renderScreen(AbstractContainerScreen<?> screen, GuiGraphics guiGraphics, int mouseX, int mouseY) {
         // Re-render when recipe is opened/closed.
         var clazz = screen.getClass();
-        if (feature().providers.blacklisted.contains(clazz)) return;
-        var tweak = feature().providers.tweaks.get(clazz);
+        if (feature().registers.blacklisted.contains(clazz)) return;
+        var tweak = feature().registers.tweaks.get(clazz);
 
         if (tweak != null && !tweak.hasRecipeButton()) {
             return;
@@ -243,7 +244,15 @@ public final class Handlers extends Setup<ItemTidying> {
     }
 
     public void addSortingButton(Screen screen, ButtonType type, int x, int y, Button.OnPress callback) {
-        sortingButtons.put(type, new ImageButton(x, y, 10, 10, feature().registers.tidyButtonSprite, callback));
+        WidgetSprites buttonSprite;
+
+        if (feature().registers.darkModeTests.stream().anyMatch(pred -> pred.test(screen))) {
+            buttonSprite = feature().registers.darkModeTidyButton;
+        } else {
+            buttonSprite = feature().registers.lightModeTidyButton;
+        }
+
+        sortingButtons.put(type, new ImageButton(x, y, 10, 10, buttonSprite, callback));
     }
 
     private boolean canUseSlotIndex(Slot slot, int start, int end) {
@@ -254,7 +263,7 @@ public final class Handlers extends Setup<ItemTidying> {
     @SuppressWarnings("deprecation")
     private void processButtonCoordinates(AbstractContainerScreen<?> screen, int baseX, int baseY) {
         var clazz = screen.getClass();
-        var tweak = feature().providers.tweaks.get(clazz);
+        var tweak = feature().registers.tweaks.get(clazz);
 
         // Set new bases for modification using tweak provider.
         var containerX = baseX;

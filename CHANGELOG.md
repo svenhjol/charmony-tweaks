@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.7
+
+- Testing new dark mode handling.
+
 ## 1.9.6
 
 - Rework screen renderer step to handle recipes.
