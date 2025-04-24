@@ -7,7 +7,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<MobDrops> {
+public class Handlers extends Setup<MobDrops> {
     public Handlers(MobDrops feature) {
         super(feature);
     }

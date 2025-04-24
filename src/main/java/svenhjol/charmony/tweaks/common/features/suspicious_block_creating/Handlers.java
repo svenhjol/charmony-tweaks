@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<SuspiciousBlockCreating> {
+public class Handlers extends Setup<SuspiciousBlockCreating> {
     public Handlers(SuspiciousBlockCreating feature) {
         super(feature);
     }

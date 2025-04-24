@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public final class Handlers extends Setup<PiglinPointing> {
+public class Handlers extends Setup<PiglinPointing> {
     // Track piglins that are currently in a pointing state.
     public static final List<UUID> POINTING_PIGLINS = new ArrayList<>();
 

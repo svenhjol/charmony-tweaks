@@ -4,7 +4,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.portal.PortalShape;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Registers extends Setup<NetherPortalBlocks> {
+public class Registers extends Setup<NetherPortalBlocks> {
     public Registers(NetherPortalBlocks feature) {
         super(feature);
     }

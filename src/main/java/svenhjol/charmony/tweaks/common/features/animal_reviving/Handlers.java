@@ -17,7 +17,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<AnimalReviving> {
+public class Handlers extends Setup<AnimalReviving> {
     public Handlers(AnimalReviving feature) {
         super(feature);
     }

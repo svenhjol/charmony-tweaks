@@ -8,15 +8,12 @@ import svenhjol.charmony.api.TotemType;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-public final class Providers extends Setup<TotemsWorkFromInventory> implements TotemInventoryCheckProvider {
-    public final List<TotemInventoryCheckProvider> inventoryCheckProviders = new ArrayList<>();
-
-    public Providers(TotemsWorkFromInventory feature) {
+public final class TotemInventoryProviders extends Setup<TotemsWorkFromInventory> implements TotemInventoryCheckProvider {
+    public TotemInventoryProviders(TotemsWorkFromInventory feature) {
         super(feature);
+        Api.registerProvider(this);
     }
 
     @Override
@@ -40,13 +37,5 @@ public final class Providers extends Setup<TotemsWorkFromInventory> implements T
         }
 
         return Optional.empty();
-    }
-
-    @Override
-    public Runnable boot() {
-        return () -> {
-            Api.registerProvider(this);
-            Api.consume(TotemInventoryCheckProvider.class, inventoryCheckProviders::add);
-        };
     }
 }

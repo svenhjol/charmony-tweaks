@@ -8,7 +8,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public final class Handlers extends Setup<RepairCostVisible> {
+public class Handlers extends Setup<RepairCostVisible> {
     public Handlers(RepairCostVisible feature) {
         super(feature);
     }

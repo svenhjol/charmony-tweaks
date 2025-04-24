@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudLayerRegistrationCallback;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Registers extends Setup<ChiseledBookshelvesShowBookOnHover> {
+public class Registers extends Setup<ChiseledBookshelvesShowBookOnHover> {
     public final HudRenderer hudRenderer;
 
     public Registers(ChiseledBookshelvesShowBookOnHover feature) {

@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.WeakHashMap;
 
-public final class Handlers extends Setup<PiglinPointing> {
+public class Handlers extends Setup<PiglinPointing> {
     public static final Map<UUID, Float> POINT_ANIMATION = new WeakHashMap<>();
     public Piglin piglin; // Reference to the currently rendering mob.
 

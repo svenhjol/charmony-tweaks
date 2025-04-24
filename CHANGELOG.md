@@ -1,8 +1,10 @@
 # Changelog
 
-## 1.9.9
+## 1.9.10
 
-- 
+- Update class access.
+- Move providers into dedicated classes.
+- Move consumers into registers.
 
 ## 1.9.8
 

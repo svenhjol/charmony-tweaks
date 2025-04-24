@@ -7,7 +7,7 @@ import svenhjol.charmony.core.common.CommonRegistry;
 
 import java.util.function.Supplier;
 
-public final class Registers extends Setup<PathConverting> {
+public class Registers extends Setup<PathConverting> {
     public final Supplier<SoundEvent> dirtToPathSound;
     public final Supplier<SoundEvent> pathToDirtSound;
 

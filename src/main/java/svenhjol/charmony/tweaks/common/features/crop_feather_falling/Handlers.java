@@ -6,7 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.EnchantmentsHelper;
 
-public final class Handlers extends Setup<CropFeatherFalling> {
+public class Handlers extends Setup<CropFeatherFalling> {
     public Handlers(CropFeatherFalling feature) {
         super(feature);
     }

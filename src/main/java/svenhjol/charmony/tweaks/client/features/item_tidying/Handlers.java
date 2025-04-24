@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public final class Handlers extends Setup<ItemTidying> {
+public class Handlers extends Setup<ItemTidying> {
     private static final int LEFT = 159;
     private static final int TOP = 12;
 

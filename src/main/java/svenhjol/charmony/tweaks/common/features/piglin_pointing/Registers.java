@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public final class Registers extends Setup<PiglinPointing> {
+public class Registers extends Setup<PiglinPointing> {
     public final MemoryModuleType<BlockPos> pointingAtTarget;
     public final List<Pair<TagKey<Item>, TagKey<Structure>>> DIRECTION_BARTERING = new ArrayList<>();
 

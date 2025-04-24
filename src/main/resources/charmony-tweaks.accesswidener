@@ -65,3 +65,6 @@ accessible method net/minecraft/world/level/block/state/BlockBehaviour$BlockStat
 
 # TotemEmergencySwap
 accessible method net/minecraft/client/gui/screens/inventory/AbstractRecipeBookScreen slotClicked (Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V
+
+# WanderingTraderTiers
+accessible method net/minecraft/world/entity/npc/AbstractVillager addOffersFromItemListings (Lnet/minecraft/world/item/trading/MerchantOffers;[Lnet/minecraft/world/entity/npc/VillagerTrades$ItemListing;I)V

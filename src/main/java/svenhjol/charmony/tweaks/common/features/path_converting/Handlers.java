@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<PathConverting> {
+public class Handlers extends Setup<PathConverting> {
     public Handlers(PathConverting feature) {
         super(feature);
     }

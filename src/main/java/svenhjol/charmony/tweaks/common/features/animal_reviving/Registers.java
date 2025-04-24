@@ -6,7 +6,7 @@ import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Registers extends Setup<AnimalReviving> {
+public class Registers extends Setup<AnimalReviving> {
     public final DataComponentType<Data> data;
 
     public Registers(AnimalReviving feature) {

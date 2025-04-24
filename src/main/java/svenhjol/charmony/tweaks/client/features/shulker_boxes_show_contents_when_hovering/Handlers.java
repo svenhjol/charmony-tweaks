@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public final class Handlers extends Setup<ShulkerBoxesShowContentsWhenHovering> {
+public class Handlers extends Setup<ShulkerBoxesShowContentsWhenHovering> {
     public Handlers(ShulkerBoxesShowContentsWhenHovering feature) {
         super(feature);
     }

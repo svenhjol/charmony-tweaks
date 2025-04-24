@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-public final class Registers extends Setup<MobDrops> {
+public class Registers extends Setup<MobDrops> {
     public final List<DropProvider> drops = new ArrayList<>();
     public final Supplier<SoundEvent> shedFeatherSound;
 

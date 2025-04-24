@@ -4,7 +4,7 @@ import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.GrindstoneDisenchanting;
 import svenhjol.charmony.tweaks.common.features.grindstone_disenchanting.Handlers;
 
-public final class Common {
+public class Common {
     public final Handlers handlers;
 
     public Common() {

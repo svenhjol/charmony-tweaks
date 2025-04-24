@@ -11,7 +11,7 @@ import svenhjol.charmony.core.enums.Side;
 public final class ItemTidying extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
-    public final Providers providers;
+    public final ItemTidyingProviders itemTidyingProviders;
 
     @Configurable(
         name = "Keybind sorts multiple inventories",
@@ -26,7 +26,7 @@ public final class ItemTidying extends SidedFeature {
         super(mod);
         handlers = new Handlers(this);
         registers = new Registers(this);
-        providers = new Providers(this);
+        itemTidyingProviders = new ItemTidyingProviders(this);
     }
 
     public static ItemTidying feature() {

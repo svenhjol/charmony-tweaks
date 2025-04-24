@@ -9,7 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.tweaks.TweaksMod;
 
-public final class Registers extends Setup<ItemFrameHiding> {
+public class Registers extends Setup<ItemFrameHiding> {
     public final SimpleParticleType particleType;
 
     public Registers(ItemFrameHiding feature) {

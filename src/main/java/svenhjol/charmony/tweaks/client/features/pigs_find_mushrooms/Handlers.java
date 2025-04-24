@@ -5,7 +5,7 @@ import net.minecraft.world.entity.animal.Pig;
 import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<PigsFindMushrooms> {
+public class Handlers extends Setup<PigsFindMushrooms> {
     // Reference to the currently rendering mob.
     public Pig pig;
 

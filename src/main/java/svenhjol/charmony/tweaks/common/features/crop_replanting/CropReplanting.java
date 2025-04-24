@@ -10,15 +10,14 @@ import svenhjol.charmony.core.enums.Side;
 public final class CropReplanting extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
-    public final Providers providers;
+    public final QuickReplantProviders quickReplantProviders;
     public final Advancements advancements;
 
     public CropReplanting(Mod mod) {
         super(mod);
-
         registers = new Registers(this);
         handlers = new Handlers(this);
-        providers = new Providers(this);
+        quickReplantProviders = new QuickReplantProviders(this);
         advancements = new Advancements(this);
     }
 }

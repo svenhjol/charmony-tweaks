@@ -4,7 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.AdvancementHelper;
 
-public final class Advancements extends Setup<PathConverting> {
+public class Advancements extends Setup<PathConverting> {
     public Advancements(PathConverting feature) {
         super(feature);
     }

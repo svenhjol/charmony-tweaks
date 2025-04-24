@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public final class Registers extends Setup<ItemTidying> {
+public class Registers extends Setup<ItemTidying> {
     public final WidgetSprites lightModeTidyButton;
     public final WidgetSprites darkModeTidyButton;
     public final KeyMapping tidyInventoryKey;
@@ -63,8 +63,8 @@ public final class Registers extends Setup<ItemTidying> {
             Api.consume(ItemTidyingBlacklistProvider.class,
                 provider -> blacklisted.addAll(provider.getItemTidyingBlacklistedScreens()));
 
-            Api.consume(UsesDarkMode.class,
-                provider -> darkModeTests.add(provider.usingDarkMode()));
+            Api.consume(DarkModeProvider.class,
+                provider -> darkModeTests.add(provider.usesDarkMode()));
         };
     }
 }

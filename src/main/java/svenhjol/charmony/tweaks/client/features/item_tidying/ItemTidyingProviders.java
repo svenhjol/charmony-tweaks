@@ -12,12 +12,12 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public final class Providers extends Setup<ItemTidying> implements
+public class ItemTidyingProviders extends Setup<ItemTidying> implements
     ItemTidyingWhitelistProvider,
     ItemTidyingBlacklistProvider,
     ItemTidyingButtonTweakProvider {
 
-    public Providers(ItemTidying feature) {
+    public ItemTidyingProviders(ItemTidying feature) {
         super(feature);
         Api.registerProvider(this);
     }

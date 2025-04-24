@@ -9,7 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Registers extends Setup<SpawnersDropItems> {
+public class Registers extends Setup<SpawnersDropItems> {
     public final Table<TagKey<EntityType<?>>, Item, Integer> dropTypes = HashBasedTable.create();
 
     public Registers(SpawnersDropItems feature) {

@@ -8,16 +8,17 @@ import svenhjol.charmony.core.enums.Side;
 @FeatureDefinition(side = Side.Common, description = """
     A Totem of Undying will work from anywhere in the player's inventory as well as held in the main or offhand.""")
 public final class TotemsWorkFromInventory extends SidedFeature {
-    public final Providers providers;
+    public final Registers registers;
     public final Handlers handlers;
     public final Advancements advancements;
+    public final TotemInventoryProviders totemInventoryProviders;
 
     public TotemsWorkFromInventory(Mod mod) {
         super(mod);
-
-        providers = new Providers(this);
+        registers = new Registers(this);
         handlers = new Handlers(this);
         advancements = new Advancements(this);
+        totemInventoryProviders = new TotemInventoryProviders(this);
     }
 
     public static TotemsWorkFromInventory feature() {

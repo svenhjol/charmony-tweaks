@@ -7,7 +7,7 @@ import svenhjol.charmony.core.common.CommonRegistry;
 
 import java.util.function.Supplier;
 
-public final class Registers extends Setup<PigsFindMushrooms> {
+public class Registers extends Setup<PigsFindMushrooms> {
     public final Supplier<SoundEvent> sniffingSound;
 
     public Registers(PigsFindMushrooms feature) {

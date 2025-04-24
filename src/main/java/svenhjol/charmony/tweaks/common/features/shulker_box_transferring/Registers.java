@@ -17,7 +17,7 @@ import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Network
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Registers extends Setup<ShulkerBoxTransferring> {
+public class Registers extends Setup<ShulkerBoxTransferring> {
     public final List<ItemLike> blacklist = new ArrayList<>();
 
     public Registers(ShulkerBoxTransferring feature) {

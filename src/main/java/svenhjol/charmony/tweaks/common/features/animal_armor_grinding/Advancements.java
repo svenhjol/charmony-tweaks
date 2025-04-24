@@ -4,7 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.AdvancementHelper;
 
-public final class Advancements extends Setup<AnimalArmorGrinding> {
+public class Advancements extends Setup<AnimalArmorGrinding> {
     public Advancements(AnimalArmorGrinding feature) {
         super(feature);
     }

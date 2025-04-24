@@ -7,7 +7,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.*;
 
-public final class Handlers extends Setup<PigsFindMushrooms> {
+public class Handlers extends Setup<PigsFindMushrooms> {
     public final Map<UUID, Integer> eating = new WeakHashMap<>();
 
     public Handlers(PigsFindMushrooms feature) {

@@ -6,10 +6,10 @@ import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
 import svenhjol.charmony.core.enums.Side;
 
-@FeatureDefinition(side = Side.Common, description = "Adds more villager trades.")
+@FeatureDefinition(side = Side.Common, description = "Adds extra villager and wandering trader trades.")
 public final class TradeImprovements extends SidedFeature {
     public final Registers registers;
-    public final Providers providers;
+    public final WanderingTraderTiersProvider wanderingTraderTiersProvider;
 
     @Configurable(name = "Enchanted books", description = "If true, librarians will buy any enchanted book in return for emeralds.")
     private static boolean enchantedBooks = true;
@@ -56,7 +56,7 @@ public final class TradeImprovements extends SidedFeature {
     public TradeImprovements(Mod mod) {
         super(mod);
         registers = new Registers(this);
-        providers = new Providers(this);
+        wanderingTraderTiersProvider = new WanderingTraderTiersProvider(this);
     }
 
     public boolean enchantedBooks() {

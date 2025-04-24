@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public final class Handlers extends Setup<GrindstoneDisenchanting> {
+public class Handlers extends Setup<GrindstoneDisenchanting> {
     public Handlers(GrindstoneDisenchanting feature) {
         super(feature);
     }

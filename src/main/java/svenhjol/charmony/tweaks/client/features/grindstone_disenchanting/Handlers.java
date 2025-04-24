@@ -12,7 +12,7 @@ import svenhjol.charmony.core.base.Setup;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Handlers extends Setup<GrindstoneDisenchanting> {
+public class Handlers extends Setup<GrindstoneDisenchanting> {
     public Handlers(GrindstoneDisenchanting feature) {
         super(feature);
     }

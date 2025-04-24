@@ -26,7 +26,7 @@ import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Network
 
 import java.util.ArrayList;
 
-public final class Handlers extends Setup<ShulkerBoxTransferring> {
+public class Handlers extends Setup<ShulkerBoxTransferring> {
     public Handlers(ShulkerBoxTransferring feature) {
         super(feature);
     }

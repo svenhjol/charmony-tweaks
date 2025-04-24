@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<DeepslateDungeons> {
+public class Handlers extends Setup<DeepslateDungeons> {
     public Handlers(DeepslateDungeons feature) {
         super(feature);
     }

@@ -6,7 +6,7 @@ import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.client.ClientRegistry;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Networking;
 
-public final class Registers extends Setup<ItemFrameHiding> {
+public class Registers extends Setup<ItemFrameHiding> {
     public Registers(ItemFrameHiding feature) {
         super(feature);
 

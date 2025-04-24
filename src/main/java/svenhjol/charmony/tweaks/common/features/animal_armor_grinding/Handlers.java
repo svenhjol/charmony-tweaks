@@ -8,7 +8,7 @@ import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.GrindstoneEvents.GrindstoneMenuInstance;
 
 @SuppressWarnings("unused")
-public final class Handlers extends Setup<AnimalArmorGrinding> {
+public class Handlers extends Setup<AnimalArmorGrinding> {
     public Handlers(AnimalArmorGrinding feature) {
         super(feature);
     }

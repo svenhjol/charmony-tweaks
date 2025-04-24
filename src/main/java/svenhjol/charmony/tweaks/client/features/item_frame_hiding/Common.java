@@ -4,7 +4,7 @@ import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.ItemFrameHiding;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Registers;
 
-public final class Common {
+public class Common {
     public final Registers registers;
 
     public Common() {

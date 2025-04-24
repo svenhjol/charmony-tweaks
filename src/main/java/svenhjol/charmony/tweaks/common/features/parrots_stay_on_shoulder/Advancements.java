@@ -5,7 +5,7 @@ import net.minecraft.world.entity.player.Player;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.AdvancementHelper;
 
-public final class Advancements extends Setup<ParrotsStayOnShoulder> {
+public class Advancements extends Setup<ParrotsStayOnShoulder> {
     public Advancements(ParrotsStayOnShoulder feature) {
         super(feature);
     }

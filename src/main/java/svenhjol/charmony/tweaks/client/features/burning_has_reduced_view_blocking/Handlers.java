@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.client.features.burning_has_reduced_view_blocki
 import com.mojang.blaze3d.vertex.PoseStack;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<BurningHasReducedViewBlocking> {
+public class Handlers extends Setup<BurningHasReducedViewBlocking> {
     public Handlers(BurningHasReducedViewBlocking feature) {
         super(feature);
     }

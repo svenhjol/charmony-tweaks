@@ -27,6 +27,7 @@
     "suspicious_block_creating.PistonBaseBlockMixin",
     "torchflowers_emit_light.BlockBehaviourPropertiesMixin",
     "totems_work_from_inventory.LivingEntityMixin",
-    "villager_attracting.VillagerMixin"
+    "villager_attracting.VillagerMixin",
+    "wandering_trader_tiers.WanderingTraderMixin"
   ]
 }

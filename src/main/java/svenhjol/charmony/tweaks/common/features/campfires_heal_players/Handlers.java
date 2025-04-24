@@ -13,7 +13,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<CampfiresHealPlayers> {
+public class Handlers extends Setup<CampfiresHealPlayers> {
     public final int INTERVAL_CHECK = 200;
     public final int LENGTH_OF_REGENERATION = 2;
     public final int DISTANCE_TO_FIRE = 6;

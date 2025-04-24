@@ -11,7 +11,7 @@ import svenhjol.charmony.core.helpers.ColorHelper;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Networking.S2CAddAmethyst;
 import svenhjol.charmony.tweaks.common.features.item_frame_hiding.Networking.S2CRemoveAmethyst;
 
-public final class Handlers extends Setup<ItemFrameHiding> {
+public class Handlers extends Setup<ItemFrameHiding> {
     public Handlers(ItemFrameHiding feature) {
         super(feature);
     }

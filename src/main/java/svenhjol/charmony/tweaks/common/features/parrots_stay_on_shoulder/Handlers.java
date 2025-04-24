@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<ParrotsStayOnShoulder> {
+public class Handlers extends Setup<ParrotsStayOnShoulder> {
     private static final long STAY_MOUNTED_TIME = 20L;
 
     public Handlers(ParrotsStayOnShoulder feature) {

@@ -18,7 +18,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.Locale;
 
-public final class Handlers extends Setup<CropReplanting> {
+public class Handlers extends Setup<CropReplanting> {
     public Handlers(CropReplanting feature) {
         super(feature);
     }
@@ -40,9 +40,9 @@ public final class Handlers extends Setup<CropReplanting> {
         var pos = hitResult.getBlockPos();
         var state = level.getBlockState(pos);
         var block = state.getBlock();
-        var doReplant = !feature().providers.notReplantable.contains(block);
+        var doReplant = !feature().registers.notReplantable.contains(block);
 
-        if (!feature().providers.replantable.contains(state)) {
+        if (!feature().registers.replantable.contains(state)) {
             return InteractionResult.PASS;
         }
 
@@ -61,7 +61,7 @@ public final class Handlers extends Setup<CropReplanting> {
             var serverPlayer = (ServerPlayer)player;
             var serverLevel = (ServerLevel)serverPlayer.level();
             var drops = Block.getDrops(state, serverLevel, pos, null, player, ItemStack.EMPTY);
-            var canAutoPickup = feature().providers.autoPickup.stream().anyMatch(func -> func.apply(player));
+            var canAutoPickup = feature().registers.autoPickup.stream().anyMatch(func -> func.apply(player));
 
             for (var drop : drops) {
                 if (doReplant && drop.getItem() == blockItem) {

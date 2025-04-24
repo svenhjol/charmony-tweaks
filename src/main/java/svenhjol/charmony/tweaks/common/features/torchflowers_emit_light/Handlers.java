@@ -7,7 +7,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.Optional;
 
-public final class Handlers extends Setup<TorchflowersEmitLight> {
+public class Handlers extends Setup<TorchflowersEmitLight> {
     private static int cachedLightLevel = -1;
 
     public Handlers(TorchflowersEmitLight feature) {

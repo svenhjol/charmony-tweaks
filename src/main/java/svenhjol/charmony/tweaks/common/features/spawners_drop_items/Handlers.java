@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public final class Handlers extends Setup<SpawnersDropItems> {
+public class Handlers extends Setup<SpawnersDropItems> {
     private static final int ITEMS_PER_STACK = 64; // This might change in a future minecraft version.
 
     public Handlers(SpawnersDropItems feature) {

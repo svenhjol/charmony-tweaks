@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.client.features.maps_show_when_hovering;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.RenderTooltipCallback;
 
-public final class Registers extends Setup<MapsShowWhenHovering> {
+public class Registers extends Setup<MapsShowWhenHovering> {
     public Registers(MapsShowWhenHovering feature) {
         super(feature);
     }

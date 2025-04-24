@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.PlaySoundCallback;
 
-public final class Registers extends Setup<JukeboxesStopBackgroundMusic> {
+public class Registers extends Setup<JukeboxesStopBackgroundMusic> {
     public Registers(JukeboxesStopBackgroundMusic feature) {
         super(feature);
     }

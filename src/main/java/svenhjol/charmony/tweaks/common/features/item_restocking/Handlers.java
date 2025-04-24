@@ -14,7 +14,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-public final class Handlers extends Setup<ItemRestocking> {
+public class Handlers extends Setup<ItemRestocking> {
     // Remember which items were in our hands and how often they were used.
     private final Map<Player, EnumMap<InteractionHand, StackData>> handCache = new WeakHashMap<>();
 

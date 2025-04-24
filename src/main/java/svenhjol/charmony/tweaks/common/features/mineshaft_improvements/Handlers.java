@@ -21,7 +21,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public final class Handlers extends Setup<MineshaftImprovements> {
+public class Handlers extends Setup<MineshaftImprovements> {
     public Handlers(MineshaftImprovements feature) {
         super(feature);
     }

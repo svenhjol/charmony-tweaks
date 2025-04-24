@@ -32,6 +32,7 @@ import svenhjol.charmony.tweaks.common.features.torchflowers_emit_light.Torchflo
 import svenhjol.charmony.tweaks.common.features.totems_work_from_inventory.TotemsWorkFromInventory;
 import svenhjol.charmony.tweaks.common.features.trade_improvements.TradeImprovements;
 import svenhjol.charmony.tweaks.common.features.villager_attracting.VillagerAttracting;
+import svenhjol.charmony.tweaks.common.features.wandering_trader_tiers.WanderingTraderTiers;
 
 import java.util.List;
 
@@ -72,7 +73,8 @@ public class CommonInitializer implements ModInitializer {
             TorchflowersEmitLight.class,
             TotemsWorkFromInventory.class,
             TradeImprovements.class,
-            VillagerAttracting.class
+            VillagerAttracting.class,
+            WanderingTraderTiers.class
         ));
         tweaks.run(Side.Common);
     }

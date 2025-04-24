@@ -20,7 +20,7 @@ import svenhjol.charmony.tweaks.TweaksMod;
 import java.util.Optional;
 import java.util.OptionalInt;
 
-public final class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
+public  class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
     public Handlers(ChiseledBookshelvesShowBookOnHover feature) {
         super(feature);
     }

@@ -16,7 +16,7 @@ import svenhjol.charmony.core.helpers.PlayerHelper;
 
 import javax.annotation.Nullable;
 
-public final class Handlers extends Setup<ItemFrameHiding> {
+public class Handlers extends Setup<ItemFrameHiding> {
     public Handlers(ItemFrameHiding feature) {
         super(feature);
     }

@@ -14,7 +14,7 @@ import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.Optional;
 
-public final class Handlers extends Setup<CraftingTableNearby> {
+public class Handlers extends Setup<CraftingTableNearby> {
     private BlockPos craftingTablePos;
 
     public Handlers(CraftingTableNearby feature) {

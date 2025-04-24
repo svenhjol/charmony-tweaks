@@ -9,7 +9,7 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import svenhjol.charmony.core.base.Setup;
 
-public final class Handlers extends Setup<AnimalDamageImmunity> {
+public class Handlers extends Setup<AnimalDamageImmunity> {
     public Handlers(AnimalDamageImmunity feature) {
         super(feature);
     }

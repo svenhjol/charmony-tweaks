@@ -18,7 +18,7 @@ import svenhjol.charmony.tweaks.TweaksMod;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Registers extends Setup<MineshaftImprovements> {
+public class Registers extends Setup<MineshaftImprovements> {
     // Holds loot tables that will be used to populate custom minecarts.
     public final List<ResourceKey<LootTable>> minecartLoot = new ArrayList<>();
 

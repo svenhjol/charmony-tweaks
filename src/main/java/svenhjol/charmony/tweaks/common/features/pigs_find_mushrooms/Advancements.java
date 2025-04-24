@@ -6,7 +6,7 @@ import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.AdvancementHelper;
 import svenhjol.charmony.core.helpers.PlayerHelper;
 
-public final class Advancements extends Setup<PigsFindMushrooms> {
+public class Advancements extends Setup<PigsFindMushrooms> {
     public Advancements(PigsFindMushrooms feature) {
         super(feature);
     }

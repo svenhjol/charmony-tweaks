@@ -11,7 +11,6 @@ import svenhjol.charmony.core.enums.Side;
 public final class CompassesShowPosition extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
-    public final Providers providers;
 
     @Configurable(
         name = "Show facing",
@@ -55,6 +54,12 @@ public final class CompassesShowPosition extends SidedFeature {
     )
     private static boolean alwaysShow = false;
 
+    public CompassesShowPosition(Mod mod) {
+        super(mod);
+        registers = new Registers(this);
+        handlers = new Handlers(this);
+    }
+
     public boolean showFacing() {
         return showFacing;
     }
@@ -77,12 +82,5 @@ public final class CompassesShowPosition extends SidedFeature {
 
     public boolean alwaysShow() {
         return alwaysShow;
-    }
-
-    public CompassesShowPosition(Mod mod) {
-        super(mod);
-        registers = new Registers(this);
-        handlers = new Handlers(this);
-        providers = new Providers(this);
     }
 }

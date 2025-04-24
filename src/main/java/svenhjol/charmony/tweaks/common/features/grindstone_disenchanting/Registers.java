@@ -6,7 +6,7 @@ import svenhjol.charmony.core.events.GrindstoneEvents;
 
 import java.util.function.BooleanSupplier;
 
-public final class Registers extends Setup<GrindstoneDisenchanting> {
+public class Registers extends Setup<GrindstoneDisenchanting> {
     public Registers(GrindstoneDisenchanting feature) {
         super(feature);
     }

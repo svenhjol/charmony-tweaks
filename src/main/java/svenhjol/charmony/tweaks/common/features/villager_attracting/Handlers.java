@@ -13,7 +13,7 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.function.Predicate;
 
-public final class Handlers extends Setup<VillagerAttracting> {
+public class Handlers extends Setup<VillagerAttracting> {
     public Handlers(VillagerAttracting feature) {
         super(feature);
     }

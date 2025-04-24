@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.UUID;
 
-public final class Handlers extends Setup<MobTextures> {
+public class Handlers extends Setup<MobTextures> {
     public Handlers(MobTextures feature) {
         super(feature);
     }

@@ -11,7 +11,7 @@ import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.tweaks.TweaksMod;
 
-public final class Handlers extends Setup<CompassesShowPosition> {
+public class Handlers extends Setup<CompassesShowPosition> {
     public Handlers(CompassesShowPosition feature) {
         super(feature);
     }
@@ -79,7 +79,7 @@ public final class Handlers extends Setup<CompassesShowPosition> {
             }
         }
 
-        for (var item : feature().providers.overlayItems) {
+        for (var item : feature().registers.overlayItems) {
             if (!item.shouldShow(player)) continue;
             guiGraphics.drawString(font, item.text(),16, y, item.color() | alpha);
             y += lineHeight;

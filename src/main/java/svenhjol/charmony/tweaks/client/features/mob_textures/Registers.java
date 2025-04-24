@@ -14,7 +14,7 @@ import svenhjol.charmony.tweaks.client.features.mob_textures.custom_renderers.Cu
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Registers extends Setup<MobTextures> {
+public class Registers extends Setup<MobTextures> {
     public final List<ResourceLocation> snowGolems = new ArrayList<>();
     public final List<ResourceLocation> wanderingTraders = new ArrayList<>();
 

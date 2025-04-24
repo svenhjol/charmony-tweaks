@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.common.features.item_restocking;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.PlayerTickCallback;
 
-public final class Registers extends Setup<ItemRestocking> {
+public class Registers extends Setup<ItemRestocking> {
     public Registers(ItemRestocking feature) {
         super(feature);
     }

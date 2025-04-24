@@ -11,14 +11,13 @@ public final class AnimalArmorGrinding extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
     public final Advancements advancements;
-    public final Providers providers;
+    public final GrindableItemProviders grindableItemProviders;
 
     public AnimalArmorGrinding(Mod mod) {
         super(mod);
-
         registers = new Registers(this);
         handlers = new Handlers(this);
         advancements = new Advancements(this);
-        providers = new Providers(this);
+        grindableItemProviders = new GrindableItemProviders(this);
     }
 }

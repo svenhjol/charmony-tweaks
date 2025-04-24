@@ -9,9 +9,10 @@ import svenhjol.charmony.core.base.Setup;
 
 import java.util.List;
 
-public final class Providers extends Setup<AnimalArmorGrinding> implements GrindableItemProvider {
-    public Providers(AnimalArmorGrinding feature) {
+public class GrindableItemProviders extends Setup<AnimalArmorGrinding> implements GrindableItemProvider {
+    public GrindableItemProviders(AnimalArmorGrinding feature) {
         super(feature);
+        Api.registerProvider(this);
     }
 
     @Override
@@ -24,16 +25,5 @@ public final class Providers extends Setup<AnimalArmorGrinding> implements Grind
             Pair.of(Items.GOLDEN_HORSE_ARMOR, Items.GOLD_INGOT),
             Pair.of(Items.DIAMOND_HORSE_ARMOR, Items.DIAMOND)
         );
-    }
-
-    @Override
-    public Runnable boot() {
-        return () -> {
-            Api.registerProvider(this);
-
-            Api.consume(GrindableItemProvider.class,
-                provider -> provider.getItemGrindResults().forEach(
-                    result -> feature().registers.recipes.put(result.getFirst(), result.getSecond())));
-        };
     }
 }

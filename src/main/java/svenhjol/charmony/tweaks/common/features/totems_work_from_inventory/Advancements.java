@@ -6,7 +6,7 @@ import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.AdvancementHelper;
 
-public final class Advancements extends Setup<TotemsWorkFromInventory> {
+public class Advancements extends Setup<TotemsWorkFromInventory> {
     public Advancements(TotemsWorkFromInventory feature) {
         super(feature);
     }

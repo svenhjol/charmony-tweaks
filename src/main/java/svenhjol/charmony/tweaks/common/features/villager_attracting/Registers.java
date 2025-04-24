@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.events.PlayerTickCallback;
 
-public final class Registers extends Setup<VillagerAttracting> {
+public class Registers extends Setup<VillagerAttracting> {
     public Registers(VillagerAttracting feature) {
         super(feature);
     }
