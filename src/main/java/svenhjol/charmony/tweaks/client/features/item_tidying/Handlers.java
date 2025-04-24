@@ -5,7 +5,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
@@ -31,7 +30,6 @@ public final class Handlers extends Setup<ItemTidying> {
     private @Nullable AbstractContainerScreen<?> containerScreen;
     private Pair<Integer, Integer> containerXY;
     private Pair<Integer, Integer> playerXY;
-    private Map<ButtonType, Integer> defaultX = new HashMap<>();
 
     public Handlers(ItemTidying feature) {
         super(feature);
@@ -241,18 +239,26 @@ public final class Handlers extends Setup<ItemTidying> {
             var imageButton = sortingButtons.get(ButtonType.Player);
             imageButton.setPosition(playerXY.getFirst(), imageButton.getY());
         }
+
+        updateButtonSprites(screen);
     }
 
     public void addSortingButton(Screen screen, ButtonType type, int x, int y, Button.OnPress callback) {
-        WidgetSprites buttonSprite;
+        sortingButtons.put(type, new ImageButton(x, y, 10, 10, feature().registers.lightModeTidyButton, callback));
+        updateButtonSprites(screen);
+    }
 
-        if (feature().registers.darkModeTests.stream().anyMatch(pred -> pred.test(screen))) {
-            buttonSprite = feature().registers.darkModeTidyButton;
-        } else {
-            buttonSprite = feature().registers.lightModeTidyButton;
+    private void updateButtonSprites(Screen screen) {
+        var useDarkMode = feature().registers.darkModeTests.stream().anyMatch(pred -> pred.test(screen));
+
+        if (sortingButtons.containsKey(ButtonType.Container)) {
+            var imageButton = sortingButtons.get(ButtonType.Container);
+            imageButton.sprites = useDarkMode ? feature().registers.darkModeTidyButton : feature().registers.lightModeTidyButton;
         }
-
-        sortingButtons.put(type, new ImageButton(x, y, 10, 10, buttonSprite, callback));
+        if (sortingButtons.containsKey(ButtonType.Player)) {
+            var imageButton = sortingButtons.get(ButtonType.Player);
+            imageButton.sprites = useDarkMode ? feature().registers.darkModeTidyButton : feature().registers.lightModeTidyButton;
+        }
     }
 
     private boolean canUseSlotIndex(Slot slot, int start, int end) {
@@ -290,9 +296,6 @@ public final class Handlers extends Setup<ItemTidying> {
 
         this.containerXY = Pair.of(containerX, containerY);
         this.playerXY = Pair.of(playerX, playerY);
-
-        this.defaultX.put(ButtonType.Container, containerX);
-        this.defaultX.put(ButtonType.Player, playerX);
     }
 
     public Pair<Integer, Integer> containerXY() {
