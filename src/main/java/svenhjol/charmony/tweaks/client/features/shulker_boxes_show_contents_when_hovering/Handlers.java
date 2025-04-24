@@ -3,7 +3,9 @@ package svenhjol.charmony.tweaks.client.features.shulker_boxes_show_contents_whe
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
@@ -24,10 +26,26 @@ public class Handlers extends Setup<ShulkerBoxesShowContentsWhenHovering> {
      */
     public void removeLinesFromShulkerBox(ItemStack stack, List<Component> components, TooltipFlag tooltipFlag) {
         var shulkerBoxBlock = tryGetShulkerBoxBlock(stack);
-        if (shulkerBoxBlock != null && components.size() > 1) {
+        if (shulkerBoxBlock != null && !components.isEmpty()) {
+            var color = shulkerBoxBlock.getColor();
             var title = components.getFirst();
             components.clear();
-            components.addFirst(title);
+
+            // Show the shulker box name in color if applicable.
+            if (color != null && title instanceof MutableComponent mutableTitle) {
+                int textColor;
+                if (color == DyeColor.BLACK) {
+                    textColor = 0x545454;
+                } else if (color == DyeColor.GRAY) {
+                    textColor = 0x909090;
+                } else {
+                    textColor = color.getTextColor();
+                }
+                mutableTitle = mutableTitle.withColor(textColor);
+                components.addFirst(mutableTitle);
+            } else {
+                components.addFirst(title);
+            }
         }
     }
 
