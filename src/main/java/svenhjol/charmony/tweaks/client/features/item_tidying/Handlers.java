@@ -264,7 +264,6 @@ public class Handlers extends Setup<ItemTidying> {
             && (end == -1 || (end > -1 && slot.getContainerSlot() <= end));
     }
 
-    @SuppressWarnings("deprecation")
     private void processButtonCoordinates(AbstractContainerScreen<?> screen, int baseX, int baseY) {
         var clazz = screen.getClass();
         var tweak = feature().registers.tweaks.get(clazz);
@@ -276,17 +275,11 @@ public class Handlers extends Setup<ItemTidying> {
         var playerY = baseY;
 
         if (tweak != null) {
-            var oldOffset = tweak.getXYOffset();
             var containerOffset = tweak.getContainerXYOffset();
             var playerOffset = tweak.getPlayerXYOffset();
 
-            if (oldOffset.getFirst() != 0 || oldOffset.getSecond() != 0) {
-                containerX = baseX + oldOffset.getFirst();
-                containerY = baseY + oldOffset.getSecond();
-            } else {
-                containerX = baseX + containerOffset.getFirst();
-                containerY = baseY + containerOffset.getSecond();
-            }
+            containerX = baseX + containerOffset.getFirst();
+            containerY = baseY + containerOffset.getSecond();
 
             playerX = baseX + playerOffset.getFirst();
             playerY = baseY + playerOffset.getSecond();

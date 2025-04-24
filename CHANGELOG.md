@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.13
+
+- Remove deprecated API use.
+
 ## 1.9.12
 
 - Show colored labels when hovering over colored shulker boxes.
