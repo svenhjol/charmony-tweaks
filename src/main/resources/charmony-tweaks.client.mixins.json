@@ -18,6 +18,7 @@
     "repair_cost_unlimited.AnvilScreenMixin",
     "repair_cost_visible.AnvilScreenMixin",
     "shields_have_reduced_view_blocking.ItemInHandRendererMixin",
+    "shulker_box_menu_colors.ShulkerBoxScreenMixin",
     "shulker_box_transferring.AbstractContainerScreenMixin",
     "spyglass_scope_hiding.GuiMixin",
     "telemetry.ClientTelemetryManagerMixin",

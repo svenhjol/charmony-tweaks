@@ -56,6 +56,10 @@ mutable    field net/minecraft/world/entity/monster/piglin/Piglin MEMORY_TYPES L
 # PigsFindMushrooms
 accessible field net/minecraft/world/entity/Mob goalSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
 
+# ShulkerBoxMenuColors
+accessible field net/minecraft/world/inventory/ShulkerBoxMenu container Lnet/minecraft/world/Container;
+accessible field net/minecraft/client/gui/screens/inventory/ShulkerBoxScreen CONTAINER_TEXTURE Lnet/minecraft/resources/ResourceLocation;
+
 # SuspiciousBlockCreating
 accessible field net/minecraft/world/level/block/entity/BrushableBlockEntity lootTable Lnet/minecraft/resources/ResourceKey;
 accessible field net/minecraft/world/level/block/entity/BrushableBlockEntity item Lnet/minecraft/world/item/ItemStack;

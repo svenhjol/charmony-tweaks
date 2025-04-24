@@ -146,15 +146,16 @@ public class Handlers extends Setup<ShulkerBoxTransferring> {
             if (data != null && direction != 0) {
                 var stacks = new ArrayList<>(data.stream().toList());
                 ItemStackHelper.mergeStacks(stacks);
+                if (!stacks.isEmpty()) {
+                    if (direction > 0) {
+                        ItemStack last = stacks.removeLast();
+                        stacks.addFirst(last);
+                    }
 
-                if (direction > 0) {
-                    ItemStack last = stacks.removeLast();
-                    stacks.addFirst(last);
-                }
-
-                if (direction < 0) {
-                    ItemStack first = stacks.removeFirst();
-                    stacks.add(first);
+                    if (direction < 0) {
+                        ItemStack first = stacks.removeFirst();
+                        stacks.add(first);
+                    }
                 }
 
                 var itemContainerContents = ItemContainerContents.fromItems(stacks);

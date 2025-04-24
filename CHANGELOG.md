@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.11
+
+- Add ShulkerBoxMenuColors feature.
+- Fix crash when trying to scroll an empty shulkerbox.
+
 ## 1.9.10
 
 - Update class access.
