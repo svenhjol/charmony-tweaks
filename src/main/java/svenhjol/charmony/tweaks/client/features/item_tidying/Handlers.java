@@ -221,23 +221,21 @@ public final class Handlers extends Setup<ItemTidying> {
         if (feature().registers.blacklisted.contains(clazz)) return;
         var tweak = feature().registers.tweaks.get(clazz);
 
-        if (tweak != null && !tweak.hasRecipeButton()) {
-            return;
-        }
+        if (tweak != null && tweak.hasRecipeButton()) {
+            // Recalculate the button X offsets.
+            processButtonCoordinates(screen, screen.leftPos + LEFT, 0);
 
-        // Recalculate the button X offsets.
-        processButtonCoordinates(screen, screen.leftPos + LEFT, 0);
+            var playerXY = playerXY();
+            var containerXY = containerXY();
 
-        var playerXY = playerXY();
-        var containerXY = containerXY();
-
-        if (sortingButtons.containsKey(ButtonType.Container)) {
-            var imageButton = sortingButtons.get(ButtonType.Container);
-            imageButton.setPosition(containerXY.getFirst(), imageButton.getY());
-        }
-        if (sortingButtons.containsKey(ButtonType.Player)) {
-            var imageButton = sortingButtons.get(ButtonType.Player);
-            imageButton.setPosition(playerXY.getFirst(), imageButton.getY());
+            if (sortingButtons.containsKey(ButtonType.Container)) {
+                var imageButton = sortingButtons.get(ButtonType.Container);
+                imageButton.setPosition(containerXY.getFirst(), imageButton.getY());
+            }
+            if (sortingButtons.containsKey(ButtonType.Player)) {
+                var imageButton = sortingButtons.get(ButtonType.Player);
+                imageButton.setPosition(playerXY.getFirst(), imageButton.getY());
+            }
         }
 
         updateButtonSprites(screen);

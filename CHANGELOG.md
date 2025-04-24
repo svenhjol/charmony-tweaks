@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.9
+
+- 
+
 ## 1.9.8
 
 - Testing new dark mode handling.
