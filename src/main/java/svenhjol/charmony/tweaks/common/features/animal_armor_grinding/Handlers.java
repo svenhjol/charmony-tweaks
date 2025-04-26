@@ -5,7 +5,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.events.GrindstoneEvents.GrindstoneMenuInstance;
+import svenhjol.charmony.api.events.GrindstoneEvents.GrindstoneMenuInstance;
 
 @SuppressWarnings("unused")
 public class Handlers extends Setup<AnimalArmorGrinding> {

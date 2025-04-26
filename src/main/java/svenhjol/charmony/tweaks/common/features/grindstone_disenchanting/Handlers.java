@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.events.GrindstoneEvents;
+import svenhjol.charmony.api.events.GrindstoneEvents;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;

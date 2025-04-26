@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.0
+
+- Update for API 1.18
+
 ## 1.9.13
 
 - Remove deprecated API use.

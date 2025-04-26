@@ -2,7 +2,7 @@ package svenhjol.charmony.tweaks.common.features.grindstone_disenchanting;
 
 import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.events.GrindstoneEvents;
+import svenhjol.charmony.api.events.GrindstoneEvents;
 
 import java.util.function.BooleanSupplier;
 

@@ -8,8 +8,8 @@ import org.lwjgl.glfw.GLFW;
 import svenhjol.charmony.api.*;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.events.RenderScreenCallback;
-import svenhjol.charmony.core.events.SetupScreenCallback;
+import svenhjol.charmony.api.events.RenderScreenCallback;
+import svenhjol.charmony.api.events.SetupScreenCallback;
 import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.ArrayList;

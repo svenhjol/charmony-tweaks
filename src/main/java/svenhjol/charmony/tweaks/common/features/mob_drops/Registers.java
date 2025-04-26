@@ -3,8 +3,8 @@ package svenhjol.charmony.tweaks.common.features.mob_drops;
 import net.minecraft.sounds.SoundEvent;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
-import svenhjol.charmony.core.events.EntityKilledDropCallback;
-import svenhjol.charmony.core.events.EntityTickCallback;
+import svenhjol.charmony.api.events.EntityKilledDropCallback;
+import svenhjol.charmony.api.events.EntityTickCallback;
 import svenhjol.charmony.tweaks.common.features.mob_drops.mobs.*;
 
 import java.util.ArrayList;

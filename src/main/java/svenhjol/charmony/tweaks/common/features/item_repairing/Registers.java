@@ -1,7 +1,7 @@
 package svenhjol.charmony.tweaks.common.features.item_repairing;
 
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.events.AnvilEvents;
+import svenhjol.charmony.api.events.AnvilEvents;
 
 public class Registers extends Setup<ItemRepairing> {
     public Registers(ItemRepairing feature) {

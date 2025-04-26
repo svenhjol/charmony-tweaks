@@ -1,8 +1,8 @@
 package svenhjol.charmony.tweaks.client.features.shulker_boxes_show_contents_when_hovering;
 
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.events.HoverOverItemTooltipCallback;
-import svenhjol.charmony.core.events.RenderTooltipComponentCallback;
+import svenhjol.charmony.api.events.HoverOverItemTooltipCallback;
+import svenhjol.charmony.api.events.RenderTooltipComponentCallback;
 
 public class Registers extends Setup<ShulkerBoxesShowContentsWhenHovering> {
     public Registers(ShulkerBoxesShowContentsWhenHovering feature) {
