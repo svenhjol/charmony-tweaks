@@ -3,6 +3,7 @@ package svenhjol.charmony.tweaks.client.features.shulker_box_menu_colors;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.phys.BlockHitResult;
 import svenhjol.charmony.core.base.Setup;
+import svenhjol.charmony.core.client.TintedGuiGraphics;
 import svenhjol.charmony.core.helpers.ColorHelper;
 
 import javax.annotation.Nullable;
@@ -33,7 +35,7 @@ public class Handlers extends Setup<ShulkerBoxMenuColors> {
             var x = (width - imageWidth) / 2;
             var y = (height - imageHeight) / 2;
             var bgColor = ColorHelper.tintBackgroundColor(color);
-            ColorHelper.tintTexture(guiGraphics, ShulkerBoxScreen.CONTAINER_TEXTURE, bgColor, x, y, 0.0f, 0.0f, imageWidth, imageHeight);
+            ((TintedGuiGraphics)guiGraphics).tint(bgColor).blit(RenderType::guiTextured, ShulkerBoxScreen.CONTAINER_TEXTURE, x, y, 0.0f, 0.0f, imageWidth, imageHeight, 256, 256);
             return true;
         }
         return false;

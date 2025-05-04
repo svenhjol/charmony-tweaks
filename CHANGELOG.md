@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.1
+
+- Update tinting to work with new Charmony method.
+
 ## 1.10.0
 
 - Update for API 1.18
