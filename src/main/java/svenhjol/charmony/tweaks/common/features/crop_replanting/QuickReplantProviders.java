@@ -2,7 +2,7 @@ package svenhjol.charmony.tweaks.common.features.crop_replanting;
 
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
-import svenhjol.charmony.api.QuickReplantProvider;
+import svenhjol.charmony.api.tweaks.QuickReplantProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 

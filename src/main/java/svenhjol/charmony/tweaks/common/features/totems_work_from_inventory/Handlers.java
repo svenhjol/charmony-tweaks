@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.common.features.totems_work_from_inventory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import svenhjol.charmony.api.TotemType;
+import svenhjol.charmony.api.tweaks.TotemType;
 import svenhjol.charmony.core.base.Setup;
 
 public class Handlers extends Setup<TotemsWorkFromInventory> {

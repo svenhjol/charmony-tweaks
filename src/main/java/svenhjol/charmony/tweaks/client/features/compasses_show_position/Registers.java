@@ -1,8 +1,8 @@
 package svenhjol.charmony.tweaks.client.features.compasses_show_position;
 
 import net.fabricmc.fabric.api.client.rendering.v1.HudLayerRegistrationCallback;
-import svenhjol.charmony.api.CompassOverlayItem;
-import svenhjol.charmony.api.CompassOverlayProvider;
+import svenhjol.charmony.api.tweaks.CompassOverlayItem;
+import svenhjol.charmony.api.tweaks.CompassOverlayProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 

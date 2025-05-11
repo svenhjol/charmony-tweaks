@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.client.features.shulker_box_menu_colors;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen;
 import svenhjol.charmony.api.Api;
-import svenhjol.charmony.api.DarkModeProvider;
+import svenhjol.charmony.api.tweaks.DarkModeProvider;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.ColorHelper;
 

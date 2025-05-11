@@ -1,6 +1,6 @@
 package svenhjol.charmony.tweaks.common.features.totems_work_from_inventory;
 
-import svenhjol.charmony.api.TotemInventoryCheckProvider;
+import svenhjol.charmony.api.tweaks.TotemInventoryCheckProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 

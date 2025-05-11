@@ -1,10 +1,10 @@
 package svenhjol.charmony.tweaks.common.features.animal_armor_grinding;
 
 import net.minecraft.world.level.ItemLike;
-import svenhjol.charmony.api.GrindableItemProvider;
+import svenhjol.charmony.api.events.GrindstoneEvents;
+import svenhjol.charmony.api.tweaks.GrindableItemProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.api.events.GrindstoneEvents;
 
 import java.util.HashMap;
 import java.util.Map;

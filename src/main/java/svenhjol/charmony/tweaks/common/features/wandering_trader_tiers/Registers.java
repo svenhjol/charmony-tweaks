@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.common.features.wandering_trader_tiers;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import svenhjol.charmony.api.WandererTradeProvider;
+import svenhjol.charmony.api.tweaks.WandererTradeProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 

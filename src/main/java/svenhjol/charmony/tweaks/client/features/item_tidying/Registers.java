@@ -5,11 +5,11 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.Screen;
 import org.lwjgl.glfw.GLFW;
-import svenhjol.charmony.api.*;
-import svenhjol.charmony.core.Api;
-import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.api.events.RenderScreenCallback;
 import svenhjol.charmony.api.events.SetupScreenCallback;
+import svenhjol.charmony.api.tweaks.*;
+import svenhjol.charmony.core.Api;
+import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.ArrayList;

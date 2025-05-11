@@ -3,10 +3,10 @@ package svenhjol.charmony.tweaks.client.features.item_tidying;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.*;
-import svenhjol.charmony.api.ItemTidyingBlacklistProvider;
-import svenhjol.charmony.api.ItemTidyingButtonTweak;
-import svenhjol.charmony.api.ItemTidyingButtonTweakProvider;
-import svenhjol.charmony.api.ItemTidyingWhitelistProvider;
+import svenhjol.charmony.api.tweaks.ItemTidyingBlacklistProvider;
+import svenhjol.charmony.api.tweaks.ItemTidyingButtonTweak;
+import svenhjol.charmony.api.tweaks.ItemTidyingButtonTweakProvider;
+import svenhjol.charmony.api.tweaks.ItemTidyingWhitelistProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 

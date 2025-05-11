@@ -5,8 +5,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import svenhjol.charmony.api.AutoPickupItemProvider;
-import svenhjol.charmony.api.QuickReplantProvider;
+import svenhjol.charmony.api.tweaks.AutoPickupItemProvider;
+import svenhjol.charmony.api.tweaks.QuickReplantProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 

@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.common.features.animal_armor_grinding;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import svenhjol.charmony.api.GrindableItemProvider;
+import svenhjol.charmony.api.tweaks.GrindableItemProvider;
 import svenhjol.charmony.core.Api;
 import svenhjol.charmony.core.base.Setup;
 
