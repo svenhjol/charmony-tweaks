@@ -1,12 +1,13 @@
 package svenhjol.charmony.tweaks.common.features.trade_improvements;
 
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = "Adds extra villager and wandering trader trades.")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class TradeImprovements extends SidedFeature {
     public final Registers registers;
     public final WanderingTraderTiersProvider wanderingTraderTiersProvider;

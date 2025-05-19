@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.client.features.totem_emergency_swap;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Client, description = """
     Adds a keybind to swap any totem in your inventory with your offhand.

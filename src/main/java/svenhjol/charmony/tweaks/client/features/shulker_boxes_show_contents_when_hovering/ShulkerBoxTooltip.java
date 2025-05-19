@@ -4,9 +4,9 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.world.item.ItemStack;
+import svenhjol.charmony.api.core.Sprite;
 import svenhjol.charmony.core.client.ItemContainerTooltip;
 import svenhjol.charmony.core.client.SlotSprite;
-import svenhjol.charmony.core.client.Sprite;
 import svenhjol.charmony.tweaks.client.features.shulker_box_transferring.ShulkerBoxTransferring;
 
 import java.util.List;

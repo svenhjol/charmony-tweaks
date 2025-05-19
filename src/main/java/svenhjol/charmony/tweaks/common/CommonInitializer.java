@@ -1,7 +1,7 @@
 package svenhjol.charmony.tweaks.common;
 
 import net.fabricmc.api.ModInitializer;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 import svenhjol.charmony.tweaks.TweaksMod;
 import svenhjol.charmony.tweaks.common.features.animal_armor_grinding.AnimalArmorGrinding;
 import svenhjol.charmony.tweaks.common.features.animal_damage_immunity.AnimalDamageImmunity;

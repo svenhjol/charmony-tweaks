@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.client.features.jukeboxes_stop_background_music;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Client, description = """
     Playing a music disc in a jukebox prevents background music from playing at the same time.""")

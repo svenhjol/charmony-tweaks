@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.nether_portal_blocks;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Adds more blocks that can be used to build nether portals. By default this adds Crying Obsidian.

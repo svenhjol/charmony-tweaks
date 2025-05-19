@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.villager_attracting;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Attract villagers by holding a desired item. By default this is an emerald block.

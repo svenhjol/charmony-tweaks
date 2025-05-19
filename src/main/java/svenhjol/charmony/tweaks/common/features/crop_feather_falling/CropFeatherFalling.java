@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.crop_feather_falling;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Prevents crop trampling when wearing boots enchanted with Feather Falling.""")

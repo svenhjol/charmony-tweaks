@@ -1,11 +1,11 @@
 package svenhjol.charmony.tweaks.client.features.telemetry;
 
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 /**
  * This feature exposes its configuration via static methods.
@@ -14,6 +14,7 @@ import svenhjol.charmony.core.enums.Side;
 @FeatureDefinition(side = Side.Client, enabledByDefault = false, description = """
     Disables telemetry and hides some nag messages.
     Some data removal may be considered controversial so this feature is disabled by default.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class Telemetry extends SidedFeature {
     @Configurable(name = "Disable telemetry", description = """
         If true, prevents the client telemetry manager from ever sending any messages back to the mothership.

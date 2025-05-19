@@ -2,12 +2,13 @@ package svenhjol.charmony.tweaks.client.features.compasses_show_position;
 
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Client, description = """
     Shows the direction that the player is facing, the position coordinates and current biome when holding a compass.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class CompassesShowPosition extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

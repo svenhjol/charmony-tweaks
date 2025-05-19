@@ -8,7 +8,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.ItemLike;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 import svenhjol.charmony.api.events.ItemDragDropCallback;
 import svenhjol.charmony.core.helpers.TagHelper;
 import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking.C2SAddItemToShulkerBox;

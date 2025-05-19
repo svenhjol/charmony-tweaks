@@ -12,8 +12,8 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.phys.BlockHitResult;
+import svenhjol.charmony.api.tint_background.TintedGuiGraphics;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.core.client.TintedGuiGraphics;
 import svenhjol.charmony.core.helpers.ColorHelper;
 
 import javax.annotation.Nullable;
@@ -62,6 +62,7 @@ public class Handlers extends Setup<ShulkerBoxMenuColors> {
      * If the block clicked (on the client) is a shulker box block, try and get its color.
      * Set the color to a reference in this handler so that the custom render methods can use it.
      */
+    @SuppressWarnings("unused")
     public InteractionResult useBlock(Player player, Level level, InteractionHand hand, BlockHitResult hitResult) {
         var pos = hitResult.getBlockPos();
         if (level.isClientSide() && level.getBlockEntity(pos) instanceof ShulkerBoxBlockEntity shulkerBox) {

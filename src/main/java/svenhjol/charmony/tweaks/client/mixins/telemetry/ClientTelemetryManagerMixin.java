@@ -1,23 +1,21 @@
 package svenhjol.charmony.tweaks.client.mixins.telemetry;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.minecraft.client.telemetry.ClientTelemetryManager;
 import net.minecraft.client.telemetry.TelemetryEventSender;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import svenhjol.charmony.tweaks.client.features.telemetry.Telemetry;
 
 @Mixin(ClientTelemetryManager.class)
 public class ClientTelemetryManagerMixin {
-    @Inject(
-        method = "createEventSender",
-        at = @At("HEAD"),
-        cancellable = true
+    @WrapMethod(
+        method = "createEventSender"
     )
-    private void hookCreateEventSender(CallbackInfoReturnable<TelemetryEventSender> cir) {
+    private TelemetryEventSender hookCreateEventSender(Operation<TelemetryEventSender> original) {
         if (Telemetry.disableTelemetry()) {
-            cir.setReturnValue(TelemetryEventSender.DISABLED);
+            return TelemetryEventSender.DISABLED;
         }
+        return original.call();
     }
 }

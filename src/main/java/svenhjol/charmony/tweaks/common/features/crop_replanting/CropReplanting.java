@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.crop_replanting;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Right-click with a hoe to quickly harvest and replant a fully-grown crop.""")

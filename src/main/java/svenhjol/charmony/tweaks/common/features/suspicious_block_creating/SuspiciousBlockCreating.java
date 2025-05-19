@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.suspicious_block_creating;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = "Use a piston to push an item into sand or gravel, making it suspicious.")
 public final class SuspiciousBlockCreating extends SidedFeature {

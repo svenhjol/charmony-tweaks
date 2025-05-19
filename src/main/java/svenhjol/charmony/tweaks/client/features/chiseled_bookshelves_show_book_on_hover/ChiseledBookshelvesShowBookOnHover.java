@@ -1,13 +1,14 @@
 package svenhjol.charmony.tweaks.client.features.chiseled_bookshelves_show_book_on_hover;
 
 import net.minecraft.util.Mth;
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Client, canBeDisabledInConfig = false)
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class ChiseledBookshelvesShowBookOnHover extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

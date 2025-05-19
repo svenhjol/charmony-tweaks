@@ -1,11 +1,13 @@
 package svenhjol.charmony.tweaks.common.mixins.repair_cost_unlimited;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AnvilMenu;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import svenhjol.charmony.tweaks.client.mixins.repair_cost_visible.AnvilScreenMixin;
+import svenhjol.charmony.tweaks.common.features.repair_cost_unlimited.RepairCostUnlimited;
 
 @Mixin(AnvilMenu.class)
 public class AnvilMenuMixin {
@@ -15,7 +17,7 @@ public class AnvilMenuMixin {
      * This modifies the updated output slot on the server side.
      * @see AnvilScreenMixin for the client side.
      */
-    @Redirect(
+    @WrapOperation(
         method = "createResult",
         at = @At(
             value = "INVOKE",
@@ -23,7 +25,10 @@ public class AnvilMenuMixin {
             ordinal = 1
         )
     )
-    private boolean hookCreateResultCheckAbilities(Player instance) {
-        return true;
+    private boolean hookCreateResultCheckAbilities(Player player, Operation<Boolean> original) {
+        if (RepairCostUnlimited.feature().enabled()) {
+            return true;
+        }
+        return original.call(player);
     }
 }

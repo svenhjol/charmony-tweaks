@@ -1,5 +1,7 @@
 package svenhjol.charmony.tweaks.client.mixins.shulker_box_menu_colors;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen;
@@ -7,9 +9,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.ShulkerBoxMenu;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import svenhjol.charmony.tweaks.client.features.shulker_box_menu_colors.ShulkerBoxMenuColors;
 
 @Mixin(ShulkerBoxScreen.class)
@@ -20,21 +19,16 @@ public abstract class ShulkerBoxScreenMixin extends AbstractContainerScreen<Shul
 
     /**
      * Try calling a custom render function that has a reference to the last clicked block color.
-     * On success cancel the vanilla rendering.
-     * If it fails, fall through to default vanilla rendering.
      */
-    @Inject(
-        method = "renderBg",
-        at = @At("HEAD"),
-        cancellable = true
+    @WrapMethod(
+        method = "renderBg"
     )
-    private void hookRenderBg(GuiGraphics guiGraphics, float ticks, int mouseX, int mouseY, CallbackInfo ci) {
+    private void hookRenderBg(GuiGraphics guiGraphics, float ticks, int mouseX, int mouseY, Operation<Void> original) {
         var result = ShulkerBoxMenuColors.feature().handlers.tryRenderBackground(guiGraphics, width, height, imageWidth, imageHeight);
         if (result) {
-            ci.cancel();
+            return;
         }
-
-        // Fallthrough to default behaviour
+        original.call(guiGraphics, ticks, mouseX, mouseY);
     }
 
     @Override

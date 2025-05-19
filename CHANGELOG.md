@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.12.0
+
+- Update for Charmony and API.
+- Rewrite mixins for less collision.
+
 ## 1.11.0
 
 - Update for API 1.20

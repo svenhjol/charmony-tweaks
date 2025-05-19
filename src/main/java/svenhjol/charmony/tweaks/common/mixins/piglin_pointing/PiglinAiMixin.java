@@ -1,9 +1,10 @@
 package svenhjol.charmony.tweaks.common.mixins.piglin_pointing;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.item.ItemStack;
@@ -11,7 +12,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import svenhjol.charmony.tweaks.common.features.piglin_pointing.PiglinPointing;
 
 @Mixin(PiglinAi.class)
@@ -27,42 +27,43 @@ public abstract class PiglinAiMixin {
         return original;
     }
 
-    @Inject(
-        method = "wantsToPickup",
-        at = @At("HEAD"),
-        cancellable = true
+    @WrapMethod(
+        method = "wantsToPickup"
     )
-    private static void hookWantsToPickup(Piglin piglin, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+    private static boolean hookWantsToPickup(Piglin piglin, ItemStack stack, Operation<Boolean> original) {
         if (PiglinPointing.feature().handlers.wantsToPickup(piglin, stack)) {
-            cir.setReturnValue(true);
+            return true;
         }
+        return original.call(piglin, stack);
     }
 
-    @Inject(
+    @WrapOperation(
         method = "pickUpItem",
         at = @At(
             value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/monster/piglin/PiglinAi;isLovedItem(Lnet/minecraft/world/item/ItemStack;)Z",
-            shift = At.Shift.BEFORE
-        ),
-        cancellable = true
+            target = "Lnet/minecraft/world/entity/monster/piglin/PiglinAi;isLovedItem(Lnet/minecraft/world/item/ItemStack;)Z"
+        )
     )
-    private static void hookCheckBeforeLovedItemCheck(ServerLevel serverLevel, Piglin piglin, ItemEntity itemEntity, CallbackInfo ci, @Local ItemStack stack) {
+    private static boolean hookCheckLovedItem(ItemStack stack, Operation<Boolean> original, @Local(argsOnly = true) Piglin piglin) {
         if (PiglinPointing.feature().handlers.tryToPickup(piglin, stack)) {
-            ci.cancel();
+            return true;
         }
+        return original.call(stack);
     }
 
-    @Inject(
+    @WrapOperation(
         method = "stopHoldingOffHandItem",
         at = @At(
             value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/monster/piglin/PiglinAi;isBarterCurrency(Lnet/minecraft/world/item/ItemStack;)Z",
-            shift = At.Shift.BEFORE
+            target = "Lnet/minecraft/world/entity/monster/piglin/PiglinAi;isBarterCurrency(Lnet/minecraft/world/item/ItemStack;)Z"
         )
     )
-    private static void hookCheckBeforeBarterCurrency(ServerLevel serverLevel, Piglin piglin, boolean bl, CallbackInfo ci, @Local ItemStack stack) {
-        PiglinPointing.feature().handlers.checkBlockAndFindStructure(piglin, stack);
+    private static boolean hookCheckBarterCurrency(ItemStack stack, Operation<Boolean> original, @Local(argsOnly = true) Piglin piglin) {
+        if (PiglinPointing.feature().enabled()) {
+            PiglinPointing.feature().handlers.checkBlockAndFindStructure(piglin, stack);
+            return false;
+        }
+        return original.call(stack);
     }
 
     @Inject(

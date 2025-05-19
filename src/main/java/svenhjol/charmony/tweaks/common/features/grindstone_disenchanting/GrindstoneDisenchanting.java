@@ -1,14 +1,15 @@
 package svenhjol.charmony.tweaks.common.features.grindstone_disenchanting;
 
 import net.minecraft.util.Mth;
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Extract enchantments from any enchanted item onto an empty book using the grindstone.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class GrindstoneDisenchanting extends SidedFeature {
     public final Advancements advancements;
     public final Handlers handlers;

@@ -1,7 +1,7 @@
 package svenhjol.charmony.tweaks.client.mixins;
 
 import svenhjol.charmony.core.base.MixinConfig;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 import svenhjol.charmony.tweaks.TweaksMod;
 
 public class ClientMixinConfig extends MixinConfig {

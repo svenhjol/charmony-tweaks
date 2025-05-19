@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.deepslate_dungeons;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Dungeons in the deepslate layer will be constructed of deepslate bricks and cobbled deepslate.""")

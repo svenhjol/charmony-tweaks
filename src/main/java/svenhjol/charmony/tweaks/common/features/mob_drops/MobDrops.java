@@ -2,13 +2,14 @@ package svenhjol.charmony.tweaks.common.features.mob_drops;
 
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = "Some mobs have a chance to drop additional items either by chance or when killed.")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class MobDrops extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

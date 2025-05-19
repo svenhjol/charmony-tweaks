@@ -1,11 +1,10 @@
 package svenhjol.charmony.tweaks.client.mixins.totem_emergency_swap;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import svenhjol.charmony.tweaks.client.features.totem_emergency_swap.TotemEmergencySwap;
 
 @Mixin(InventoryScreen.class)
@@ -15,14 +14,13 @@ public class InventoryScreenMixin {
      * Check if the totem is currently being swapped, and if it is, suppress the rendering.
      * Without this there will be a momentary popup of the inventory screen.
      */
-    @Inject(
-        method = "render",
-        at = @At("HEAD"),
-        cancellable = true
+    @WrapMethod(
+        method = "render"
     )
-    private void hookRender(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
+    private void hookRender(GuiGraphics guiGraphics, int mouseX, int mouseY, float ticks, Operation<Void> original) {
         if (TotemEmergencySwap.feature().handlers.preventInventoryRendering()) {
-            ci.cancel();
+            return;
         }
+        original.call(guiGraphics, mouseX, mouseY, ticks);
     }
 }

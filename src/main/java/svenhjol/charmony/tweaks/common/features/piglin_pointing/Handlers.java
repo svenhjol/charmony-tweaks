@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.monster.piglin.Piglin;
-import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.item.ItemStack;
 import svenhjol.charmony.core.base.Setup;
 
@@ -38,6 +37,7 @@ public class Handlers extends Setup<PiglinPointing> {
             if (target != null) {
                 piglin.getBrain().setMemoryWithExpiry(feature().registers.pointingAtTarget, target, 100L);
                 feature().advancements.piglinProvidedDirections(level, source);
+                stack.shrink(1);
             }
         }
     }
@@ -47,16 +47,21 @@ public class Handlers extends Setup<PiglinPointing> {
      * @see svenhjol.charmony.tweaks.common.mixins.piglin_pointing.PiglinAiMixin
      */
     public void setPointing(Piglin piglin) {
-        piglin.getBrain().getMemory(feature().registers.pointingAtTarget).ifPresentOrElse(
-            pos -> {
+        var brain = piglin.getBrain();
+        var uuid = piglin.getUUID();
+        var activity = feature().registers.pointingAtTarget;
+
+        if (brain.hasMemoryValue(activity)) {
+            brain.getMemory(activity).ifPresent(pos -> {
                 piglin.getLookControl().setLookAt(pos.getX(), 60, pos.getZ());
                 piglin.getNavigation().stop();
-                POINTING_PIGLINS.add(piglin.getUUID());
-            },
-            () -> {
-                POINTING_PIGLINS.remove(piglin.getUUID());
-            }
-        );
+                if (!POINTING_PIGLINS.contains(uuid)) {
+                    POINTING_PIGLINS.add(uuid);
+                }
+            });
+        } else {
+            POINTING_PIGLINS.remove(uuid);
+        }
     }
 
     /**
@@ -64,9 +69,11 @@ public class Handlers extends Setup<PiglinPointing> {
      * @see svenhjol.charmony.tweaks.common.mixins.piglin_pointing.PiglinAiMixin
      */
     public boolean wantsToPickup(Piglin piglin, ItemStack stack) {
-        return !piglin.isBaby()
-            && isBarteringItem(stack)
-            && isNotAdmiringOrPointing(piglin);
+        var isBaby = piglin.isBaby();
+        var isBarteringItem = isBarteringItem(stack);
+        var isAvailable = isNotAdmiringOrPointing(piglin);
+
+        return !isBaby && isBarteringItem && isAvailable;
     }
 
     /**
@@ -74,13 +81,9 @@ public class Handlers extends Setup<PiglinPointing> {
      * @see svenhjol.charmony.tweaks.common.mixins.piglin_pointing.PiglinAiMixin
      */
     public boolean tryToPickup(Piglin piglin, ItemStack stack) {
-        if (isBarteringItem(stack) && piglin.level() instanceof ServerLevel serverLevel) {
-            piglin.getBrain().eraseMemory(MemoryModuleType.TIME_TRYING_TO_REACH_ADMIRE_ITEM);
-            piglin.getBrain().setMemoryWithExpiry(MemoryModuleType.ADMIRING_ITEM, true, 40L);
-            PiglinAi.holdInOffhand(serverLevel, piglin, stack);
-            return true;
-        }
-        return false;
+        return isBarteringItem(stack)
+            && !piglin.isBaby()
+            && piglin.level() instanceof ServerLevel;
     }
 
     public boolean isNotAdmiringOrPointing(Piglin piglin) {

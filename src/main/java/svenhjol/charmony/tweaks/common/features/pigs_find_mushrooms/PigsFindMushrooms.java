@@ -1,15 +1,16 @@
 package svenhjol.charmony.tweaks.common.features.pigs_find_mushrooms;
 
 import net.minecraft.util.Mth;
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Pigs have a chance to find mushrooms from certain blocks. By default mushrooms are unearthed from mycelium and podzol blocks.
     The item tag 'pigs_find_mushrooms' can be used to configure the blocks in which mushrooms can be unearthed by a pig.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class PigsFindMushrooms extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

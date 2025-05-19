@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.client.features.shulker_boxes_show_contents_when_hovering;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Client, description = "Shulker boxes show their content when hovering over the inventory item.")
 public final class ShulkerBoxesShowContentsWhenHovering extends SidedFeature {

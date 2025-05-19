@@ -1,14 +1,15 @@
 package svenhjol.charmony.tweaks.common.features.animal_reviving;
 
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     A tamed animal with a name drops its name tag on death.
     Right-click (use) the name tag while holding a Totem of Undying to revive the animal and consume the totem.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class AnimalReviving extends SidedFeature {
     public final Advancements advancements;
     public final Handlers handlers;

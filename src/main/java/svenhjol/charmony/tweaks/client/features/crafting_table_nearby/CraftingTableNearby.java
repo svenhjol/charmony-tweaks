@@ -1,13 +1,14 @@
 package svenhjol.charmony.tweaks.client.features.crafting_table_nearby;
 
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Client, description = """
     Open the 3x3 crafting grid using a hotkey when within 4 blocks of any crafting table.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class CraftingTableNearby extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

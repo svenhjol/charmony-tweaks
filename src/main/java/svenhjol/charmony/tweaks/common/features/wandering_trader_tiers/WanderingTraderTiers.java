@@ -1,9 +1,9 @@
 package svenhjol.charmony.tweaks.common.features.wandering_trader_tiers;
 
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Adds a tier of trades to a Wandering Trader. The trader selects a tier at random when spawned.
