@@ -55,7 +55,7 @@ public class Handlers extends Setup<MapsShowWhenHovering> {
                 y = ty + lines.size() * 10 + 8;
             }
 
-            poseStack.pushPose();
+            poseStack.pushMatrix();
             poseStack.translate(x, y, 500.0);
             poseStack.scale(0.5F, 0.5F, 1.0F);
 
@@ -68,15 +68,15 @@ public class Handlers extends Setup<MapsShowWhenHovering> {
             vertexConsumer.addVertex(matrix4f, 135.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 0.0F).setLight(light);
             vertexConsumer.addVertex(matrix4f, -7.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 0.0F).setLight(light);
 
-            poseStack.pushPose();
+            poseStack.pushMatrix();
             poseStack.translate(0.0, 0.0, 1.0);
 
             MapRenderer mapRenderer = minecraft.getMapRenderer();
             mapRenderer.extractRenderState(mapId, data, this.mapRenderState);
             mapRenderer.render(this.mapRenderState, poseStack, bufferSource, false, light);
 
-            poseStack.popPose();
-            poseStack.popPose();
+            poseStack.popMatrix();
+            poseStack.popMatrix();
         }
     }
 }

@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.client.features.shulker_box_menu_colors;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -35,7 +35,7 @@ public class Handlers extends Setup<ShulkerBoxMenuColors> {
             var x = (width - imageWidth) / 2;
             var y = (height - imageHeight) / 2;
             var bgColor = ColorHelper.tintBackgroundColor(color);
-            ((TintedGuiGraphics)guiGraphics).tint(bgColor).blit(RenderType::guiTextured, ShulkerBoxScreen.CONTAINER_TEXTURE, x, y, 0.0f, 0.0f, imageWidth, imageHeight, 256, 256);
+            ((TintedGuiGraphics)guiGraphics).tint(bgColor).blit(RenderPipelines.GUI_TEXTURED, ShulkerBoxScreen.CONTAINER_TEXTURE, x, y, 0.0f, 0.0f, imageWidth, imageHeight, 256, 256);
             return true;
         }
         return false;
