@@ -1,5 +1,6 @@
 package svenhjol.charmony.tweaks.client.features.maps_show_when_hovering;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
@@ -38,7 +39,7 @@ public class Handlers extends Setup<MapsShowWhenHovering> {
             var data = MapItem.getSavedData(mapId, level);
             if (data == null) return;
 
-            var poseStack = guiGraphics.pose();
+            var poseStack = new PoseStack();
             ty -= 16;
 
             var x = tx;
@@ -55,28 +56,27 @@ public class Handlers extends Setup<MapsShowWhenHovering> {
                 y = ty + lines.size() * 10 + 8;
             }
 
-            poseStack.pushMatrix();
-            poseStack.translate(x, y, 500.0);
-            poseStack.scale(0.5F, 0.5F, 1.0F);
+            poseStack.pushPose();
+            poseStack.translate(x, y, 500.0f);
+            poseStack.scale(0.5f, 0.5f, 1.0f);
 
             var bufferSource = minecraft.renderBuffers().bufferSource();
             var vertexConsumer = bufferSource.getBuffer(MAP_BACKGROUND);
-            var matrix4f = poseStack.last().pose();
 
-            vertexConsumer.addVertex(matrix4f, -7.0F, 135.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 1.0F).setLight(light);
-            vertexConsumer.addVertex(matrix4f, 135.0F, 135.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 1.0F).setLight(light);
-            vertexConsumer.addVertex(matrix4f, 135.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 0.0F).setLight(light);
-            vertexConsumer.addVertex(matrix4f, -7.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 0.0F).setLight(light);
+            vertexConsumer.addVertex(-7.0F, 135.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 1.0F).setLight(light);
+            vertexConsumer.addVertex(135.0F, 135.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 1.0F).setLight(light);
+            vertexConsumer.addVertex(135.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 0.0F).setLight(light);
+            vertexConsumer.addVertex(-7.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 0.0F).setLight(light);
 
-            poseStack.pushMatrix();
+            poseStack.pushPose();
             poseStack.translate(0.0, 0.0, 1.0);
 
             MapRenderer mapRenderer = minecraft.getMapRenderer();
             mapRenderer.extractRenderState(mapId, data, this.mapRenderState);
             mapRenderer.render(this.mapRenderState, poseStack, bufferSource, false, light);
 
-            poseStack.popMatrix();
-            poseStack.popMatrix();
+            poseStack.popPose();
+            poseStack.popPose();
         }
     }
 }

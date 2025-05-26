@@ -1,8 +1,8 @@
 package svenhjol.charmony.tweaks.client.features.crafting_table_nearby;
 
-import net.fabricmc.fabric.api.client.rendering.v1.IdentifiedLayer;
-import net.fabricmc.fabric.api.client.rendering.v1.LayeredDrawerWrapper;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.Optional;
 
@@ -69,11 +68,16 @@ public class Handlers extends Setup<CraftingTableNearby> {
         return Optional.ofNullable(craftingTablePos);
     }
 
-    public void hudRender(LayeredDrawerWrapper drawers) {
-        drawers.attachLayerAfter(
-            IdentifiedLayer.MISC_OVERLAYS,
-            TweaksMod.id("crafting_table_nearby"),
-            ((guiGraphics, deltaTracker)
-                -> feature().registers.hudRenderer.render(guiGraphics, deltaTracker)));
+    public void hudRender(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
+        feature().registers.hudRenderer.render(guiGraphics, deltaTracker);
     }
+
+    // Removed in 1.21.6
+    //    public void hudRender(LayeredDrawerWrapper drawers) {
+    //        drawers.attachLayerAfter(
+    //            IdentifiedLayer.MISC_OVERLAYS,
+    //            TweaksMod.id("crafting_table_nearby"),
+    //            ((guiGraphics, deltaTracker)
+    //                -> feature().registers.hudRenderer.render(guiGraphics, deltaTracker)));
+    //    }
 }

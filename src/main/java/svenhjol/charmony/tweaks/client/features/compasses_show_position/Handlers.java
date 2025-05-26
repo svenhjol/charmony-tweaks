@@ -1,7 +1,5 @@
 package svenhjol.charmony.tweaks.client.features.compasses_show_position;
 
-import net.fabricmc.fabric.api.client.rendering.v1.IdentifiedLayer;
-import net.fabricmc.fabric.api.client.rendering.v1.LayeredDrawerWrapper;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -9,7 +7,6 @@ import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Items;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 public class Handlers extends Setup<CompassesShowPosition> {
     public Handlers(CompassesShowPosition feature) {
@@ -86,10 +83,10 @@ public class Handlers extends Setup<CompassesShowPosition> {
         }
     }
 
-    public void hudRender(LayeredDrawerWrapper drawers) {
-        drawers.attachLayerAfter(
-            IdentifiedLayer.MISC_OVERLAYS,
-            TweaksMod.id("compass_position"),
-            this::hudRender);
-    }
+    //    public void hudRender(LayeredDrawerWrapper drawers) {
+    //        drawers.attachLayerAfter(
+    //            IdentifiedLayer.MISC_OVERLAYS,
+    //            TweaksMod.id("compass_position"),
+    //            this::hudRender);
+    //    }
 }

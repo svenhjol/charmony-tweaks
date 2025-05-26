@@ -5,6 +5,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.ARGB;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import svenhjol.charmony.api.tint_background.TintedGuiGraphics;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.helpers.ColorHelper;
@@ -50,9 +52,9 @@ public class Handlers extends Setup<ShulkerBoxMenuColors> {
                                    Component containerTitle, int containerTitleX, int containerTitleY,
                                    Component playerTitle, int playerTitleX, int playerTitleY) {
         if (color != null) {
-            var textColor = ColorHelper.tintForegroundColor(color);
-            guiGraphics.drawString(font, containerTitle, containerTitleX, containerTitleY, textColor, false);
-            guiGraphics.drawString(font, playerTitle, playerTitleX, playerTitleY, textColor, false);
+            var gg = ARGB.color(Vec3.fromRGB24(ColorHelper.tintForegroundColor(color)));
+            guiGraphics.drawString(font, containerTitle, containerTitleX, containerTitleY, gg, false);
+            guiGraphics.drawString(font, playerTitle, playerTitleX, playerTitleY, gg, false);
             return true;
         }
         return false;

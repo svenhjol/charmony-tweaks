@@ -1,8 +1,8 @@
 package svenhjol.charmony.tweaks.client.features.chiseled_bookshelves_show_book_on_hover;
 
-import net.fabricmc.fabric.api.client.rendering.v1.IdentifiedLayer;
-import net.fabricmc.fabric.api.client.rendering.v1.LayeredDrawerWrapper;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +15,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -41,13 +40,18 @@ public  class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
         return bookshelf.getItem(slot);
     }
 
-    public void hudRender(LayeredDrawerWrapper drawers) {
-        drawers.attachLayerAfter(
-            IdentifiedLayer.MISC_OVERLAYS,
-            TweaksMod.id("chiseled_bookshelf"),
-            ((guiGraphics, deltaTracker)
-                -> feature().registers.hudRenderer.render(guiGraphics, deltaTracker)));
+    public void hudRender(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
+        feature().registers.hudRenderer.render(guiGraphics, deltaTracker);
     }
+
+    // API has been removed in snapshots for 1.21.6
+    //    public void hudRender(LayeredDrawerWrapper drawers) {
+    //        drawers.attachLayerAfter(
+    //            IdentifiedLayer.MISC_OVERLAYS,
+    //            TweaksMod.id("chiseled_bookshelf"),
+    //            ((guiGraphics, deltaTracker)
+    //                -> feature().registers.hudRenderer.render(guiGraphics, deltaTracker)));
+    //    }
 
     public void clientTick(Minecraft minecraft) {
         var player = minecraft.player;

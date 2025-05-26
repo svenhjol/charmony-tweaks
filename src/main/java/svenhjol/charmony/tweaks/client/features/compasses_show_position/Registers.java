@@ -1,6 +1,6 @@
 package svenhjol.charmony.tweaks.client.features.compasses_show_position;
 
-import net.fabricmc.fabric.api.client.rendering.v1.HudLayerRegistrationCallback;
+import svenhjol.charmony.api.events.HudDisplayCallback;
 import svenhjol.charmony.api.tweaks.CompassOverlayItem;
 import svenhjol.charmony.api.tweaks.CompassOverlayProvider;
 import svenhjol.charmony.core.Api;
@@ -22,7 +22,7 @@ public class Registers extends Setup<CompassesShowPosition> {
             Api.consume(CompassOverlayProvider.class,
                 provider -> overlayItems.addAll(provider.getCompassOverlayItems()));
 
-            HudLayerRegistrationCallback.EVENT.register(feature().handlers::hudRender);
+            HudDisplayCallback.EVENT.register(feature().handlers::hudRender);
         };
     }
 }

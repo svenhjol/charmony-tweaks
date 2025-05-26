@@ -1,10 +1,10 @@
 package svenhjol.charmony.tweaks.common.features.animal_reviving;
 
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.TagValueOutput;
 import svenhjol.charmony.core.base.Setup;
 
 public class Handlers extends Setup<AnimalReviving> {
@@ -41,11 +42,13 @@ public class Handlers extends Setup<AnimalReviving> {
             var stack = new ItemStack(Items.NAME_TAG);
             stack.set(DataComponents.CUSTOM_NAME, entity.getDisplayName());
 
-            var tag = new CompoundTag();
-            entity.save(tag);
-            stack.set(feature().registers.data, Data.of(tag));
-
-            level.addFreshEntity(new ItemEntity(level, pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d, stack));
+            try (var scopedCollector = new ProblemReporter.ScopedCollector(entity.problemPath(), feature().log().getLogger())) {
+                var valueOutput = TagValueOutput.createWithContext(scopedCollector, entity.registryAccess());
+                entity.save(valueOutput);
+                var tag = valueOutput.buildResult();
+                stack.set(feature().registers.data, Data.of(tag));
+                level.addFreshEntity(new ItemEntity(level, pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d, stack));
+            }
         }
     }
 

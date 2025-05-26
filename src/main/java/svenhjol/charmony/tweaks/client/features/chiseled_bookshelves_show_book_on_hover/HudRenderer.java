@@ -1,6 +1,5 @@
 package svenhjol.charmony.tweaks.client.features.chiseled_bookshelves_show_book_on_hover;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -9,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
+import org.joml.Matrix3x2fStack;
 import svenhjol.charmony.core.client.BaseHudRenderer;
 
 public class HudRenderer extends BaseHudRenderer {
@@ -66,8 +66,8 @@ public class HudRenderer extends BaseHudRenderer {
      * Render displayed item with scaling.
      */
     @Override
-    public void scaleItem(ItemStack stack, PoseStack poseStack) {
-        poseStack.scale(scaleX, scaleY, 1.0f);
+    public void scaleItem(ItemStack stack, Matrix3x2fStack matrixStack) {
+        matrixStack.scale(scaleX, scaleY, matrixStack);
         scaleX = scaleY = 1.0f;
     }
 
