@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.12.1
+
+- Update to use new Charmony and API.
+- Fix shulker box colored dialogs.
+
 ## 1.12.0
 
 - Update for Charmony and API.
