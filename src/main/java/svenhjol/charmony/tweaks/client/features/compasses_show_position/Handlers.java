@@ -46,12 +46,12 @@ public class Handlers extends Setup<CompassesShowPosition> {
         String coords;
 
         if (feature().onlyShowXZ()) {
-            coords = I18n.get("gui.charmony-tweaks.compass.coords_only_xz", pos.getX(), pos.getZ());
+            coords = I18n.get("gui.charmony.compass.coords_only_xz", pos.getX(), pos.getZ());
         } else {
-            coords = I18n.get("gui.charmony-tweaks.compass.coords", pos.getX(), pos.getY(), pos.getZ());
+            coords = I18n.get("gui.charmony.compass.coords", pos.getX(), pos.getY(), pos.getZ());
         }
 
-        var facing = I18n.get("gui.charmony-tweaks.compass.facing", direction.getName());
+        var facing = I18n.get("gui.charmony.compass.facing", direction.getName());
         var facingColor = 0xffeedd;
         var coordsColor = 0xaa9988;
         var biomeColor = 0x9accaa;
@@ -70,7 +70,7 @@ public class Handlers extends Setup<CompassesShowPosition> {
             var biomeRes = player.level().getBiome(pos).unwrap().map(key -> key != null ? key.location() : null, unknown -> null);
             if (biomeRes != null) {
                 var biomeName = I18n.get("biome." + biomeRes.getNamespace() + "." + biomeRes.getPath());
-                var biomeText = Component.translatable("gui.charmony-tweaks.compass.biome", biomeName).getString();
+                var biomeText = Component.translatable("gui.charmony.compass.biome", biomeName).getString();
                 guiGraphics.drawString(font, biomeText,16, y, biomeColor | alpha);
                 y += lineHeight;
             }
@@ -82,11 +82,4 @@ public class Handlers extends Setup<CompassesShowPosition> {
             y += lineHeight;
         }
     }
-
-    //    public void hudRender(LayeredDrawerWrapper drawers) {
-    //        drawers.attachLayerAfter(
-    //            IdentifiedLayer.MISC_OVERLAYS,
-    //            TweaksMod.id("compass_position"),
-    //            this::hudRender);
-    //    }
 }

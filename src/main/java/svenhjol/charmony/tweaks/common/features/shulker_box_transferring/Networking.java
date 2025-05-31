@@ -4,8 +4,8 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import svenhjol.charmony.core.Charmony;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 public final class Networking extends Setup<ShulkerBoxTransferring> {
     public Networking(ShulkerBoxTransferring feature) {
@@ -13,7 +13,7 @@ public final class Networking extends Setup<ShulkerBoxTransferring> {
     }
 
     public record C2SAddItemToShulkerBox() implements CustomPacketPayload {
-        public static Type<C2SAddItemToShulkerBox> TYPE = new Type<>(TweaksMod.id("add_item_to_shulker_box"));
+        public static Type<C2SAddItemToShulkerBox> TYPE = new Type<>(Charmony.id("add_item_to_shulker_box"));
         static StreamCodec<FriendlyByteBuf, C2SAddItemToShulkerBox> CODEC = StreamCodec.of(C2SAddItemToShulkerBox::encode, C2SAddItemToShulkerBox::decode);
 
         public static void send() {
@@ -35,7 +35,7 @@ public final class Networking extends Setup<ShulkerBoxTransferring> {
     }
 
     public record C2SReorderShulkerBoxItems(int slot, int direction) implements CustomPacketPayload {
-        public static Type<C2SReorderShulkerBoxItems> TYPE = new Type<>(TweaksMod.id("reorder_shulker_box_items"));
+        public static Type<C2SReorderShulkerBoxItems> TYPE = new Type<>(Charmony.id("reorder_shulker_box_items"));
         static StreamCodec<FriendlyByteBuf, C2SReorderShulkerBoxItems> CODEC = StreamCodec.of(C2SReorderShulkerBoxItems::encode, C2SReorderShulkerBoxItems::decode);
 
         public static void send(int slot, int direction) {

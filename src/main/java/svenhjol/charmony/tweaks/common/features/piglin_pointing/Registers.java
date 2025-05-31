@@ -10,8 +10,8 @@ import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import svenhjol.charmony.core.Charmony;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Registers extends Setup<PiglinPointing> {
     public Registers(PiglinPointing feature) {
         super(feature);
 
-        var pointingAtTargetId = TweaksMod.id("pointing_at_target");
+        var pointingAtTargetId = Charmony.id("pointing_at_target");
         pointingAtTarget = Registry.register(BuiltInRegistries.MEMORY_MODULE_TYPE, pointingAtTargetId,
             new MemoryModuleType<>(Optional.empty()));
 

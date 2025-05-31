@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.13.0
+
+- Testing consolidated namespace.
+- Fix Chiseled bookshelf hud rendering.
+
 ## 1.12.1
 
 - Update to use new Charmony and API.

@@ -48,7 +48,7 @@ public  class Handlers extends Setup<ChiseledBookshelvesShowBookOnHover> {
     //    public void hudRender(LayeredDrawerWrapper drawers) {
     //        drawers.attachLayerAfter(
     //            IdentifiedLayer.MISC_OVERLAYS,
-    //            TweaksMod.id("chiseled_bookshelf"),
+    //            Charmony.id("chiseled_bookshelf"),
     //            ((guiGraphics, deltaTracker)
     //                -> feature().registers.hudRenderer.render(guiGraphics, deltaTracker)));
     //    }

@@ -3,16 +3,21 @@ package svenhjol.charmony.tweaks.client.features.chiseled_bookshelves_show_book_
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.render.state.GuiItemRenderState;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
-import org.joml.Matrix3x2fStack;
 import svenhjol.charmony.core.client.BaseHudRenderer;
 
 public class HudRenderer extends BaseHudRenderer {
     private ItemStack hitStack; // A reference to the item stack currently being pointed at.
+
+    @Override
+    protected boolean withScaling() {
+        return true;
+    }
 
     @Override
     public void render(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
@@ -62,12 +67,10 @@ public class HudRenderer extends BaseHudRenderer {
         return false;
     }
 
-    /**
-     * Render displayed item with scaling.
-     */
     @Override
-    public void scaleItem(ItemStack stack, Matrix3x2fStack matrixStack) {
-        matrixStack.scale(scaleX, scaleY, matrixStack);
+    public void scaleItem(ItemStack stack, GuiItemRenderState state, Minecraft minecraft, int width, int height) {
+        var o = isValid ? 30 : 16;
+        state.pose().scaleAround(scaleX, scaleY, (float) width / 2, (float) (height / 2) + o);
         scaleX = scaleY = 1.0f;
     }
 

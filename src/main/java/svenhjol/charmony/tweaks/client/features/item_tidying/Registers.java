@@ -9,8 +9,8 @@ import svenhjol.charmony.api.events.RenderScreenCallback;
 import svenhjol.charmony.api.events.SetupScreenCallback;
 import svenhjol.charmony.api.tweaks.*;
 import svenhjol.charmony.core.Api;
+import svenhjol.charmony.core.Charmony;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,17 +32,17 @@ public class Registers extends Setup<ItemTidying> {
         super(feature);
 
         this.lightModeTidyButton = new WidgetSprites(
-            TweaksMod.id("widget/item_tidying/tidy_button"),
-            TweaksMod.id("widget/item_tidying/tidy_button_highlighted")
+            Charmony.id("widget/item_tidying/tidy_button"),
+            Charmony.id("widget/item_tidying/tidy_button_highlighted")
         );
 
         this.darkModeTidyButton = new WidgetSprites(
-            TweaksMod.id("widget/item_tidying/dark_mode_tidy_button"),
-            TweaksMod.id("widget/item_tidying/dark_mode_tidy_button_highlighted")
+            Charmony.id("widget/item_tidying/dark_mode_tidy_button"),
+            Charmony.id("widget/item_tidying/dark_mode_tidy_button_highlighted")
         );
 
         this.tidyInventoryKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
-            "key.charmony-tweaks.tidyInventory",
+            "key.charmony.tidyInventory",
             GLFW.GLFW_KEY_APOSTROPHE,
             "key.categories.inventory"));
     }

@@ -16,7 +16,7 @@ public class Registers extends Setup<CraftingTableNearby> {
 
         this.hudRenderer = new HudRenderer();
         this.openCraftingKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
-            "key.charmony-tweaks.openCrafting",
+            "key.charmony.openCrafting",
             GLFW.GLFW_KEY_V,
             "key.categories.misc"));
     }

@@ -12,7 +12,7 @@ public class Registers extends Setup<TotemEmergencySwap> {
     public Registers(TotemEmergencySwap feature) {
         super(feature);
         this.swapTotemKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
-            "key.charmony-tweaks.swapTotem",
+            "key.charmony.swapTotem",
             GLFW.GLFW_KEY_Z,
             "key.categories.inventory"));
     }

@@ -76,7 +76,7 @@ public class Handlers extends Setup<CraftingTableNearby> {
     //    public void hudRender(LayeredDrawerWrapper drawers) {
     //        drawers.attachLayerAfter(
     //            IdentifiedLayer.MISC_OVERLAYS,
-    //            TweaksMod.id("crafting_table_nearby"),
+    //            Charmony.id("crafting_table_nearby"),
     //            ((guiGraphics, deltaTracker)
     //                -> feature().registers.hudRenderer.render(guiGraphics, deltaTracker)));
     //    }

@@ -6,8 +6,8 @@ import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
+import svenhjol.charmony.core.Charmony;
 import svenhjol.charmony.core.base.Setup;
-import svenhjol.charmony.tweaks.TweaksMod;
 
 public class Registers extends Setup<ItemFrameHiding> {
     public final SimpleParticleType particleType;
@@ -16,7 +16,7 @@ public class Registers extends Setup<ItemFrameHiding> {
         super(feature);
 
         // TODO: make common registry method for this and for ChorusNetwork mod.
-        particleType = Registry.register(BuiltInRegistries.PARTICLE_TYPE, TweaksMod.id("apply_amethyst"), new ParticleType());
+        particleType = Registry.register(BuiltInRegistries.PARTICLE_TYPE, Charmony.id("apply_amethyst"), new ParticleType());
     }
 
     @Override

@@ -28,9 +28,9 @@ public class ChiseledBookShelfBlockEntityMixin extends BlockEntity {
     public CompoundTag getUpdateTag(HolderLookup.Provider provider) {
         var logger = ChiseledBookshelvesShowBookOnHover.feature().log().getLogger();
         try (ProblemReporter.ScopedCollector scopedCollector = new ProblemReporter.ScopedCollector(this.problemPath(), logger)) {
-            var output = TagValueOutput.createWithContext(scopedCollector, provider);
-            saveAdditional(output);
-            return output.buildResult();
+            var valueOutput = TagValueOutput.createWithContext(scopedCollector, provider);
+            saveAdditional(valueOutput);
+            return valueOutput.buildResult();
         }
     }
 

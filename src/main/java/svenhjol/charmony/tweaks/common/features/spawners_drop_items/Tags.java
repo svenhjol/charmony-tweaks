@@ -3,30 +3,30 @@ package svenhjol.charmony.tweaks.common.features.spawners_drop_items;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
-import svenhjol.charmony.tweaks.TweaksMod;
+import svenhjol.charmony.core.Charmony;
 
 public final class Tags {
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_BLAZE_RODS = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_blaze_rods"));
+        Charmony.id("spawners/drops_blaze_rods"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_BONES = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_bones"));
+        Charmony.id("spawners/drops_bones"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_GUNPOWDER = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_gunpowder"));
+        Charmony.id("spawners/drops_gunpowder"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_MAGMA_CREAM = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_magma_cream"));
+        Charmony.id("spawners/drops_magma_cream"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_ROTTEN_FLESH = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_rotten_flesh"));
+        Charmony.id("spawners/drops_rotten_flesh"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_SLIME_BALLS = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_slime_balls"));
+        Charmony.id("spawners/drops_slime_balls"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_SPIDER_EYES = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_spider_eyes"));
+        Charmony.id("spawners/drops_spider_eyes"));
 
     public static final TagKey<EntityType<?>> SPAWNER_DROPS_STRING = TagKey.create(Registries.ENTITY_TYPE,
-        TweaksMod.id("spawners/drops_string"));
+        Charmony.id("spawners/drops_string"));
 }

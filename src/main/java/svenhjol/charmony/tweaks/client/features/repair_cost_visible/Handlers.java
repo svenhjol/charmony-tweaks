@@ -17,7 +17,7 @@ public class Handlers extends Setup<RepairCostVisible> {
         var repairCost = stack.get(DataComponents.REPAIR_COST);
         if (repairCost != null && repairCost > 0) {
             tooltip.add(Component.empty()); // A blank line.
-            tooltip.add(Component.translatable("gui.charmony-tweaks.repair_cost", repairCost)
+            tooltip.add(Component.translatable("gui.charmony.repair_cost", repairCost)
                 .withStyle(ChatFormatting.GRAY));
         }
 
