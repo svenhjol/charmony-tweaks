@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.2
+
+- Add tweaks directly into root advancement.
+
 ## 1.13.1
 
 - Update icon location.

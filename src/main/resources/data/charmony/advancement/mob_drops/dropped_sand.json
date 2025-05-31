@@ -1,5 +1,5 @@
 {
-  "parent": "charmony:tweaks",
+  "parent": "charmony:root",
   "display": {
     "icon": {
       "id": "minecraft:sand"
