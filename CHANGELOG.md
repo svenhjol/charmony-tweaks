@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.1
+
+- Update icon location.
+
 ## 1.13.0
 
 - Testing consolidated namespace.

@@ -12,7 +12,7 @@
     "Coranthes",
     "WarlordWossman"
   ],
-  "icon": "assets/charmony-tweaks/textures/gui/sprites/icon.png",
+  "icon": "assets/charmony/textures/gui/sprites/charmony-tweaks.png",
   "license": "MIT",
   "environment": "*",
   "accessWidener": "charmony-tweaks.accesswidener",
