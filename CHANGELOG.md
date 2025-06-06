@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.1
+
+- Bump for Charmony
+
 ## 1.12.0
 
 - Update for Charmony and API.
