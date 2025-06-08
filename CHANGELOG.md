@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.3
+
+- Fix map hover.
+
 ## 1.13.2
 
 - Add tweaks directly into root advancement.

@@ -1,11 +1,9 @@
 package svenhjol.charmony.tweaks.client.features.maps_show_when_hovering;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
-import net.minecraft.client.renderer.MapRenderer;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.state.MapRenderState;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
@@ -17,7 +15,7 @@ import svenhjol.charmony.core.base.Setup;
 import java.util.List;
 
 public class Handlers extends Setup<MapsShowWhenHovering> {
-    public static final RenderType MAP_BACKGROUND = RenderType.text(ResourceLocation.parse("textures/map/map_background.png"));
+    public static final ResourceLocation MAP_BACKGROUND = ResourceLocation.parse("textures/map/map_background.png");
     private final MapRenderState mapRenderState = new MapRenderState();
 
     public Handlers(MapsShowWhenHovering feature) {
@@ -39,13 +37,9 @@ public class Handlers extends Setup<MapsShowWhenHovering> {
             var data = MapItem.getSavedData(mapId, level);
             if (data == null) return;
 
-            var poseStack = new PoseStack();
-            ty -= 16;
-
             var x = tx;
             var y = ty - 72;
             var w = 64;
-            var light = 240;
             var right = x + w;
 
             if (right > minecraft.getWindow().getGuiScaledWidth()) {
@@ -56,27 +50,16 @@ public class Handlers extends Setup<MapsShowWhenHovering> {
                 y = ty + lines.size() * 10 + 8;
             }
 
-            poseStack.pushPose();
-            poseStack.translate(x, y, 500.0f);
-            poseStack.scale(0.5f, 0.5f, 1.0f);
+            guiGraphics.blit(RenderPipelines.GUI_TEXTURED, MAP_BACKGROUND,
+                x - 3, y - 3, 0, 0, 64, 64, 64, 64);
 
-            var bufferSource = minecraft.renderBuffers().bufferSource();
-            var vertexConsumer = bufferSource.getBuffer(MAP_BACKGROUND);
+            guiGraphics.pose().pushMatrix();
+            guiGraphics.pose().translate(x, y);
+            guiGraphics.pose().scale(0.455f, 0.455f);
 
-            vertexConsumer.addVertex(-7.0F, 135.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 1.0F).setLight(light);
-            vertexConsumer.addVertex(135.0F, 135.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 1.0F).setLight(light);
-            vertexConsumer.addVertex(135.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(1.0F, 0.0F).setLight(light);
-            vertexConsumer.addVertex(-7.0F, -7.0F, 0.0F).setColor(255, 255, 255, 255).setUv(0.0F, 0.0F).setLight(light);
-
-            poseStack.pushPose();
-            poseStack.translate(0.0, 0.0, 1.0);
-
-            MapRenderer mapRenderer = minecraft.getMapRenderer();
-            mapRenderer.extractRenderState(mapId, data, this.mapRenderState);
-            mapRenderer.render(this.mapRenderState, poseStack, bufferSource, false, light);
-
-            poseStack.popPose();
-            poseStack.popPose();
+            minecraft.getMapRenderer().extractRenderState(mapId, data, this.mapRenderState);
+            guiGraphics.submitMapRenderState(this.mapRenderState);
+            guiGraphics.pose().popMatrix();
         }
     }
 }
