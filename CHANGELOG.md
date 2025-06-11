@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.4
+
+- Use GlintColorApi when extracting enchantment from an item that has a glint color.
+
 ## 1.13.3
 
 - Fix map hover.

@@ -9,8 +9,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.api.events.GrindstoneEvents;
+import svenhjol.charmony.api.glint_colors.GlintColorsApi;
+import svenhjol.charmony.core.base.Setup;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
@@ -113,10 +114,18 @@ public class Handlers extends Setup<GrindstoneDisenchanting> {
         if (enchanted.isEmpty()) return null;
 
         var in = enchanted.get();
-        if (player != null && !hasEnoughXp(player, getCost(in))) return null;
+        if (player != null && !hasEnoughXp(player, getCost(in))) {
+            return null;
+        }
 
         var out = new ItemStack(Items.ENCHANTED_BOOK);
         var enchantments = EnchantmentHelper.getEnchantmentsForCrafting(in);
+
+        // Apply the glint color from the item being extracted, if present.
+        if (GlintColorsApi.instance().has(in)) {
+            GlintColorsApi.instance().getColor(in).ifPresent(
+                color -> GlintColorsApi.instance().apply(out, color));
+        }
 
         EnchantmentHelper.updateEnchantments(out, mutable -> enchantments.entrySet().forEach(
             entry -> {
@@ -124,6 +133,7 @@ public class Handlers extends Setup<GrindstoneDisenchanting> {
                 var power = entry.getIntValue();
                 mutable.set(enchantment, mutable.getLevel(enchantment) + power);
             }));
+
 
         return out;
     }
