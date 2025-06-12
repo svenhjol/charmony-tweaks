@@ -31,7 +31,6 @@ public abstract class PlayerMixin extends Entity {
         var player = (Player)(Object)(this);
 
         if (feature.handlers.hasParrotOnAnyShoulder(player) && feature.handlers.shouldParrotStayMounted(level(), timeEntitySatOnShoulder)) {
-            feature.advancements.remainedOnShoulder(player);
             return;
         }
 

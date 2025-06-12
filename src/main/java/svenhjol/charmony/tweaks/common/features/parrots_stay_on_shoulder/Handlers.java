@@ -36,23 +36,16 @@ public class Handlers extends Setup<ParrotsStayOnShoulder> {
             && player.level().getGameTime() % 10 == 0
             && (player.isSecondaryUseActive() || player.isUnderWater())
         ) {
-            boolean doAdvancement = false;
             var serverPlayer = (ServerPlayer)player;
 
             if (hasParrotOnShoulder(serverPlayer, Shoulder.Left)) {
                 serverPlayer.respawnEntityOnShoulder(serverPlayer.getShoulderEntityLeft());
                 serverPlayer.setShoulderEntityLeft(new CompoundTag());
-                doAdvancement = true;
             }
 
             if (hasParrotOnShoulder(serverPlayer, Shoulder.Right)) {
                 serverPlayer.respawnEntityOnShoulder(serverPlayer.getShoulderEntityRight());
                 serverPlayer.setShoulderEntityRight(new CompoundTag());
-                doAdvancement = true;
-            }
-
-            if (doAdvancement) {
-                feature().advancements.dismountedFromShoulder(serverPlayer);
             }
         }
     }

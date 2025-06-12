@@ -10,14 +10,12 @@ import svenhjol.charmony.api.core.Side;
 public final class ParrotsStayOnShoulder extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
-    public final Advancements advancements;
 
     public ParrotsStayOnShoulder(Mod mod) {
         super(mod);
 
         registers = new Registers(this);
         handlers = new Handlers(this);
-        advancements = new Advancements(this);
     }
 
     public static ParrotsStayOnShoulder feature() {
