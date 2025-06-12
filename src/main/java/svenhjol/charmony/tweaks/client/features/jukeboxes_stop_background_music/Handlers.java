@@ -20,7 +20,7 @@ import svenhjol.charmony.core.base.Setup;
 
 @SuppressWarnings("unused")
 public class Handlers extends Setup<JukeboxesStopBackgroundMusic> {
-    private static final int CHECK_TICKS = 10;
+    private static final int CHECK_TICKS = 5;
     public SoundInstance musicToStop = null;
     public int ticksBeforeStop = 0;
 
@@ -70,8 +70,17 @@ public class Handlers extends Setup<JukeboxesStopBackgroundMusic> {
         }
     }
 
+    public boolean shouldPreventMusic() {
+        for (var category : getPlayingSounds().keys()) {
+            if (category == SoundSource.RECORDS) {
+                return true;
+            }
+        }
+        return musicToStop != null;
+    }
+
     public void tryStopMusic() {
-        if (musicToStop != null && ++ticksBeforeStop % CHECK_TICKS == 0) {
+        if (shouldPreventMusic() && ++ticksBeforeStop % CHECK_TICKS == 0) {
             getSoundManager().stop(musicToStop);
             ticksBeforeStop = 0;
             musicToStop = null;

@@ -11,6 +11,7 @@
     "burning_has_reduced_view_blocking.ScreenEffectRendererMixin",
     "grindstone_disenchanting.GrindstoneScreenMixin",
     "item_tidying.AbstractContainerScreenMixin",
+    "jukeboxes_stop_background_music.MusicManagerMixin",
     "piglin_pointing.LivingEntityRendererMixin",
     "piglin_pointing.PiglinModelMixin",
     "pigs_find_mushrooms.LivingEntityRendererMixin",

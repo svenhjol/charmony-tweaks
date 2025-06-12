@@ -16,4 +16,8 @@ public final class JukeboxesStopBackgroundMusic extends SidedFeature {
         registers = new Registers(this);
         handlers = new Handlers(this);
     }
+
+    public static JukeboxesStopBackgroundMusic feature() {
+        return Mod.getSidedFeature(JukeboxesStopBackgroundMusic.class);
+    }
 }

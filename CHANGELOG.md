@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.6
+
+- Added tiny mixin to make jukeboxes stop background music more reliable.
+
 ## 1.13.5
 
 - Remove parrot advancements.
