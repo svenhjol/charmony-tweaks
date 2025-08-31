@@ -26,7 +26,7 @@ public class Handlers extends Setup<PathConverting> {
         if (feature().allowPathToDirt() && stack.getItem() instanceof HoeItem && state.is(Blocks.DIRT_PATH)) {
             player.swing(hand);
 
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 level.setBlock(pos, Blocks.DIRT.defaultBlockState(), 11);
                 level.playSound(null, pos, feature().registers.pathToDirtSound.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
                 feature().advancements.convertedPathToDirt((ServerPlayer) player);
@@ -37,7 +37,7 @@ public class Handlers extends Setup<PathConverting> {
         } else if (feature().allowDirtToPath() && stack.getItem() instanceof ShovelItem && state.is(Blocks.DIRT)) {
             player.swing(hand);
 
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 level.setBlock(pos, Blocks.DIRT_PATH.defaultBlockState(), 11);
                 level.playSound(null, pos, feature().registers.dirtToPathSound.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
                 feature().advancements.convertedDirtToPath((ServerPlayer) player);
@@ -47,7 +47,7 @@ public class Handlers extends Setup<PathConverting> {
 
         if (success) {
             if (!player.getAbilities().instabuild) {
-                stack.hurtAndBreak(1, player, Player.getSlotForHand(hand));
+                stack.hurtAndBreak(1, player, hand);
             }
             return InteractionResult.SUCCESS;
         }

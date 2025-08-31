@@ -57,7 +57,7 @@ public class Handlers extends Setup<CropReplanting> {
             }
         }
 
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             var serverPlayer = (ServerPlayer)player;
             var serverLevel = (ServerLevel)serverPlayer.level();
             var drops = Block.getDrops(state, serverLevel, pos, null, player, ItemStack.EMPTY);
@@ -90,7 +90,7 @@ public class Handlers extends Setup<CropReplanting> {
 
             // Damage the hoe a bit.
             if (!player.getAbilities().instabuild) {
-                held.hurtAndBreak(1, player, Player.getSlotForHand(hand));
+                held.hurtAndBreak(1, player, hand);
             }
 
             return InteractionResult.CONSUME;
