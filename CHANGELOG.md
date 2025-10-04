@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.14.1
+
+- Fix wandering trader textures.
+- Shulker box transfer now checks if running vanilla. 
+
+## 1.14.0
+
+- Fix all issues for 1.21.9
+
 ## 1.13.6
 
 - Added tiny mixin to make jukeboxes stop background music more reliable.

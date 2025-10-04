@@ -53,7 +53,7 @@ public class Registers extends Setup<MobTextures> {
         }
 
         for (var i = 1; i <= max; i++) {
-            set.add(mobType.customTexture(feature().mod(), baseName + i));
+            set.add(mobType.customTexture(baseName + i));
         }
     }
 }

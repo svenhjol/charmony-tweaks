@@ -7,6 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import svenhjol.charmony.core.base.Environment;
 import svenhjol.charmony.tweaks.common.features.shulker_box_transferring.Networking;
 
 @SuppressWarnings("unused")
@@ -24,6 +25,10 @@ public class ShulkerBoxMouseActions implements ItemSlotMouseAction {
 
     @Override
     public boolean onMouseScrolled(double mouseX, double mouseY, int slot, ItemStack stack) {
+        if (!Environment.usesCharmonyServer()) {
+            return false;
+        }
+
         var vector = scrollWheelHandler.onMouseScroll(mouseX, mouseY);
         var direction = vector.y == 0 ? -vector.x : vector.y;
         var common = ShulkerBoxTransferring.feature().common.get();

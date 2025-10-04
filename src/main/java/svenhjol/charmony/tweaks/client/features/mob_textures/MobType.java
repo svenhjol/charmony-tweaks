@@ -3,7 +3,7 @@ package svenhjol.charmony.tweaks.client.features.mob_textures;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
-import svenhjol.charmony.core.base.Mod;
+import svenhjol.charmony.core.Charmony;
 
 import java.util.Locale;
 
@@ -21,8 +21,8 @@ public enum MobType implements StringRepresentable {
         return vanillaTexture;
     }
 
-    public ResourceLocation customTexture(Mod mod, String texture) {
-        return ResourceLocation.tryBuild(mod.id(), "textures/entity/" + this.getSerializedName() + "/" + texture + ".png");
+    public ResourceLocation customTexture(String texture) {
+        return ResourceLocation.tryBuild(Charmony.ID, "textures/entity/" + this.getSerializedName() + "/" + texture + ".png");
     }
 
     @Override
